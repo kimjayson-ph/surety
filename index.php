@@ -61,36 +61,43 @@ error_reporting(0);
   <!-- Fun Facts-->
   <section class="fun-facts-section">
     <div class="container div_zindex">
+      <div align="center">
+        <h1 style="color: white;">It's really easier to rent!</h1>
+        <h5 style="color: white;">We can rent different kinds of motorcycle at a low price</h5>
+      </div>
+      <div><img src="" alt=""></div>
       <div class="row">
-        <div class="col-lg-3 col-xs-6 col-sm-3">
-          <div class="fun-facts-m">
-            <div class="cell">
-              <h2><i class="fa fa-calendar" aria-hidden="true"></i>40+</h2>
-              <p>Years In Business</p>
+        <div class="col-lg-6 col-md-6 col-xs col-sm-6">
+          <div>
+            <div align="center" class="cell">
+              <img src="./assets/images/surety/1.png" style="width: 280px; margin: 10px 10px" alt="">
+
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-xs-6 col-sm-3">
-          <div class="fun-facts-m">
-            <div class="cell">
-              <h2><i class="fa fa-car" aria-hidden="true"></i>1200+</h2>
-              <p>New Motorbike For Sale</p>
+        <div class="col-lg-6 col-md-6 col-xs col-sm-6">
+          <div>
+            <div align="center" class="cell">
+              <img src="./assets/images/surety/2.png" style="width: 280px; margin: 10px 10px" alt="">
+
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-xs-6 col-sm-3">
-          <div class="fun-facts-m">
-            <div class="cell">
-              <h2><i class="fa fa-car" aria-hidden="true"></i>1000+</h2>
-              <p>Used Motorbike For Sale</p>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-xs col-sm-6">
+          <div>
+            <div align="center" class="cell">
+              <img src="./assets/images/surety/3.png" style="width: 280px; margin: 10px 10px" alt="">
+
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-xs-6 col-sm-3">
-          <div class="fun-facts-m">
-            <div class="cell">
-              <h2><i class="fa fa-user-circle-o" aria-hidden="true"></i>600+</h2>
-              <p>Satisfied Customers</p>
+        <div class="col-lg-6 col-md-6 col-xs col-sm-6">
+          <div>
+            <div align="center" class="cell">
+              <img src="./assets/images/surety/4.png" style="width: 280px; margin: 10px 10px" alt="">
+
             </div>
           </div>
         </div>

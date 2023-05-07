@@ -1075,7 +1075,7 @@ nav.navbar {
 	3.1. Banner
 -------------------------------*/
 .banner-section {
-  background-image: url("../images/bannerpic.png");
+  background-image: url("../images/surety/banner-image.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1366,8 +1366,7 @@ nav.navbar {
 	3.5. Fun-Facts
 -----------------------------*/
 .fun-facts-section {
-  background: rgba(0, 0, 0, 0) url("../images/fun-facts-bg.jpg") repeat scroll 0
-    0;
+  background: rgba(0, 0, 0, 0) url("#") repeat scroll 0 0;
   padding: 100px 0;
   position: relative;
 }
@@ -1571,7 +1570,7 @@ nav.navbar {
 	3.8 Testimonial-Section
 -----------------------------*/
 .testimonial-section {
-  background-image: url("../images/testimonial-bg.jpg");
+  background-image: url("#");
 }
 .white-text h2 {
   color: #ffffff;
@@ -1606,8 +1605,7 @@ nav.navbar {
   width: 425px;
 }
 .testimonial-content::after {
-  background: rgba(0, 0, 0, 0) url("../images/testimonial-content-bg.jpg")
-    repeat scroll 0 0 / cover;
+  background: rgba(0, 0, 0, 0) url("#") repeat scroll 0 0 / cover;
   border-radius: 0 30px;
   content: "";
   height: 100%;
@@ -2146,8 +2144,7 @@ form .slider.slider-horizontal {
   margin: 0 10px 20px 0;
 }
 .facts_section_bg {
-  background: rgba(0, 0, 0, 0) url("../images/facts_bg.jpg") no-repeat scroll 0
-    0 / cover;
+  background: rgba(0, 0, 0, 0) url("#") no-repeat scroll 0 0 / cover;
   bottom: 0;
   height: 100%;
   left: 0;
@@ -2244,7 +2241,7 @@ form .slider.slider-horizontal {
 	4.8. Help
 ------------------------*/
 #help {
-  background-image: url("../images/help_bg.jpg");
+  background-image: url("#");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -2256,7 +2253,7 @@ form .slider.slider-horizontal {
 ==============================================*/
 
 .page-header {
-  background-image: url("../images/listing-page-header-img.jpg");
+  background-image: url("#");
   background-repeat: no-repeat;
   background-size: cover;
   border: 0 none;
@@ -2483,7 +2480,7 @@ form .slider.slider-horizontal {
   background-attachment: scroll;
   background-clip: border-box;
   background-color: rgba(0, 0, 0, 0);
-  background-image: url("../images/img_390x390.jpg") !important;
+  background-image: url("#") !important;
   background-origin: padding-box;
   background-position: 0 0;
   background-repeat: no-repeat;
@@ -2801,8 +2798,7 @@ table.info-tabel tr td {
 }
 
 .listing_detail_header {
-  background: rgba(0, 0, 0, 0) url("../images/listing-detail-header-img.jpg")
-    no-repeat fixed center center / cover;
+  background: rgba(0, 0, 0, 0) url("#") no-repeat fixed center center / cover;
   padding: 80px 0;
   position: relative;
 }
@@ -2875,7 +2871,7 @@ table.info-tabel tr td {
 	10. Contact-Us-Page
 ================================*/
 .contactus_page {
-  background-image: url(../images/contact-page-header-img.jpg);
+  background-image: url("#");
 }
 .contact_form {
   padding: 28px;
@@ -2944,23 +2940,20 @@ table.info-tabel tr td {
   padding: 20px 0;
 }
 .knowledge_base_faq {
-  background: rgba(0, 0, 0, 0) url("../images/knowledge_base_bg.jpg") no-repeat
-    scroll 0 0 / cover;
+  background: rgba(0, 0, 0, 0) url("#") no-repeat scroll 0 0 / cover;
 }
 .about_services_faq {
-  background: rgba(0, 0, 0, 0) url("../images/about_services_faq_bg.jpg")
-    no-repeat scroll 0 0 / cover;
+  background: rgba(0, 0, 0, 0) url("#") no-repeat scroll 0 0 / cover;
 }
 .support_faq {
-  background: rgba(0, 0, 0, 0) url("../images/support_faq_bg.jpg") no-repeat
-    scroll 0 0 / cover;
+  background: rgba(0, 0, 0, 0) url("#") no-repeat scroll 0 0 / cover;
 }
 
 /*=========================
 	12. About-Us-Page
 ================================*/
 .aboutus_page {
-  background-image: url(../images/aboutus-page-header-img.jpg);
+  background-image: url("#");
 }
 .about_img {
   background: #000 none repeat scroll 0 0;
@@ -3115,7 +3108,7 @@ table.info-tabel tr td {
 	13. 404-Page
 ===========================*/
 .page_404 {
-  background-image: url(../images/error404-page-header-img.jpg);
+  background-image: url("404");
 }
 .error_text_m {
   position: relative;
@@ -3171,7 +3164,7 @@ table.info-tabel tr td {
 	14. Our-Services-Page
 ==================================*/
 .services_page {
-  background-image: url(../images/services-page-header-img.jpg);
+  background-image: url("#");
 }
 .services_image {
   position: relative;
@@ -3216,7 +3209,7 @@ table.info-tabel tr td {
 	15. Our-Blog-Page
 ==============================*/
 .blog_page {
-  background-image: url(../images/blog-page-header-img.jpg);
+  background-image: url("#");
 }
 .our_blog {
   padding: 80px 0;
@@ -3628,7 +3621,7 @@ table.info-tabel tr td {
 	16. Profile-page
 ================================*/
 .profile_page {
-  background-image: url(../images/profile-page-header-img.jpg);
+  background-image: url("#");
 }
 .inner_pages {
   padding: 80px 0;
@@ -3972,7 +3965,7 @@ table.info-tabel tr td {
 	19. Compare-Page
 ================================*/
 .compare_page {
-  background-image: url(../images/compare-page-header-img.jpg);
+  background-image: url("#");
 }
 .compare_info table td,
 .compare_info table th {
@@ -4128,7 +4121,7 @@ table.info-tabel tr td {
 	20. Coming-Soon-Page
 ================================*/
 .coming_soon_bg {
-  background-image: url(../images/coming_soon_bg.jpg);
+  background-image: url("#");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
