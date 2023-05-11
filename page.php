@@ -8,7 +8,9 @@ include('includes/config.php');
 <html lang="en">
 
 <head>
-
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Motorbike Rental Portal | Page details</title>
   <!--Bootstrap -->
   <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
@@ -69,7 +71,7 @@ include('includes/config.php');
           <div class="section-header text-center">
 
 
-            <h2><?php echo htmlentities($result->PageName); ?></h2>
+            <!-- <h2><?php echo htmlentities($result->PageName); ?></h2> -->
             <h4><?php echo $result->detail; ?> </h4>
           </div>
       <?php }

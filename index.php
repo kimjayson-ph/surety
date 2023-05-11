@@ -9,7 +9,9 @@ error_reporting(0);
 <html lang="en">
 
 <head>
-
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Surety Moto Rental</title>
   <!--Bootstrap -->
   <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
@@ -125,7 +127,6 @@ error_reporting(0);
         <!-- Recently Listed New MotorBikes -->
         <div class="tab-content">
           <div role="tabpanel" class="tab-pane active" id="resentnewcar">
-
             <?php $sql = "SELECT tblvehicles.VehiclesTitle,tblbrands.BrandName,tblvehicles.PricePerDay,tblvehicles.FuelType,tblvehicles.ModelYear,tblvehicles.id,tblvehicles.SeatingCapacity,tblvehicles.VehiclesOverview,tblvehicles.Vimage1 from tblvehicles join tblbrands on tblbrands.id=tblvehicles.VehiclesBrand limit 9";
             $query = $dbh->prepare($sql);
             $query->execute();
@@ -156,11 +157,12 @@ error_reporting(0);
             <?php }
             } ?>
 
+
           </div>
         </div>
       </div>
   </section>
-  <!-- /Resent Cat -->
+  <!-- /Resent bike -->
 
 
 
