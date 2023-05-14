@@ -39,7 +39,7 @@ if (isset($_POST['submit'])) {
       echo "<script type='text/javascript'> document.location = 'car-listing.php'; </script>";
     }
   } else {
-    echo "<script>alert('Car already booked for these days');</script>";
+    echo "<script>alert('Motorbike already booked for these days');</script>";
     echo "<script type='text/javascript'> document.location = 'car-listing.php'; </script>";
   }
 }
@@ -418,7 +418,7 @@ if (isset($_POST['submit'])) {
       <script src="assets/js/jquery.min.js"></script>
       <script src="assets/js/bootstrap.min.js"></script>
       <script src="assets/js/interface.js"></script>
-      <script src="assets/switcher/js/switcher.js"></script>
+
       <script src="assets/js/bootstrap-slider.min.js"></script>
       <script src="assets/js/slick.min.js"></script>
       <script src="assets/js/owl.carousel.min.js"></script>

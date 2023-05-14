@@ -83,7 +83,7 @@ error_reporting(0);
               $results = $query->fetchAll(PDO::FETCH_OBJ);
               $cnt = $query->rowCount();
               ?>
-              <p><span><?php echo htmlentities($cnt); ?> Listings</span></p>
+              <p><span><?php echo htmlentities($cnt); ?> Listing</span></p>
             </div>
           </div>
 
@@ -123,7 +123,7 @@ error_reporting(0);
               <h5><i class="fa fa-filter" aria-hidden="true"></i> Find Your Motorbike </h5>
             </div>
             <div class="sidebar_filter">
-              <form action="search-carresult.php" method="get">
+              <form action="motorbike-listing.php" method="get">
                 <div class="form-group select">
                   <select class="form-control" name="brand">
                     <option>Select Brand</option>
