@@ -75,10 +75,10 @@ error_reporting(0);
               //Query for Listing count
               $brand = $_POST['brand'];
               $fueltype = $_POST['fueltype'];
-              $sql = "SELECT id from tblvehicles where tblvehicles.VehiclesBrand=:brand and tblvehicles.FuelType=:fueltype";
+              $sql = "SELECT id from tblvehicles where tblvehicles.VehiclesBrand=:brand";
               $query = $dbh->prepare($sql);
               $query->bindParam(':brand', $brand, PDO::PARAM_STR);
-              $query->bindParam(':fueltype', $fueltype, PDO::PARAM_STR);
+
               $query->execute();
               $results = $query->fetchAll(PDO::FETCH_OBJ);
               $cnt = $query->rowCount();
@@ -89,10 +89,10 @@ error_reporting(0);
 
           <?php
 
-          $sql = "SELECT tblvehicles.*,tblbrands.BrandName,tblbrands.id as bid  from tblvehicles join tblbrands on tblbrands.id=tblvehicles.VehiclesBrand where tblvehicles.VehiclesBrand=:brand and tblvehicles.FuelType=:fueltype";
+          $sql = "SELECT tblvehicles.*,tblbrands.BrandName,tblbrands.id as bid  from tblvehicles join tblbrands on tblbrands.id=tblvehicles.VehiclesBrand where tblvehicles.VehiclesBrand=:brand";
           $query = $dbh->prepare($sql);
           $query->bindParam(':brand', $brand, PDO::PARAM_STR);
-          $query->bindParam(':fueltype', $fueltype, PDO::PARAM_STR);
+
           $query->execute();
           $results = $query->fetchAll(PDO::FETCH_OBJ);
           $cnt = 1;
@@ -123,9 +123,9 @@ error_reporting(0);
               <h5><i class="fa fa-filter" aria-hidden="true"></i> Find Your Motorbike </h5>
             </div>
             <div class="sidebar_filter">
-              <form action="#" method="get">
+              <form action="search-carresult.php" method="get">
                 <div class="form-group select">
-                  <select class="form-control">
+                  <select class="form-control" name="brand">
                     <option>Select Brand</option>
 
                     <?php $sql = "SELECT * from  tblbrands ";

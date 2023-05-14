@@ -51,7 +51,9 @@ if (isset($_POST['submit'])) {
 <html lang="en">
 
 <head>
-
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Motorbike Rental | Vehicle Details</title>
   <!--Bootstrap -->
   <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
