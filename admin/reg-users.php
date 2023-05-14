@@ -102,7 +102,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 												<th>DOB</th>
 												<th>Address</th>
 												<th>City</th>
-												<th>Country</th>
+
 												<th>Reg Date</th>
 
 											</tr>
@@ -116,7 +116,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 												<th>DOB</th>
 												<th>Address</th>
 												<th>City</th>
-												<th>Country</th>
+
 												<th>Reg Date</th>
 											</tr>
 											</tr>
@@ -138,7 +138,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 														<td><?php echo htmlentities($result->dob); ?></td>
 														<td><?php echo htmlentities($result->Address); ?></td>
 														<td><?php echo htmlentities($result->City); ?></td>
-														<td><?php echo htmlentities($result->Country); ?></td>
+
 														<td><?php echo htmlentities($result->RegDate); ?></td>
 													</tr>
 											<?php $cnt = $cnt + 1;

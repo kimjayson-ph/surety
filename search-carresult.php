@@ -8,6 +8,9 @@ error_reporting(0);
 <html lang="en">
 
 <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 
   <title>Bike Rental Portal | Bike Listing</title>
   <!--Bootstrap -->
@@ -100,11 +103,11 @@ error_reporting(0);
                 </div>
                 <div class="product-listing-content">
                   <h5><a href="vehical-details.php?vhid=<?php echo htmlentities($result->id); ?>"><?php echo htmlentities($result->BrandName); ?> , <?php echo htmlentities($result->VehiclesTitle); ?></a></h5>
-                  <p class="list-price">$<?php echo htmlentities($result->PricePerDay); ?> Per Day</p>
+                  <p class="list-price">&#x20B1;<?php echo htmlentities($result->PricePerDay); ?> Per Day</p>
                   <ul>
-                    <li><i class="fa fa-user" aria-hidden="true"></i><?php echo htmlentities($result->SeatingCapacity); ?> seats</li>
+                    <li><i class="fa fa-user" aria-hidden="true"></i><?php echo htmlentities($result->SeatingCapacity); ?> Helmet</li>
                     <li><i class="fa fa-calendar" aria-hidden="true"></i><?php echo htmlentities($result->ModelYear); ?> model</li>
-                    <li><i class="fa fa-car" aria-hidden="true"></i><?php echo htmlentities($result->FuelType); ?></li>
+
                   </ul>
                   <a href="vehical-details.php?vhid=<?php echo htmlentities($result->id); ?>" class="btn">View Details <span class="angle_arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></span></a>
                 </div>
@@ -138,14 +141,7 @@ error_reporting(0);
 
                   </select>
                 </div>
-                <div class="form-group select">
-                  <select class="form-control">
-                    <option>Select Fuel Type</option>
-                    <option value="Petrol">Petrol</option>
-                    <option value="Diesel">Diesel</option>
-                    <option value="CNG">CNG</option>
-                  </select>
-                </div>
+
 
                 <div class="form-group">
                   <button type="submit" class="btn btn-block"><i class="fa fa-search" aria-hidden="true"></i>Search Motorbike</button>
@@ -156,7 +152,7 @@ error_reporting(0);
 
           <div class="sidebar_widget">
             <div class="widget_heading">
-              <h5><i class="fa fa-car" aria-hidden="true"></i> Recently Listed Motorbike</h5>
+              <h5><img src="./assets/images/surety/suretyfavicon.png" alt=""> Recently Listed Motorbike</h5>
             </div>
             <div class="recent_addedcars">
               <ul>
@@ -171,7 +167,7 @@ error_reporting(0);
                     <li class="gray-bg">
                       <div class="recent_post_img"> <a href="vehical-details.php?vhid=<?php echo htmlentities($result->id); ?>"><img src="admin/img/vehicleimages/<?php echo htmlentities($result->Vimage1); ?>" alt="image"></a> </div>
                       <div class="recent_post_title"> <a href="vehical-details.php?vhid=<?php echo htmlentities($result->id); ?>"><?php echo htmlentities($result->BrandName); ?> , <?php echo htmlentities($result->VehiclesTitle); ?></a>
-                        <p class="widget_price">$<?php echo htmlentities($result->PricePerDay); ?> Per Day</p>
+                        <p class="widget_price">&#x20B1;<?php echo htmlentities($result->PricePerDay); ?> Per Day</p>
                       </div>
                     </li>
                 <?php }

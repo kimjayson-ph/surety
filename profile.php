@@ -116,7 +116,7 @@ if (strlen($_SESSION['login']) == 0) {
         <section class="user_profile inner_pages">
           <div class="container">
             <div class="user_profile_info gray-bg padding_4x4_40">
-              <div class="upload_user_logo"> <img src="assets/images/dealer-logo.jpg" alt="image">
+              <div class="upload_user_logo"> <img src="assets/images/surety/headerlogo.png" alt="image">
               </div>
 
               <div class="dealer_info">
@@ -165,10 +165,7 @@ if (strlen($_SESSION['login']) == 0) {
                         <label class="control-label">Your Address</label>
                         <textarea class="form-control white_bg" name="address" rows="4"><?php echo htmlentities($result->Address); ?></textarea>
                       </div>
-                      <div class="form-group">
-                        <label class="control-label">Country</label>
-                        <input class="form-control white_bg" id="country" name="country" value="<?php echo htmlentities($result->City); ?>" type="text">
-                      </div>
+
                       <div class="form-group">
                         <label class="control-label">City</label>
                         <input class="form-control white_bg" id="city" name="city" value="<?php echo htmlentities($result->City); ?>" type="text">

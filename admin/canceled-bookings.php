@@ -88,7 +88,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 												<th>#</th>
 												<th>Name</th>
 												<th>Booking No.</th>
-												<th>Vehicle</th>
+												<th>Motorbike</th>
 												<th>From Date</th>
 												<th>To Date</th>
 												<th>Status</th>
@@ -101,7 +101,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 												<th>#</th>
 												<th>Name</th>
 												<th>Booking No.</th>
-												<th>Vehicle</th>
+												<th>Motorbike</th>
 												<th>From Date</th>
 												<th>To Date</th>
 												<th>Status</th>

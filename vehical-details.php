@@ -123,7 +123,7 @@ if (isset($_POST['submit'])) {
             </div>
             <div class="col-md-3">
               <div class="price_info">
-                <p>$<?php echo htmlentities($result->PricePerDay); ?> </p>Per Day
+                <p>&#x20B1;<?php echo htmlentities($result->PricePerDay); ?> </p>Per Day
 
               </div>
             </div>
@@ -137,15 +137,16 @@ if (isset($_POST['submit'])) {
                     <h5><?php echo htmlentities($result->ModelYear); ?></h5>
                     <p>Reg.Year</p>
                   </li>
-                  <li> <i class="fa fa-cogs" aria-hidden="true"></i>
-                    <h5><?php echo htmlentities($result->FuelType); ?></h5>
-                    <p>Fuel Type</p>
-                  </li>
-
                   <li> <i class="fa fa-user-plus" aria-hidden="true"></i>
                     <h5><?php echo htmlentities($result->SeatingCapacity); ?></h5>
-                    <p>Seats</p>
+                    <p>Helmet</p>
                   </li>
+                  <li> <i class="fa fa-cogs" aria-hidden="true"></i>
+                    <h5></h5>
+                    <p></p>
+                  </li>
+
+
                 </ul>
               </div>
               <div class="listing_more_info">
@@ -167,8 +168,8 @@ if (isset($_POST['submit'])) {
 
 
                     <!-- Accessories -->
-                    <div role="tabpanel" class="tab-pane" id="accessories">
-                      <!--Accessories-->
+                    <!-- <div role="tabpanel" class="tab-pane" id="accessories">
+                      
                       <table>
                         <thead>
                           <tr>
@@ -300,7 +301,8 @@ if (isset($_POST['submit'])) {
 
                         </tbody>
                       </table>
-                    </div>
+                    </div> -->
+                    <!--Accessories-->
                   </div>
                 </div>
 
@@ -349,9 +351,9 @@ if (isset($_POST['submit'])) {
           <div class="space-20"></div>
           <div class="divider"></div>
 
-          <!--Similar-Cars-->
+          <!--Similar-Motorbike-->
           <div class="similar_cars">
-            <h3>Similar Cars</h3>
+            <h3>Similar Motorbike</h3>
             <div class="row">
               <?php
               $bid = $_SESSION['brndid'];
@@ -369,13 +371,13 @@ if (isset($_POST['submit'])) {
                       </div>
                       <div class="product-listing-content">
                         <h5><a href="vehical-details.php?vhid=<?php echo htmlentities($result->id); ?>"><?php echo htmlentities($result->BrandName); ?> , <?php echo htmlentities($result->VehiclesTitle); ?></a></h5>
-                        <p class="list-price">$<?php echo htmlentities($result->PricePerDay); ?></p>
+                        <p class="list-price">&#x20B1;<?php echo htmlentities($result->PricePerDay); ?></p>
 
                         <ul class="features_list">
 
-                          <li><i class="fa fa-user" aria-hidden="true"></i><?php echo htmlentities($result->SeatingCapacity); ?> seats</li>
+                          <li><img src="./assets/images/surety/suretyfavicon.png" alt=""><?php echo htmlentities($result->BrandName); ?> </li>
                           <li><i class="fa fa-calendar" aria-hidden="true"></i><?php echo htmlentities($result->ModelYear); ?> model</li>
-                          <li><i class="fa fa-car" aria-hidden="true"></i><?php echo htmlentities($result->FuelType); ?></li>
+
                         </ul>
                       </div>
                     </div>
@@ -385,7 +387,7 @@ if (isset($_POST['submit'])) {
 
             </div>
           </div>
-          <!--/Similar-Cars-->
+          <!--/Similar-Motorbike-->
 
         </div>
       </section>

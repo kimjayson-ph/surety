@@ -3635,6 +3635,7 @@ table.info-tabel tr td {
   float: left;
   position: relative;
   width: 28%;
+  margin-top: 20px;
 }
 .upload_newlogo {
   background-color: rgba(0, 0, 0, 0.8);
@@ -5002,6 +5003,7 @@ table.info-tabel tr td {
     line-height: 22px;
     margin-right: 6px;
     width: 24px;
+    object-fit: cover;
   }
   .uppercase_text {
     display: none;

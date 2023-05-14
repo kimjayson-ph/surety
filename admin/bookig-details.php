@@ -149,16 +149,13 @@ DATEDIFF(tblbooking.ToDate,tblbooking.FromDate) as totalnodays,tblvehicles.Price
 															<th>City</th>
 															<td><?php echo htmlentities($result->City); ?></td>
 														</tr>
-														<tr>
-															<th>Country</th>
-															<td colspan="3"><?php echo htmlentities($result->Country); ?></td>
-														</tr>
+
 
 														<tr>
 															<th colspan="4" style="text-align:center;color:blue">Booking Details</th>
 														</tr>
 														<tr>
-															<th>Vehicle Name</th>
+															<th>Motorbike Name</th>
 															<td><a href="edit-vehicle.php?id=<?php echo htmlentities($result->vid); ?>"><?php echo htmlentities($result->BrandName); ?> , <?php echo htmlentities($result->VehiclesTitle); ?></td>
 															<th>Booking Date</th>
 															<td><?php echo htmlentities($result->PostingDate); ?></td>

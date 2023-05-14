@@ -12,8 +12,10 @@ error_reporting(0);
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+
   <title>Surety Moto Rental</title>
   <!--Bootstrap -->
+
   <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
   <link rel="stylesheet" href="assets/css/style.css" type="text/css">
   <link rel="stylesheet" href="assets/css/owl.carousel.css" type="text/css">
@@ -46,6 +48,7 @@ error_reporting(0);
               <p>Find the perfect motorcycle for rent today!</p>
               <a href="" class="btn" style="background-color: #7bc41d;">Rent a Ride</a>
               <a href="" class="btn" style="background-color: #7bc41d; margin-left: 10px;">Learn more</a>
+
             </div>
           </div>
         </div>
@@ -140,9 +143,10 @@ error_reporting(0);
                   <div class="recent-car-list">
                     <div class="car-info-box"> <a href="vehical-details.php?vhid=<?php echo htmlentities($result->id); ?>"><img src="admin/img/vehicleimages/<?php echo htmlentities($result->Vimage1); ?>" class="img-responsive" alt="image"></a>
                       <ul>
-                        <li><i class="fa fa-car" aria-hidden="true"></i><?php echo htmlentities($result->FuelType); ?></li>
+                        <li><img src="./assets/images/surety/suretyfavicon.png" alt=""></li>
+                        <li><?php echo htmlentities($result->BrandName); ?></li>
                         <li><i class="fa fa-calendar" aria-hidden="true"></i><?php echo htmlentities($result->ModelYear); ?> Model</li>
-                        <li><i class="fa fa-user" aria-hidden="true"></i><?php echo htmlentities($result->SeatingCapacity); ?> seats</li>
+
                       </ul>
                     </div>
                     <div class="car-title-m">
