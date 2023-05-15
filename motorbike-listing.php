@@ -76,7 +76,7 @@ error_reporting(0);
               $results = $query->fetchAll(PDO::FETCH_OBJ);
               $cnt = $query->rowCount();
               ?>
-              <p><span><?php echo htmlentities($cnt); ?> Listings</span></p>
+              <p><span><?php echo htmlentities($cnt); ?> Listing</span></p>
             </div>
           </div>
 
