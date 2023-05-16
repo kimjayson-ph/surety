@@ -34,6 +34,15 @@ include('includes/config.php');
   <link rel="apple-touch-icon-precomposed" href="./assets/images/surety/suretyfavicon.png">
   <link rel="shortcut icon" href="./assets/images/surety/suretyfavicon.png">
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+
+
+
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+
+
+
 </head>
 
 <body>
@@ -66,56 +75,197 @@ include('includes/config.php');
         <!-- Dark Overlay-->
         <div class="dark-overlay"></div>
       </section>
-      <section class="about_us section-padding">
+      <!-- <section class="about_us section-padding">
         <div class="container">
-          <div class="section-header text-center">
+          <div class="section-header text-center"> -->
 
 
-            <!-- <h2><?php echo htmlentities($result->PageName); ?></h2> -->
-            <h4><?php echo $result->detail; ?> </h4>
-          </div>
-      <?php }
+      <!-- <h2><?php echo htmlentities($result->PageName); ?></h2> -->
+      <!-- <h4><?php echo $result->detail; ?> </h4> -->
+      </div>
+  <?php }
   } ?>
+  </div>
+  </section>
+  <!-- /About-us-->
+
+  <!-- P -->
+  <section class="section1">
+    <div class="container clearfix">
+      <div class="content col-lg-12 col-md-12 col-sm-12 clearfix">
+        <div class="general-title text-center">
+          <h1>WELCOME TO SURETY MOTORBIKES</h1>
+          <p>Learn more about us</p>
+          <hr>
         </div>
-      </section>
-      <!-- /About-us-->
+        <div class="divider"></div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+          <div class="he-wrap tpl2">
+            <img src="img/office.png" alt="" class="img-responsive">
+            <!-- <div class="he-view">
+              <div class="bg a0" data-animate="fadeIn">
+                <div class="center-bar">
+                  <a href="#" class="twitter a0" data-animate="elasticInDown"></a>
+                  <a href="#" class="facebook a1" data-animate="elasticInDown"></a>
+                  <a href="#" class="google a2" data-animate="elasticInDown"></a>
+                </div>
+              </div>
+            </div> -->
+          </div>
+          <!-- he wrap -->
+        </div>
+        <!-- end col-6 -->
+
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+          <p><?php echo $result->detail; ?>
+
+          </p>
+        </div>
+        <!-- end col-6 -->
+      </div>
+    </div>
+    <!-- end container -->
+  </section>
+  <!-- end section 1 -->
+
+  <div class="clearfix"></div>
+  <div class="divider"></div>
+
+  <div class="container">
+    <div class="general-title text-center">
+      <h3>WHAT WE DO</h3>
+      <hr>
+    </div>
+
+    <div class="skills text-center">
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+        <img src="img/support1.png" class="img-fluid">
+        <h4 class="title">24/7 MOTORBIKE RENTAL SUPPORT</h4>
+      </div>
+
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+        <img src="img/motorbike.png" class="img-fluid">
+        <h4 class="title">MOTORBIKE RESERVATION ANYTIME</h4>
+      </div>
+
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+        <img src="img/map.png" class="img-fluid">
+        <h4 class="title">LOTS OF PICKUP LOCATIONS ANYWHERE</h4>
+      </div>
+
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+        <img src="img/rate.png" class="img-fluid">
+        <h4 class="title">BOOK AT THE BASE PRICE AND ENJOY</h4>
+      </div>
+    </div>
+    <!-- end skills -->
+  </div>
+  <!-- end container -->
+
+  <div class="clearfix"></div>
+  <div class="divider"></div>
+
+  <section class="section1">
+    <div class="container">
+      <div class="general-title text-center">
+        <h3>SOME STATS</h3>
+        <p>Important information about us</p>
+        <hr>
+      </div>
+
+      <div class="stat f-container">
+        <div class="f-element col-lg-3 col-md-3 col-sm-6 col-xs-12">
+          <i class="fa fa-motorcycle fa-4x"></i>
+          <div class="milestone-counter">
+            <span class="stat-count highlight">42</span>
+            <div class="milestone-details">Motorbikes</div>
+          </div>
+        </div>
+        <div class="f-element col-lg-3 col-md-3 col-sm-6 col-xs-12">
+          <i class="fa fa-laptop fa-4x"></i>
+          <div class="milestone-counter">
+            <span class="stat-count highlight">105</span>
+            <div class="milestone-details">Completed Transaction</div>
+          </div>
+        </div>
+        <div class="f-element col-lg-3 col-md-3 col-sm-6 col-xs-12">
+          <i class="fa fa-comments-o fa-4x"></i>
+          <div class="milestone-counter">
+            <span class="stat-count highlight">492</span>
+            <div class="milestone-details">Questions Answered</div>
+          </div>
+        </div>
+        <div class="f-element col-lg-3 col-md-3 col-sm-6 col-xs-12">
+          <i class="fa fa-smile-o fa-4x"></i>
+          <div class="milestone-counter">
+            <span class="stat-count highlight">790</span>
+            <div class="milestone-details">Happy Clients</div>
+          </div>
+        </div>
+      </div>
+      <!-- end stat -->
+
+    </div>
+    <!-- end container -->
+  </section>
+  <!-- end section -->
+  <section class="section3 withpadding">
+    <div class="container">
+      <div class="message">
+        <div class="col-lg-9 col-md-9 col-sm-9">
+          <h3>Grab the attention of your customers!</h3>
+          <p>Once you rent the motorcycle your destinations are limited because the Philippines is an archipelago.</p>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-12">
+          <a class="dmbutton button large pull-right" href="#"><i class="fa fa-download"></i> BOOK NOW !</a>
+        </div>
+      </div>
+      <!-- end message -->
+    </div>
+    <!-- end container -->
+  </section>
+  <!-- end section3 -->
+
+  <!-- P -->
+
+
+  <!--Footer -->
+  <?php include('includes/footer.php'); ?>
+  <!-- /Footer-->
+
+  <!--Back to top-->
+  <div id="back-top" class="back-top"> <a href="#top"><i class="fa fa-angle-up" aria-hidden="true"></i> </a> </div>
+
+  <!--/Back to top-->
+
+  <!--Login-Form -->
+  <?php include('includes/login.php'); ?>
+  <!--/Login-Form -->
+
+  <!--Register-Form -->
+  <?php include('includes/registration.php'); ?>
+
+  <!--/Register-Form -->
+
+  <!--Forgot-password-Form -->
+  <?php include('includes/forgotpassword.php'); ?>
+  <!--/Forgot-password-Form -->
+
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/interface.js"></script>
+  <!--Switcher-->
+  <script src="assets/switcher/js/switcher.js"></script>
+  <!--bootstrap-slider-JS-->
+  <script src="assets/js/bootstrap-slider.min.js"></script>
+  <!--Slider-JS-->
+  <script src="assets/js/slick.min.js"></script>
+  <script src="assets/js/owl.carousel.min.js"></script>
 
 
 
 
-
-      <<!--Footer -->
-        <?php include('includes/footer.php'); ?>
-        <!-- /Footer-->
-
-        <!--Back to top-->
-        <div id="back-top" class="back-top"> <a href="#top"><i class="fa fa-angle-up" aria-hidden="true"></i> </a> </div>
-        <!--/Back to top-->
-
-        <!--Login-Form -->
-        <?php include('includes/login.php'); ?>
-        <!--/Login-Form -->
-
-        <!--Register-Form -->
-        <?php include('includes/registration.php'); ?>
-
-        <!--/Register-Form -->
-
-        <!--Forgot-password-Form -->
-        <?php include('includes/forgotpassword.php'); ?>
-        <!--/Forgot-password-Form -->
-
-        <!-- Scripts -->
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/bootstrap.min.js"></script>
-        <script src="assets/js/interface.js"></script>
-        <!--Switcher-->
-        <script src="assets/switcher/js/switcher.js"></script>
-        <!--bootstrap-slider-JS-->
-        <script src="assets/js/bootstrap-slider.min.js"></script>
-        <!--Slider-JS-->
-        <script src="assets/js/slick.min.js"></script>
-        <script src="assets/js/owl.carousel.min.js"></script>
 
 </body>
 
