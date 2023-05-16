@@ -34,6 +34,8 @@ error_reporting(0);
   <link rel="apple-touch-icon-precomposed" href="./assets/images/surety/suretyfavicon.png">
   <link rel="shortcut icon" href="./assets/images/surety/suretyfavicon.png">
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -112,7 +114,7 @@ error_reporting(0);
               <h5><i class="fa fa-filter" aria-hidden="true"></i> Find Your Motorbike </h5>
             </div>
             <div class="sidebar_filter">
-              <form action="search-carresult.php" method="post">
+              <form action="search-result.php" method="post">
                 <div class="form-group select">
                   <select class="form-control" name="brand">
                     <option>Select Brand</option>
