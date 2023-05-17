@@ -936,6 +936,7 @@ table thead td {
   border-radius: 0;
   padding: 15px 0;
   top: 107%;
+  left: -130px;
 }
 
 /*----------------------------------
@@ -1050,6 +1051,7 @@ nav.navbar {
   }
   .navbar-nav > li > .dropdown-menu {
     top: 80px;
+
     display: block !important;
     transition: 0.4s;
     -webkit-transition: 0.4s;
@@ -4223,8 +4225,7 @@ table.info-tabel tr td {
 =====================================*/
 
 @media (max-width: 767px) {
-  .header_widgets,
-  header .social-follow {
+  .header_widgets {
     display: none;
   }
   .navbar-header {

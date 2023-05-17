@@ -6,6 +6,7 @@ if (isset($_POST['submit'])) {
   $fromdate = $_POST['fromdate'];
   $todate = $_POST['todate'];
   $message = $_POST['message'];
+
   $useremail = $_SESSION['login'];
   $status = 0;
   $vhid = $_GET['vhid'];
@@ -28,7 +29,9 @@ if (isset($_POST['submit'])) {
     $query->bindParam(':fromdate', $fromdate, PDO::PARAM_STR);
     $query->bindParam(':todate', $todate, PDO::PARAM_STR);
     $query->bindParam(':message', $message, PDO::PARAM_STR);
+
     $query->bindParam(':status', $status, PDO::PARAM_STR);
+
     $query->execute();
     $lastInsertId = $dbh->lastInsertId();
     if ($lastInsertId) {
@@ -334,6 +337,10 @@ if (isset($_POST['submit'])) {
                   <div class="form-group">
                     <label>To Date:</label>
                     <input type="date" class="form-control" name="todate" placeholder="To Date" required>
+                  </div>
+                  <div class="form-group">
+                    <label>Upload ID</label>
+                    <input type="file" class="form-control" name="uploadid" required>
                   </div>
                   <div class="form-group">
                     <textarea rows="4" class="form-control" name="message" placeholder="Message" required></textarea>

@@ -150,6 +150,8 @@ if (strlen($_SESSION['login']) == 0) {
                                 <th>To Date</th>
                                 <th>Total Days</th>
                                 <th>Rent / Day</th>
+                                <th>id</th>
+                                <th>selfie w/ id</th>
                               </tr>
                               <tr>
                                 <td><?php echo htmlentities($result->VehiclesTitle); ?>, <?php echo htmlentities($result->BrandName); ?></td>
@@ -157,6 +159,7 @@ if (strlen($_SESSION['login']) == 0) {
                                 <td> <?php echo htmlentities($result->ToDate); ?></td>
                                 <td><?php echo htmlentities($tds = $result->totaldays); ?></td>
                                 <td> <?php echo htmlentities($ppd = $result->PricePerDay); ?></td>
+                                <td> <?php echo htmlentities($uid = $result->uploadid); ?></td>
                               </tr>
                               <tr>
                                 <th colspan="4" style="text-align:center;"> Grand Total</th>

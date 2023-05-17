@@ -133,7 +133,7 @@ if (strlen($_SESSION['login']) == 0) {
 
 
                       <div class="form-group">
-                        <label class="control-label">Testimonail</label>
+                        <label class="control-label">Testimonial</label>
                         <textarea class="form-control white_bg" name="testimonial" rows="4" required=""></textarea>
                       </div>
 

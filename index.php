@@ -73,8 +73,8 @@ error_reporting(0);
   <section class="fun-facts-section">
     <div class="container div_zindex">
       <div align="center">
-        <h1 style="color: white;">It's really easier to rent!</h1>
-        <h5 style="color: white;">We can rent different kinds of motorcycle at a low price</h5>
+        <h1 style="color: white;">It's easier to rent!</h1>
+        <h5 style="color: white;">We can rent different kinds of motorcycles at a low price</h5>
       </div>
       <div><img src="" alt=""></div>
       <div class="row">
