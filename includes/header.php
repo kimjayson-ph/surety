@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-3 col-md-2">
-          <div class="logo"> <a href="index.php"><img src="assets/images/surety/headerlogo.png" style="width: 153px;" alt="image" /></a> </div>
+          <div class="logo"> <a href="index.php"><img src="assets/images/surety/headerlogo.png" style="width: 153px; height: 55px;" alt="image" /></a> </div>
         </div>
         <div class="col-sm-9 col-md-10">
           <div class="header_info">
@@ -36,7 +36,7 @@
               <div class="login_btn"> <a style="background-color: #7bc41d;" href="#loginform" class="btn btn-xs uppercase" data-toggle="modal" data-dismiss="modal">Login / Register</a> </div>
             <?php } else {
 
-              echo  "Welcome To SuretyMoto rental portal";
+              echo  "";
             } ?>
           </div>
         </div>

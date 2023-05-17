@@ -45,10 +45,12 @@ error_reporting(0);
     <div class="container">
       <div class="div_zindex">
         <div class="row">
-          <div class="col-md col-md-push-7">
+          <div class="col-md">
             <div class="banner_content">
-              <h1>EASY & AFFORDABLE</h1>
-              <p>Find the perfect motorcycle for rent today!</p>
+              <div class="backdrop">
+                <h1>EASY & AFFORDABLE</h1>
+                <p>Find the perfect motorcycle for rent today!</p>
+              </div>
               <a href="" class="btn" style="background-color: #7bc41d;">Rent a Ride</a>
               <a href="" class="btn" style="background-color: #7bc41d; margin-left: 10px;">Learn more</a>
 
@@ -60,9 +62,10 @@ error_reporting(0);
   </section>
   <!-- /Banners -->
   <div class="container ">
-    <div class="section-header text-center">
+    <div class="section-header choose-section text-center">
       <h2>Choose the Best <span>MotorBike</span></h2>
-      <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+      <p>Surety Motorbikes Rental is a company that provides top-of-the-line motorbikes for rent. Our mission is to provide customers with the best possible experience when it comes to renting a motorbike. We believe that everyone should have access to high-quality, reliable transportation.</p>
+      <p>Safety First At Surety Motorbikes Rental, safety is our top priority. All of our motorbikes are regularly maintained and inspected to ensure they are in top working condition. We also provide customers with helmets and other safety gear to ensure their protection while riding. </p>
     </div>
   </div>
 
@@ -75,7 +78,7 @@ error_reporting(0);
       </div>
       <div><img src="" alt=""></div>
       <div class="row">
-        <div class="col-lg-6 col-md-6 col-xs col-sm-6">
+        <div class="col-lg-3 col-md-3 col-xs col-sm-3">
           <div>
             <div align="center" class="cell">
               <img src="./assets/images/surety/1.png" style="width: 280px; margin: 10px 10px" alt="">
@@ -83,7 +86,7 @@ error_reporting(0);
             </div>
           </div>
         </div>
-        <div class="col-lg-6 col-md-6 col-xs col-sm-6">
+        <div class="col-lg-3 col-md-3 col-xs col-sm-3">
           <div>
             <div align="center" class="cell">
               <img src="./assets/images/surety/2.png" style="width: 280px; margin: 10px 10px" alt="">
@@ -91,9 +94,9 @@ error_reporting(0);
             </div>
           </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-6 col-md-6 col-xs col-sm-6">
+
+
+        <div class="col-lg-3 col-md-3 col-xs col-sm-3">
           <div>
             <div align="center" class="cell">
               <img src="./assets/images/surety/3.png" style="width: 280px; margin: 10px 10px" alt="">
@@ -101,7 +104,7 @@ error_reporting(0);
             </div>
           </div>
         </div>
-        <div class="col-lg-6 col-md-6 col-xs col-sm-6">
+        <div class="col-lg-3 col-md-3 col-xs col-sm-3">
           <div>
             <div align="center" class="cell">
               <img src="./assets/images/surety/4.png" style="width: 280px; margin: 10px 10px" alt="">

@@ -36,11 +36,11 @@ if (isset($_POST['submit'])) {
       echo "<script type='text/javascript'> document.location = 'my-booking.php'; </script>";
     } else {
       echo "<script>alert('Something went wrong. Please try again');</script>";
-      echo "<script type='text/javascript'> document.location = 'car-listing.php'; </script>";
+      echo "<script type='text/javascript'> document.location = 'motorbike-listing.php'; </script>";
     }
   } else {
     echo "<script>alert('Motorbike already booked for these days');</script>";
-    echo "<script type='text/javascript'> document.location = 'car-listing.php'; </script>";
+    echo "<script type='text/javascript'> document.location = 'motorbike-listing.php'; </script>";
   }
 }
 
