@@ -125,7 +125,7 @@ where tblvehicles.VehiclesTitle=:search || tblvehicles.FuelType=:search || tblbr
               <h5><i class="fa fa-filter" aria-hidden="true"></i> Find Your Motorbike </h5>
             </div>
             <div class="sidebar_filter">
-              <form action="search-result.php" method="get">
+              <form action="motorbike-listing.php" method="post">
                 <div class="form-group select">
                   <select class="form-control">
                     <option>Select Brand</option>

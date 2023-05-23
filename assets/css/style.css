@@ -190,9 +190,6 @@ ul.list-with-icon li i {
   top: 4px;
 }
 
-blockquote {
-  background: #f5f5f5;
-}
 .white-text,
 .white-text h1,
 .white-text h2,
@@ -249,7 +246,7 @@ blockquote {
 }
 .btn:hover,
 .btn:focus {
-  color: #ffffff;
+  color: #c51514;
   outline: none;
 }
 .btn-link {
@@ -413,6 +410,7 @@ a:focus,
 #other_info:hover {
   background-color: #c60210;
   fill: #fb4d59;
+  color: white;
 }
 
 .nav-tabs > li.active > a,

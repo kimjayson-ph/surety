@@ -97,7 +97,7 @@
           <li><a href="index.php">Home</a> </li>
           <li><a href="page.php?type=aboutus">About Us</a></li>
           <li><a href="motorbike-listing.php">Motorbike Listing</a>
-          <li><a href="page.php?type=faqs">FAQs</a></li>
+          <li><a href="faqs.php?type=faqs">FAQs</a></li>
           <li><a href="contact-us.php">Contact Us</a></li>
 
         </ul>

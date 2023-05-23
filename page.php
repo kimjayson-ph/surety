@@ -177,28 +177,28 @@ include('includes/config.php');
         <div class="f-element col-lg-3 col-md-3 col-sm-6 col-xs-12">
           <i class="fa fa-motorcycle fa-4x"></i>
           <div class="milestone-counter">
-            <span class="stat-count highlight">42</span>
+            <span class="stat-count highlight">6</span>
             <div class="milestone-details">Motorbikes</div>
           </div>
         </div>
         <div class="f-element col-lg-3 col-md-3 col-sm-6 col-xs-12">
           <i class="fa fa-laptop fa-4x"></i>
           <div class="milestone-counter">
-            <span class="stat-count highlight">105</span>
+            <span class="stat-count highlight">10</span>
             <div class="milestone-details">Completed Transaction</div>
           </div>
         </div>
         <div class="f-element col-lg-3 col-md-3 col-sm-6 col-xs-12">
           <i class="fa fa-comments-o fa-4x"></i>
           <div class="milestone-counter">
-            <span class="stat-count highlight">492</span>
+            <span class="stat-count highlight">20</span>
             <div class="milestone-details">Questions Answered</div>
           </div>
         </div>
         <div class="f-element col-lg-3 col-md-3 col-sm-6 col-xs-12">
           <i class="fa fa-smile-o fa-4x"></i>
           <div class="milestone-counter">
-            <span class="stat-count highlight">790</span>
+            <span class="stat-count highlight">10</span>
             <div class="milestone-details">Happy Clients</div>
           </div>
         </div>
