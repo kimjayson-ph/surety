@@ -776,7 +776,7 @@ table thead td {
 .default-header {
   background: #fff none repeat scroll 0 0;
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
-  padding: 10px 0;
+  padding-top: 5px;
   transition-duration: 0.3s;
   -moz-transition-duration: 0.3s;
   -o-transition-duration: 0.3s;

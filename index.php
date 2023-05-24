@@ -51,8 +51,8 @@ error_reporting(0);
                 <h1>EASY & AFFORDABLE</h1>
                 <p>Find the perfect motorcycle for rent today!</p>
               </div>
-              <a href="" class="btn" style="background-color: #7bc41d;">Rent a Ride</a>
-              <a href="" class="btn" style="background-color: #7bc41d; margin-left: 10px;">Learn more</a>
+              <a href="motorbike-listing.php" class="btn" style="background-color: #7bc41d;">Rent a Ride</a>
+              <a href="#funFacts" class="btn" style="background-color: #7bc41d; margin-left: 10px;">Learn more</a>
 
             </div>
           </div>
@@ -70,7 +70,7 @@ error_reporting(0);
   </div>
 
   <!-- Fun Facts-->
-  <section class="fun-facts-section">
+  <section class="fun-facts-section" id="funFacts">
     <div class="container div_zindex">
       <div align="center">
         <h1 style="color: white;">It's easier to rent!</h1>

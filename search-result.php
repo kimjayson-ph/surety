@@ -125,7 +125,7 @@ error_reporting(0);
               <h5><i class="fa fa-filter" aria-hidden="true"></i> Find Your Motorbike </h5>
             </div>
             <div class="sidebar_filter">
-              <form action="search.php" method="post">
+              <form action="search-result.php" method="post">
                 <div class="form-group select">
                   <select class="form-control" name="brand">
                     <option>Select Brand</option>
