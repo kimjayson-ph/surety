@@ -34,7 +34,7 @@ include('includes/config.php');
   <link rel="apple-touch-icon-precomposed" href="./assets/images/surety/suretyfavicon.png">
   <link rel="shortcut icon" href="./assets/images/surety/suretyfavicon.png">
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css?family=Ruda:400,900,700" rel="stylesheet">
 
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
