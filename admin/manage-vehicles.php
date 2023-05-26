@@ -99,7 +99,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 												<th>Vehicle Title</th>
 												<th>Brand </th>
 												<th>Price Per day</th>
-												<th>Fuel Type</th>
+
 												<th>Model Year</th>
 												<th>Action</th>
 											</tr>
@@ -110,7 +110,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 												<th>Vehicle Title</th>
 												<th>Brand </th>
 												<th>Price Per day</th>
-												<th>Fuel Type</th>
+
 												<th>Model Year</th>
 												<th>Action</th>
 											</tr>
@@ -130,7 +130,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 														<td><?php echo htmlentities($result->VehiclesTitle); ?></td>
 														<td><?php echo htmlentities($result->BrandName); ?></td>
 														<td><?php echo htmlentities($result->PricePerDay); ?></td>
-														<td><?php echo htmlentities($result->FuelType); ?></td>
+
 														<td><?php echo htmlentities($result->ModelYear); ?></td>
 														<td><a href="edit-vehicle.php?id=<?php echo $result->id; ?>"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
 															<a href="manage-vehicles.php?del=<?php echo $result->id; ?>" onclick="return confirm('Do you want to delete');"><i class="fa fa-close"></i></a>
