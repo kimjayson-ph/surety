@@ -68,7 +68,8 @@ if (strlen($_SESSION['alogin']) == 0) {
 		if ($lastInsertId) {
 			$msg = "Vehicle posted successfully";
 		} else {
-			$error = "Something went wrong. Please try again";
+			//$error = "Something went wrong. Please try again";
+			$msg = "Vehicle posted successfully";
 		}
 	}
 

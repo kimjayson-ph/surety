@@ -65,7 +65,7 @@
               <div class="login_btn"> <a style="background-color: #7bc41d;" href="#loginform" class="btn btn-xs uppercase" data-toggle="modal" data-dismiss="modal">Login / Register</a> </div>
             <?php } else {
 
-              echo  "";
+              echo  " ";
             } ?>
 
 

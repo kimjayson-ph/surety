@@ -283,15 +283,14 @@ include('includes/config.php');
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/interface.js"></script>
-    <!--Switcher-->
-    <script src="assets/switcher/js/switcher.js"></script>
+
     <!--bootstrap-slider-JS-->
     <script src="assets/js/bootstrap-slider.min.js"></script>
     <!--Slider-JS-->
     <script src="assets/js/slick.min.js"></script>
     <script src="assets/js/owl.carousel.min.js"></script>
     <!-- JavaScript Libraries -->
-    <script src="lib/php-mail-form/validate.js"></script>
+    <!--  <script src="lib/php-mail-form/validate.js"></script>
     <script src="lib/prettyphoto/js/prettyphoto.js"></script>
     <script src="lib/isotope/isotope.min.js"></script>
     <script src="lib/hover/hoverdir.js"></script>
@@ -302,7 +301,7 @@ include('includes/config.php');
     <script src="lib/animate-enhanced/animate-enhanced.min.js"></script>
     <script src="lib/jigowatt/jigowatt.js"></script>
     <script src="lib/easypiechart/easypiechart.min.js"></script>
-
+ -->
     <!-- Template Main Javascript File -->
     <script src="js/main.js"></script>
 
