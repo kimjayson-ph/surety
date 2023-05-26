@@ -128,7 +128,7 @@ if (strlen($_SESSION['login']) == 0) {
       foreach ($results as $result) { ?>
         <section class="user_profile inner_pages">
           <div class="container">
-            <div class="user_profile_info gray-bg padding_4x4_40">
+            <!-- <div class="user_profile_info gray-bg padding_4x4_40">
               <div class="upload_user_logo"> <img src="assets/images/surety/headerlogo.png" alt="image">
               </div>
 
@@ -139,17 +139,17 @@ if (strlen($_SESSION['login']) == 0) {
                                                                 }
                                                               } ?></p>
               </div>
-            </div>
+            </div> -->
             <div class="row">
               <div class="col-md-3 col-sm-3">
                 <?php include('includes/sidebar.php'); ?>
                 <div class="col-md-6 col-sm-8">
+
                   <div class="profile_wrap">
+                    <h5 class="uppercase underline">Update password</h5>
                     <form name="chngpwd" method="post" onSubmit="return valid();">
 
-                      <div class="gray-bg field-title">
-                        <h6>Update password</h6>
-                      </div>
+
                       <?php if ($error) { ?><div class="errorWrap"><strong>ERROR</strong>:<?php echo htmlentities($error); ?> </div><?php } else if ($msg) { ?><div class="succWrap"><strong>SUCCESS</strong>:<?php echo htmlentities($msg); ?> </div><?php } ?>
                       <div class="form-group">
                         <label class="control-label">Current Password</label>
