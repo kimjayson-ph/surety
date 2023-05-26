@@ -21,6 +21,8 @@ if (isset($_POST['login'])) {
 
 ?>
 
+
+
 <div class="modal fade" id="loginform">
   <div class="modal-dialog" role="document">
     <div class="modal-content">

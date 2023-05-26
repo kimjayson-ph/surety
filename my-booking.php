@@ -102,7 +102,7 @@ if (strlen($_SESSION['login']) == 0) {
                       <ul class="vehicle_listing">
                         <?php
                         $useremail = $_SESSION['login'];
-                        $sql = "SELECT tblvehicles.Vimage1 as Vimage1,tblvehicles.VehiclesTitle,tblvehicles.id as vid,tblbrands.BrandName,tblbooking.FromDate,tblbooking.ToDate,tblbooking.message,tblbooking.Status,tblvehicles.PricePerDay,DATEDIFF(tblbooking.ToDate,tblbooking.FromDate) as totaldays,tblbooking.BookingNumber  from tblbooking join tblvehicles on tblbooking.VehicleId=tblvehicles.id join tblbrands on tblbrands.id=tblvehicles.VehiclesBrand where tblbooking.userEmail=:useremail order by tblbooking.id desc";
+                        $sql = "SELECT tblvehicles.Vimage1 as Vimage1,tblvehicles.VehiclesTitle,tblvehicles.id as vid,tblbrands.BrandName,tblbooking.FromDate,tblbooking.ToDate,tblbooking.message,tblbooking.Status,tblbooking.driverid,tblvehicles.PricePerDay,DATEDIFF(tblbooking.ToDate,tblbooking.FromDate) as totaldays,tblbooking.BookingNumber  from tblbooking join tblvehicles on tblbooking.VehicleId=tblvehicles.id join tblbrands on tblbrands.id=tblvehicles.VehiclesBrand where tblbooking.userEmail=:useremail order by tblbooking.id desc";
                         $query = $dbh->prepare($sql);
                         $query->bindParam(':useremail', $useremail, PDO::PARAM_STR);
                         $query->execute();
@@ -123,12 +123,12 @@ if (strlen($_SESSION['login']) == 0) {
                                 </div>
                               </div>
                               <?php if ($result->Status == 1) { ?>
-                                <div class="vehicle_status"> <a href="#" class="btn outline btn-xs active-btn">Confirmed</a>
+                                <div class="vehicle_status"> <a href="#" style="background-color: #7bc41d;" class="btn btn-xs active-btn">Confirmed</a>
                                   <div class="clearfix"></div>
                                 </div>
 
                               <?php } else if ($result->Status == 2) { ?>
-                                <div class="vehicle_status"> <a href="#" class="btn outline btn-xs">Cancelled</a>
+                                <div class="vehicle_status"> <a href="#" style="background-color: red;" class="btn outline btn-xs">Cancelled</a>
                                   <div class="clearfix"></div>
                                 </div>
 
@@ -150,8 +150,8 @@ if (strlen($_SESSION['login']) == 0) {
                                 <th>To Date</th>
                                 <th>Total Days</th>
                                 <th>Rent / Day</th>
-                                <th>id</th>
-                                <th>selfie w/ id</th>
+                                <th>Drivers License</th>
+
                               </tr>
                               <tr>
                                 <td><?php echo htmlentities($result->VehiclesTitle); ?>, <?php echo htmlentities($result->BrandName); ?></td>
@@ -159,7 +159,7 @@ if (strlen($_SESSION['login']) == 0) {
                                 <td> <?php echo htmlentities($result->ToDate); ?></td>
                                 <td><?php echo htmlentities($tds = $result->totaldays); ?></td>
                                 <td> <?php echo htmlentities($ppd = $result->PricePerDay); ?></td>
-                                <td> <?php echo htmlentities($uid = $result->uploadid); ?></td>
+                                <td> <img width="70px" src="./img/id/<?php echo htmlentities($result->driverid); ?>" alt="image"></td>
                               </tr>
                               <tr>
                                 <th colspan="4" style="text-align:center;"> Grand Total</th>

@@ -117,6 +117,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 												<th>From Date</th>
 												<th>To Date</th>
 												<th>Message</th>
+												<th>Drivers License</th>
 												<th>Status</th>
 												<th>Posting date</th>
 												<th>Action</th>
@@ -130,6 +131,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 												<th>From Date</th>
 												<th>To Date</th>
 												<th>Message</th>
+												<th>Drivers License</th>
 												<th>Status</th>
 												<th>Posting date</th>
 												<th>Action</th>
@@ -137,7 +139,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 										</tfoot>
 										<tbody>
 
-											<?php $sql = "SELECT tblusers.FullName,tblbrands.BrandName,tblvehicles.VehiclesTitle,tblbooking.FromDate,tblbooking.ToDate,tblbooking.message,tblbooking.VehicleId as vid,tblbooking.Status,tblbooking.PostingDate,tblbooking.id  from tblbooking join tblvehicles on tblvehicles.id=tblbooking.VehicleId join tblusers on tblusers.EmailId=tblbooking.userEmail join tblbrands on tblvehicles.VehiclesBrand=tblbrands.id  ";
+											<?php $sql = "SELECT tblusers.FullName,tblbrands.BrandName,tblvehicles.VehiclesTitle,tblbooking.FromDate,tblbooking.ToDate,tblbooking.message,tblbooking.driverid,tblbooking.VehicleId as vid,tblbooking.Status,tblbooking.PostingDate,tblbooking.id  from tblbooking join tblvehicles on tblvehicles.id=tblbooking.VehicleId join tblusers on tblusers.EmailId=tblbooking.userEmail join tblbrands on tblvehicles.VehiclesBrand=tblbrands.id  ";
 											$query = $dbh->prepare($sql);
 											$query->execute();
 											$results = $query->fetchAll(PDO::FETCH_OBJ);
@@ -151,6 +153,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 														<td><?php echo htmlentities($result->FromDate); ?></td>
 														<td><?php echo htmlentities($result->ToDate); ?></td>
 														<td><?php echo htmlentities($result->message); ?></td>
+														<td> <img width="60px" src="../img/id/<?php echo htmlentities($result->driverid); ?>" alt="image"></td>
 														<td><?php
 															if ($result->Status == 0) {
 																echo htmlentities('Not Confirmed yet');

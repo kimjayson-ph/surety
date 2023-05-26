@@ -6,10 +6,11 @@ if (isset($_POST['submit'])) {
   $fromdate = $_POST['fromdate'];
   $todate = $_POST['todate'];
   $message = $_POST['message'];
-
+  $driverid = $_FILES["driverslicense"]["name"];
   $useremail = $_SESSION['login'];
   $status = 0;
   $vhid = $_GET['vhid'];
+  move_uploaded_file($_FILES["driverslicense"]["tmp_name"], "./img/id/" . $_FILES["driverslicense"]["name"]);
   $bookingno = mt_rand(100000000, 999999999);
   $ret = "SELECT * FROM tblbooking where (:fromdate BETWEEN date(FromDate) and date(ToDate) || :todate BETWEEN date(FromDate) and date(ToDate) || date(FromDate) BETWEEN :fromdate and :todate) and VehicleId=:vhid";
   $query1 = $dbh->prepare($ret);
@@ -21,7 +22,7 @@ if (isset($_POST['submit'])) {
 
   if ($query1->rowCount() == 0) {
 
-    $sql = "INSERT INTO  tblbooking(BookingNumber,userEmail,VehicleId,FromDate,ToDate,message,Status) VALUES(:bookingno,:useremail,:vhid,:fromdate,:todate,:message,:status)";
+    $sql = "INSERT INTO  tblbooking(BookingNumber,userEmail,VehicleId,FromDate,ToDate,message,Status,driverid) VALUES(:bookingno,:useremail,:vhid,:fromdate,:todate,:message,:status,:driverid)";
     $query = $dbh->prepare($sql);
     $query->bindParam(':bookingno', $bookingno, PDO::PARAM_STR);
     $query->bindParam(':useremail', $useremail, PDO::PARAM_STR);
@@ -31,7 +32,7 @@ if (isset($_POST['submit'])) {
     $query->bindParam(':message', $message, PDO::PARAM_STR);
 
     $query->bindParam(':status', $status, PDO::PARAM_STR);
-
+    $query->bindParam(':driverid', $driverid, PDO::PARAM_STR);
     $query->execute();
     $lastInsertId = $dbh->lastInsertId();
     if ($lastInsertId) {
@@ -329,7 +330,7 @@ if (isset($_POST['submit'])) {
                 <div class="widget_heading">
                   <h5><i class="fa fa-envelope" aria-hidden="true"></i>Book Now</h5>
                 </div>
-                <form method="post">
+                <form method="post" enctype="multipart/form-data">
                   <div class="form-group">
                     <label>From Date:</label>
                     <input type="date" class="form-control" name="fromdate" placeholder="From Date" required>
@@ -339,8 +340,8 @@ if (isset($_POST['submit'])) {
                     <input type="date" class="form-control" name="todate" placeholder="To Date" required>
                   </div>
                   <div class="form-group">
-                    <label>Upload ID</label>
-                    <input type="file" class="form-control" name="uploadid" required>
+                    <label>Upload Driver's License</label>
+                    <input type="file" class="form-control" name="driverslicense" required>
                   </div>
                   <div class="form-group">
                     <textarea rows="4" class="form-control" name="message" placeholder="Message" required></textarea>
