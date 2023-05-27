@@ -115,7 +115,7 @@ include('includes/config.php');
                   <i class="dm-icon fa fa-comments fa-3x"></i>
                 </div>
               </div>
-              <h4>2. Live Chat!</h4>
+              <h4> Live Chat!</h4>
               <p>You can escalate your issue to our representative, if you feel you’re not getting the service you deserve.</p>
             </div>
           </div>
@@ -128,7 +128,7 @@ include('includes/config.php');
                   <i class="dm-icon fa fa-envelope-o fa-3x"></i>
                 </div>
               </div>
-              <h4>3. Report a Bug</h4>
+              <h4> Report a Bug</h4>
               <p>
                 Make statements that demonstrate your dissatisfaction. You should articulate your dissatisfaction in a forceful way</p>
             </div>
