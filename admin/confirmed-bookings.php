@@ -92,6 +92,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 												<th>From Date</th>
 												<th>To Date</th>
 												<th>Status</th>
+												<th>Drivers License</th>
 												<th>Posting date</th>
 												<th>Action</th>
 											</tr>
@@ -105,6 +106,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 												<th>From Date</th>
 												<th>To Date</th>
 												<th>Status</th>
+												<th>Drivers License</th>
 												<th>Posting date</th>
 												<th>Action</th>
 											</tr>
@@ -114,7 +116,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 											<?php
 
 											$status = 1;
-											$sql = "SELECT tblusers.FullName,tblbrands.BrandName,tblvehicles.VehiclesTitle,tblbooking.FromDate,tblbooking.ToDate,tblbooking.message,tblbooking.VehicleId as vid,tblbooking.Status,tblbooking.PostingDate,tblbooking.id,tblbooking.BookingNumber  from tblbooking join tblvehicles on tblvehicles.id=tblbooking.VehicleId join tblusers on tblusers.EmailId=tblbooking.userEmail join tblbrands on tblvehicles.VehiclesBrand=tblbrands.id   where tblbooking.Status=:status";
+											$sql = "SELECT tblusers.FullName,tblbrands.BrandName,tblvehicles.VehiclesTitle,tblbooking.FromDate,tblbooking.ToDate,tblbooking.message,tblbooking.VehicleId as vid,tblbooking.Status,tblbooking.driverid,tblbooking.PostingDate,tblbooking.id,tblbooking.BookingNumber  from tblbooking join tblvehicles on tblvehicles.id=tblbooking.VehicleId join tblusers on tblusers.EmailId=tblbooking.userEmail join tblbrands on tblvehicles.VehiclesBrand=tblbrands.id   where tblbooking.Status=:status";
 											$query = $dbh->prepare($sql);
 											$query->bindParam(':status', $status, PDO::PARAM_STR);
 											$query->execute();
@@ -138,6 +140,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 																echo htmlentities('Cancelled');
 															}
 															?></td>
+														<td> <img width="60px" src="../img/id/<?php echo htmlentities($result->driverid); ?>" alt="image"></td>
 														<td><?php echo htmlentities($result->PostingDate); ?></td>
 														<td>
 
