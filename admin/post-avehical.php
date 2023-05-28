@@ -19,25 +19,25 @@ if (strlen($_SESSION['alogin']) == 0) {
 		$vimage3 = $_FILES["img3"]["name"];
 		$vimage4 = $_FILES["img4"]["name"];
 		$vimage5 = $_FILES["img5"]["name"];
-		$airconditioner = $_POST['airconditioner'];
+		$helmet = $_POST['helmet'];
 		$powerdoorlocks = $_POST['powerdoorlocks'];
-		$antilockbrakingsys = $_POST['antilockbrakingsys'];
+		$raincoat = $_POST['raincoat'];
 		$brakeassist = $_POST['brakeassist'];
-		$powersteering = $_POST['powersteering'];
+		$phoneholder = $_POST['phoneholder'];
 		$driverairbag = $_POST['driverairbag'];
 		$passengerairbag = $_POST['passengerairbag'];
-		$powerwindow = $_POST['powerwindow'];
-		$cdplayer = $_POST['cdplayer'];
+		$phonecharger = $_POST['phonecharger'];
+		$ndhelmet = $_POST['ndhelmet'];
 		$centrallocking = $_POST['centrallocking'];
 		$crashcensor = $_POST['crashcensor'];
-		$leatherseats = $_POST['leatherseats'];
+		$ndraincoat = $_POST['ndraincoat'];
 		move_uploaded_file($_FILES["img1"]["tmp_name"], "img/vehicleimages/" . $_FILES["img1"]["name"]);
 		move_uploaded_file($_FILES["img2"]["tmp_name"], "img/vehicleimages/" . $_FILES["img2"]["name"]);
 		move_uploaded_file($_FILES["img3"]["tmp_name"], "img/vehicleimages/" . $_FILES["img3"]["name"]);
 		move_uploaded_file($_FILES["img4"]["tmp_name"], "img/vehicleimages/" . $_FILES["img4"]["name"]);
 		move_uploaded_file($_FILES["img5"]["tmp_name"], "img/vehicleimages/" . $_FILES["img5"]["name"]);
 
-		$sql = "INSERT INTO tblvehicles(VehiclesTitle,VehiclesBrand,VehiclesOverview,PricePerDay,FuelType,ModelYear,SeatingCapacity,Vimage1,Vimage2,Vimage3,Vimage4,Vimage5,AirConditioner,PowerDoorLocks,AntiLockBrakingSystem,BrakeAssist,PowerSteering,DriverAirbag,PassengerAirbag,PowerWindows,CDPlayer,CentralLocking,CrashSensor,LeatherSeats) VALUES(:vehicletitle,:brand,:vehicleoverview,:priceperday,:fueltype,:modelyear,:seatingcapacity,:vimage1,:vimage2,:vimage3,:vimage4,:vimage5,:airconditioner,:powerdoorlocks,:antilockbrakingsys,:brakeassist,:powersteering,:driverairbag,:passengerairbag,:powerwindow,:cdplayer,:centrallocking,:crashcensor,:leatherseats)";
+		$sql = "INSERT INTO tblvehicles(VehiclesTitle,VehiclesBrand,VehiclesOverview,PricePerDay,FuelType,ModelYear,SeatingCapacity,Vimage1,Vimage2,Vimage3,Vimage4,Vimage5,helmet,PowerDoorLocks,raincoat,BrakeAssist,phoneholder,DriverAirbag,PassengerAirbag,phonecharger,ndhelmet,CentralLocking,CrashSensor,ndraincoat) VALUES(:vehicletitle,:brand,:vehicleoverview,:priceperday,:fueltype,:modelyear,:seatingcapacity,:vimage1,:vimage2,:vimage3,:vimage4,:vimage5,:helmet,:powerdoorlocks,:raincoat,:brakeassist,:phoneholder,:driverairbag,:passengerairbag,:phonecharger,:ndhelmet,:centrallocking,:crashcensor,:ndraincoat)";
 		$query = $dbh->prepare($sql);
 		$query->bindParam(':vehicletitle', $vehicletitle, PDO::PARAM_STR);
 		$query->bindParam(':brand', $brand, PDO::PARAM_STR);
@@ -51,18 +51,18 @@ if (strlen($_SESSION['alogin']) == 0) {
 		$query->bindParam(':vimage3', $vimage3, PDO::PARAM_STR);
 		$query->bindParam(':vimage4', $vimage4, PDO::PARAM_STR);
 		$query->bindParam(':vimage5', $vimage5, PDO::PARAM_STR);
-		$query->bindParam(':airconditioner', $airconditioner, PDO::PARAM_STR);
+		$query->bindParam(':helmet', $helmet, PDO::PARAM_STR);
 		$query->bindParam(':powerdoorlocks', $powerdoorlocks, PDO::PARAM_STR);
-		$query->bindParam(':antilockbrakingsys', $antilockbrakingsys, PDO::PARAM_STR);
+		$query->bindParam(':raincoat', $raincoat, PDO::PARAM_STR);
 		$query->bindParam(':brakeassist', $brakeassist, PDO::PARAM_STR);
-		$query->bindParam(':powersteering', $powersteering, PDO::PARAM_STR);
+		$query->bindParam(':phoneholder', $phoneholder, PDO::PARAM_STR);
 		$query->bindParam(':driverairbag', $driverairbag, PDO::PARAM_STR);
 		$query->bindParam(':passengerairbag', $passengerairbag, PDO::PARAM_STR);
-		$query->bindParam(':powerwindow', $powerwindow, PDO::PARAM_STR);
-		$query->bindParam(':cdplayer', $cdplayer, PDO::PARAM_STR);
+		$query->bindParam(':phonecharger', $phonecharger, PDO::PARAM_STR);
+		$query->bindParam(':ndhelmet', $ndhelmet, PDO::PARAM_STR);
 		$query->bindParam(':centrallocking', $centrallocking, PDO::PARAM_STR);
 		$query->bindParam(':crashcensor', $crashcensor, PDO::PARAM_STR);
-		$query->bindParam(':leatherseats', $leatherseats, PDO::PARAM_STR);
+		$query->bindParam(':ndraincoat', $ndraincoat, PDO::PARAM_STR);
 		$query->execute();
 		$lastInsertId = $dbh->lastInsertId();
 		if ($lastInsertId) {
@@ -250,29 +250,29 @@ if (strlen($_SESSION['alogin']) == 0) {
 																<div class="form-group">
 																	<div class="col-sm-3">
 																		<div class="checkbox checkbox-inline">
-																			<input type="checkbox" id="airconditioner" name="airconditioner" value="1">
-																			<label for="airconditioner"> Helmet </label>
+																			<input type="checkbox" id="helmet" name="helmet" value="1">
+																			<label for="helmet"> Helmet </label>
 																		</div>
 																	</div>
 
 																	<div class="col-sm-3">
 																		<div class="checkbox checkbox-inline">
-																			<input type="checkbox" id="antilockbrakingsys" name="antilockbrakingsys" value="1">
-																			<label for="antilockbrakingsys"> Rain Coat </label>
+																			<input type="checkbox" id="raincoat" name="raincoat" value="1">
+																			<label for="raincoat"> Rain Coat </label>
 																		</div>
 																	</div>
 
 																	<div class="col-sm-3">
 																		<div class="checkbox checkbox-inline">
-																			<input type="checkbox" id="powersteering" name="powersteering" value="1">
-																			<input type="checkbox" id="powersteering" name="powersteering" value="1">
-																			<label for="inlineCheckbox5"> Phone Holder </label>
+
+																			<input type="checkbox" id="phoneholder" name="phoneholder" value="1">
+																			<label for="phoneholder"> Phone Holder </label>
 																		</div>
 																	</div>
 
 																	<div class="checkbox checkbox-inline">
-																		<input type="checkbox" id="powerwindow" name="powerwindow" value="1">
-																		<label for="powerwindow"> Phone Charger </label>
+																		<input type="checkbox" id="phonecharger" name="phonecharger" value="1">
+																		<label for="phonecharger"> Phone Charger </label>
 																	</div>
 
 																</div>
@@ -280,16 +280,16 @@ if (strlen($_SESSION['alogin']) == 0) {
 																<div class="form-group">
 																	<div class="col-sm-3">
 																		<div class="checkbox checkbox-inline">
-																			<input type="checkbox" id="cdplayer" name="cdplayer" value="1">
-																			<label for="cdplayer">2nd Helmet </label>
+																			<input type="checkbox" id="ndhelmet" name="ndhelmet" value="1">
+																			<label for="ndhelmet">2nd Helmet </label>
 																		</div>
 																	</div>
 
 
 																	<div class="col-sm-3">
 																		<div class="checkbox checkbox-inline">
-																			<input type="checkbox" id="leatherseats" name="leatherseats" value="1">
-																			<label for="leatherseats">2nd Rain Coat </label>
+																			<input type="checkbox" id="ndraincoat" name="ndraincoat" value="1">
+																			<label for="ndraincoat">2nd Rain Coat </label>
 																		</div>
 																	</div>
 																</div>

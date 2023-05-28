@@ -194,7 +194,7 @@ if (isset($_POST['submit'])) {
                         <tbody>
                           <tr>
                             <td>Helmet</td>
-                            <?php if ($result->AirConditioner == 1) {
+                            <?php if ($result->helmet == 1) {
                             ?>
                               <td><i class="fa fa-check" aria-hidden="true"></i></td>
                             <?php } else { ?>
@@ -204,7 +204,7 @@ if (isset($_POST['submit'])) {
 
                           <tr>
                             <td>Rain Coat</td>
-                            <?php if ($result->AntiLockBrakingSystem == 1) {
+                            <?php if ($result->raincoat == 1) {
                             ?>
                               <td><i class="fa fa-check" aria-hidden="true"></i></td>
                             <?php } else { ?>
@@ -214,7 +214,7 @@ if (isset($_POST['submit'])) {
 
                           <tr>
                             <td>Phone Holder</td>
-                            <?php if ($result->PowerSteering == 1) {
+                            <?php if ($result->phoneholder == 1) {
                             ?>
                               <td><i class="fa fa-check" aria-hidden="true"></i></td>
                             <?php } else { ?>
@@ -227,7 +227,7 @@ if (isset($_POST['submit'])) {
 
                             <td>Phone Charger</td>
 
-                            <?php if ($result->PowerWindows == 1) {
+                            <?php if ($result->Phonecharger == 1) {
                             ?>
                               <td><i class="fa fa-check" aria-hidden="true"></i></td>
                             <?php } else { ?>
@@ -237,7 +237,7 @@ if (isset($_POST['submit'])) {
 
                           <tr>
                             <td>2nd Helmet</td>
-                            <?php if ($result->CDPlayer == 1) {
+                            <?php if ($result->ndhelmet == 1) {
                             ?>
                               <td><i class="fa fa-check" aria-hidden="true"></i></td>
                             <?php } else { ?>
@@ -247,7 +247,7 @@ if (isset($_POST['submit'])) {
 
                           <tr>
                             <td>2nd Rain Coat</td>
-                            <?php if ($result->LeatherSeats == 1) {
+                            <?php if ($result->ndraincoat == 1) {
                             ?>
                               <td><i class="fa fa-check" aria-hidden="true"></i></td>
                             <?php } else { ?>

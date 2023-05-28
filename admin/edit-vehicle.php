@@ -14,21 +14,21 @@ if (strlen($_SESSION['alogin']) == 0) {
 		$fueltype = $_POST['fueltype'];
 		$modelyear = $_POST['modelyear'];
 		$seatingcapacity = $_POST['seatingcapacity'];
-		$airconditioner = $_POST['airconditioner'];
+		$helmet = $_POST['helmet'];
 		$powerdoorlocks = $_POST['powerdoorlocks'];
-		$antilockbrakingsys = $_POST['antilockbrakingsys'];
+		$raincoat = $_POST['raincoat'];
 		$brakeassist = $_POST['brakeassist'];
-		$powersteering = $_POST['powersteering'];
+		$phoneholder = $_POST['phoneholder'];
 		$driverairbag = $_POST['driverairbag'];
 		$passengerairbag = $_POST['passengerairbag'];
-		$powerwindow = $_POST['powerwindow'];
-		$cdplayer = $_POST['cdplayer'];
+		$phonecharger = $_POST['phonecharger'];
+		$ndhelmet = $_POST['ndhelmet'];
 		$centrallocking = $_POST['centrallocking'];
 		$crashcensor = $_POST['crashcensor'];
-		$leatherseats = $_POST['leatherseats'];
+		$ndraincoat = $_POST['ndraincoat'];
 		$id = intval($_GET['id']);
 
-		$sql = "update tblvehicles set VehiclesTitle=:vehicletitle,VehiclesBrand=:brand,VehiclesOverview=:vehicleoverview,PricePerDay=:priceperday,FuelType=:fueltype,ModelYear=:modelyear,SeatingCapacity=:seatingcapacity,AirConditioner=:airconditioner,PowerDoorLocks=:powerdoorlocks,AntiLockBrakingSystem=:antilockbrakingsys,BrakeAssist=:brakeassist,PowerSteering=:powersteering,DriverAirbag=:driverairbag,PassengerAirbag=:passengerairbag,PowerWindows=:powerwindow,CDPlayer=:cdplayer,CentralLocking=:centrallocking,CrashSensor=:crashcensor,LeatherSeats=:leatherseats where id=:id ";
+		$sql = "update tblvehicles set VehiclesTitle=:vehicletitle,VehiclesBrand=:brand,VehiclesOverview=:vehicleoverview,PricePerDay=:priceperday,FuelType=:fueltype,ModelYear=:modelyear,SeatingCapacity=:seatingcapacity,helmet=:helmet,PowerDoorLocks=:powerdoorlocks,raincoat=:raincoat,BrakeAssist=:brakeassist,phoneholder=:phoneholder,DriverAirbag=:driverairbag,PassengerAirbag=:passengerairbag,phonecharger=:phonecharger,ndhelmet=:ndhelmet,CentralLocking=:centrallocking,CrashSensor=:crashcensor,ndraincoat=:ndraincoat where id=:id ";
 		$query = $dbh->prepare($sql);
 		$query->bindParam(':vehicletitle', $vehicletitle, PDO::PARAM_STR);
 		$query->bindParam(':brand', $brand, PDO::PARAM_STR);
@@ -37,18 +37,18 @@ if (strlen($_SESSION['alogin']) == 0) {
 		$query->bindParam(':fueltype', $fueltype, PDO::PARAM_STR);
 		$query->bindParam(':modelyear', $modelyear, PDO::PARAM_STR);
 		$query->bindParam(':seatingcapacity', $seatingcapacity, PDO::PARAM_STR);
-		$query->bindParam(':airconditioner', $airconditioner, PDO::PARAM_STR);
+		$query->bindParam(':helmet', $helmet, PDO::PARAM_STR);
 		$query->bindParam(':powerdoorlocks', $powerdoorlocks, PDO::PARAM_STR);
-		$query->bindParam(':antilockbrakingsys', $antilockbrakingsys, PDO::PARAM_STR);
+		$query->bindParam(':raincoat', $raincoat, PDO::PARAM_STR);
 		$query->bindParam(':brakeassist', $brakeassist, PDO::PARAM_STR);
-		$query->bindParam(':powersteering', $powersteering, PDO::PARAM_STR);
+		$query->bindParam(':phoneholder', $phoneholder, PDO::PARAM_STR);
 		$query->bindParam(':driverairbag', $driverairbag, PDO::PARAM_STR);
 		$query->bindParam(':passengerairbag', $passengerairbag, PDO::PARAM_STR);
-		$query->bindParam(':powerwindow', $powerwindow, PDO::PARAM_STR);
-		$query->bindParam(':cdplayer', $cdplayer, PDO::PARAM_STR);
+		$query->bindParam(':phonecharger', $phonecharger, PDO::PARAM_STR);
+		$query->bindParam(':ndhelmet', $ndhelmet, PDO::PARAM_STR);
 		$query->bindParam(':centrallocking', $centrallocking, PDO::PARAM_STR);
 		$query->bindParam(':crashcensor', $crashcensor, PDO::PARAM_STR);
-		$query->bindParam(':leatherseats', $leatherseats, PDO::PARAM_STR);
+		$query->bindParam(':ndraincoat', $ndraincoat, PDO::PARAM_STR);
 		$query->bindParam(':id', $id, PDO::PARAM_STR);
 		$query->execute();
 
@@ -256,63 +256,63 @@ if (strlen($_SESSION['alogin']) == 0) {
 
 											<div class="form-group">
 												<div class="col-sm-3">
-													<?php if ($result->AirConditioner == 1) { ?>
+													<?php if ($result->helmet == 1) { ?>
 														<div class="checkbox checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox1" name="airconditioner" checked value="1">
-															<label for="inlineCheckbox1"> Helmet </label>
+															<input type="checkbox" id="helmet" name="helmet" checked value="1">
+															<label for="helmet"> Helmet </label>
 														</div>
 													<?php } else { ?>
 														<div class="checkbox checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox1" name="airconditioner" value="1">
-															<label for="inlineCheckbox1"> Helmet </label>
+															<input type="checkbox" id="helmet" name="helmet" value="1">
+															<label for="helmet"> Helmet </label>
 														</div>
 													<?php } ?>
 												</div>
 
 												<div class="col-sm-3">
-													<?php if ($result->AntiLockBrakingSystem == 1) { ?>
+													<?php if ($result->raincoat == 1) { ?>
 														<div class="checkbox checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox1" name="antilockbrakingsys" checked value="1">
-															<label for="inlineCheckbox3">Rain Coat </label>
+															<input type="checkbox" id="raincoat" name="raincoat" checked value="1">
+															<label for="raincoat">Rain Coat </label>
 														</div>
 													<?php } else { ?>
 														<div class="checkbox checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox1" name="antilockbrakingsys" value="1">
-															<label for="inlineCheckbox3"> Rain Coat</label>
+															<input type="checkbox" id="raincoat" name="raincoat" value="1">
+															<label for="raincoat"> Rain Coat</label>
 														</div>
 													<?php } ?>
 												</div>
 
 
 												<div class="form-group">
-													<?php if ($result->PowerSteering == 1) {
+													<?php if ($result->phoneholder == 1) {
 													?>
 														<div class="col-sm-3">
 															<div class="checkbox checkbox-inline">
-																<input type="checkbox" id="inlineCheckbox1" name="powersteering" checked value="1">
-																<label for="inlineCheckbox1">Phone Holder</label>
+																<input type="checkbox" id="phoneholder" name="phoneholder" checked value="1">
+																<label for="phoneholder">Phone Holder</label>
 															</div>
 														<?php } else { ?>
 															<div class="col-sm-3">
 																<div class="checkbox checkbox-inline">
-																	<input type="checkbox" id="inlineCheckbox1" name="powersteering" value="1">
-																	<label for="inlineCheckbox1"> Phone Holder</label>
+																	<input type="checkbox" id="phoneholder" name="phoneholder" value="1">
+																	<label for="phoneholder"> Phone Holder</label>
 																</div>
 															<?php } ?>
 															</div>
 
 
 															<div class="col-sm-3">
-																<?php if ($result->PowerWindows == 1) {
+																<?php if ($result->phonecharger == 1) {
 																?>
 																	<div class="checkbox checkbox-inline">
-																		<input type="checkbox" id="inlineCheckbox1" name="powerwindow" checked value="1">
-																		<label for="inlineCheckbox3"> Phone Charger </label>
+																		<input type="checkbox" id="phonecharger" name="phonecharger" checked value="1">
+																		<label for="phonecharger"> Phone Charger </label>
 																	</div>
 																<?php } else { ?>
 																	<div class="checkbox checkbox-inline">
-																		<input type="checkbox" id="inlineCheckbox1" name="powerwindow" value="1">
-																		<label for="inlineCheckbox3"> Phone Charger</label>
+																		<input type="checkbox" id="phonecharger" name="phonecharger" value="1">
+																		<label for="phonecharger"> Phone Charger</label>
 																	</div>
 																<?php } ?>
 															</div>
@@ -320,15 +320,15 @@ if (strlen($_SESSION['alogin']) == 0) {
 
 															<div class="form-group">
 																<div class="col-sm-3">
-																	<?php if ($result->CDPlayer == 1) {
+																	<?php if ($result->ndhelmet == 1) {
 																	?>
 																		<div class="checkbox checkbox-inline">
-																			<input type="checkbox" id="inlineCheckbox1" name="cdplayer" checked value="1">
+																			<input type="checkbox" id="inlineCheckbox1" name="ndhelmet" checked value="1">
 																			<label for="inlineCheckbox1"> 2nd Helmet </label>
 																		</div>
 																	<?php } else { ?>
 																		<div class="checkbox checkbox-inline">
-																			<input type="checkbox" id="inlineCheckbox1" name="cdplayer" value="1">
+																			<input type="checkbox" id="inlineCheckbox1" name="ndhelmet" value="1">
 																			<label for="inlineCheckbox1"> 2nd Helmet </label>
 																		</div>
 																	<?php } ?>
@@ -336,16 +336,16 @@ if (strlen($_SESSION['alogin']) == 0) {
 
 
 																<div class="col-sm-3">
-																	<?php if ($result->LeatherSeats == 1) {
+																	<?php if ($result->ndraincoat == 1) {
 																	?>
 																		<div class="checkbox checkbox-inline">
-																			<input type="checkbox" id="inlineCheckbox1" name="leatherseats" checked value="1">
-																			<label for="inlineCheckbox3"> 2nd Rain Coat </label>
+																			<input type="checkbox" id="ndraincoat" name="ndraincoat" checked value="1">
+																			<label for="ndraincoat"> 2nd Rain Coat </label>
 																		</div>
 																	<?php } else { ?>
 																		<div class="checkbox checkbox-inline">
-																			<input type="checkbox" id="inlineCheckbox1" name="leatherseats" value="1">
-																			<label for="inlineCheckbox3"> 2nd Rain Coat </label>
+																			<input type="checkbox" id="ndraincoat" name="ndraincoat" value="1">
+																			<label for="ndraincoat"> 2nd Rain Coat </label>
 																		</div>
 																	<?php } ?>
 																</div>
