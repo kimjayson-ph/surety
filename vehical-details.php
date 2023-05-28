@@ -150,8 +150,8 @@ if (isset($_POST['submit'])) {
                     <p>Helmet</p>
                   </li>
                   <li> <i class="fa fa-cogs" aria-hidden="true"></i>
-                    <h5></h5>
-                    <p></p>
+                    <h5><?php echo htmlentities($result->FuelType); ?></h5>
+                    <p>Transmission</p>
                   </li>
 
 
@@ -163,7 +163,8 @@ if (isset($_POST['submit'])) {
                   <ul class="nav nav-tabs gray-bg" role="tablist">
                     <li role="presentation" class="active"><a href="#vehicle-overview " aria-controls="vehicle-overview" role="tab" data-toggle="tab">Vehicle Overview </a></li>
 
-                    <li role="presentation"><a href="#accessories" aria-controls="accessories" role="tab" data-toggle="tab">Accessories</a></li>
+                    <li role="presentation"><a href="#accessories" aria-controls="accessories" role="tab" data-toggle="tab">Accessories & extras</a></li>
+                    <li role="presentation"><a href="#rentalrequirements" aria-controls="rentalrequirements" role="tab" data-toggle="tab">Rental requirements</a></li>
                   </ul>
 
                   <!-- Tab panes -->
@@ -174,19 +175,25 @@ if (isset($_POST['submit'])) {
                       <p><?php echo htmlentities($result->VehiclesOverview); ?></p>
                     </div>
 
+                    <!-- Rental requirements -->
+                    <div role="tabpanel" class="tab-pane" id="rentalrequirements">
+
+                      <p><?php echo htmlentities($result->VehiclesOverview); ?></p>
+                    </div>
+
 
                     <!-- Accessories -->
-                    <!-- <div role="tabpanel" class="tab-pane" id="accessories">
-                      
+                    <div role="tabpanel" class="tab-pane" id="accessories">
+
                       <table>
                         <thead>
                           <tr>
-                            <th colspan="2">Accessories</th>
+                            <!-- <th colspan="2">Accessories</th> -->
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
-                            <td>Air Conditioner</td>
+                            <td>Helmet</td>
                             <?php if ($result->AirConditioner == 1) {
                             ?>
                               <td><i class="fa fa-check" aria-hidden="true"></i></td>
@@ -196,7 +203,7 @@ if (isset($_POST['submit'])) {
                           </tr>
 
                           <tr>
-                            <td>AntiLock Braking System</td>
+                            <td>Rain Coat</td>
                             <?php if ($result->AntiLockBrakingSystem == 1) {
                             ?>
                               <td><i class="fa fa-check" aria-hidden="true"></i></td>
@@ -206,7 +213,7 @@ if (isset($_POST['submit'])) {
                           </tr>
 
                           <tr>
-                            <td>Power Steering</td>
+                            <td>Phone Holder</td>
                             <?php if ($result->PowerSteering == 1) {
                             ?>
                               <td><i class="fa fa-check" aria-hidden="true"></i></td>
@@ -218,7 +225,7 @@ if (isset($_POST['submit'])) {
 
                           <tr>
 
-                            <td>Power Windows</td>
+                            <td>Phone Charger</td>
 
                             <?php if ($result->PowerWindows == 1) {
                             ?>
@@ -229,7 +236,7 @@ if (isset($_POST['submit'])) {
                           </tr>
 
                           <tr>
-                            <td>CD Player</td>
+                            <td>2nd Helmet</td>
                             <?php if ($result->CDPlayer == 1) {
                             ?>
                               <td><i class="fa fa-check" aria-hidden="true"></i></td>
@@ -239,7 +246,7 @@ if (isset($_POST['submit'])) {
                           </tr>
 
                           <tr>
-                            <td>Leather Seats</td>
+                            <td>2nd Rain Coat</td>
                             <?php if ($result->LeatherSeats == 1) {
                             ?>
                               <td><i class="fa fa-check" aria-hidden="true"></i></td>
@@ -248,68 +255,10 @@ if (isset($_POST['submit'])) {
                             <?php } ?>
                           </tr>
 
-                          <tr>
-                            <td>Central Locking</td>
-                            <?php if ($result->CentralLocking == 1) {
-                            ?>
-                              <td><i class="fa fa-check" aria-hidden="true"></i></td>
-                            <?php } else { ?>
-                              <td><i class="fa fa-close" aria-hidden="true"></i></td>
-                            <?php } ?>
-                          </tr>
-
-                          <tr>
-                            <td>Power Door Locks</td>
-                            <?php if ($result->PowerDoorLocks == 1) {
-                            ?>
-                              <td><i class="fa fa-check" aria-hidden="true"></i></td>
-                            <?php } else { ?>
-                              <td><i class="fa fa-close" aria-hidden="true"></i></td>
-                            <?php } ?>
-                          </tr>
-                          <tr>
-                            <td>Brake Assist</td>
-                            <?php if ($result->BrakeAssist == 1) {
-                            ?>
-                              <td><i class="fa fa-check" aria-hidden="true"></i></td>
-                            <?php  } else { ?>
-                              <td><i class="fa fa-close" aria-hidden="true"></i></td>
-                            <?php } ?>
-                          </tr>
-
-                          <tr>
-                            <td>Driver Airbag</td>
-                            <?php if ($result->DriverAirbag == 1) {
-                            ?>
-                              <td><i class="fa fa-check" aria-hidden="true"></i></td>
-                            <?php } else { ?>
-                              <td><i class="fa fa-close" aria-hidden="true"></i></td>
-                            <?php } ?>
-                          </tr>
-
-                          <tr>
-                            <td>Passenger Airbag</td>
-                            <?php if ($result->PassengerAirbag == 1) {
-                            ?>
-                              <td><i class="fa fa-check" aria-hidden="true"></i></td>
-                            <?php } else { ?>
-                              <td><i class="fa fa-close" aria-hidden="true"></i></td>
-                            <?php } ?>
-                          </tr>
-
-                          <tr>
-                            <td>Crash Sensor</td>
-                            <?php if ($result->CrashSensor == 1) {
-                            ?>
-                              <td><i class="fa fa-check" aria-hidden="true"></i></td>
-                            <?php } else { ?>
-                              <td><i class="fa fa-close" aria-hidden="true"></i></td>
-                            <?php } ?>
-                          </tr>
 
                         </tbody>
                       </table>
-                    </div> -->
+                    </div>
                     <!--Accessories-->
                   </div>
                 </div>

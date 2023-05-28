@@ -180,18 +180,18 @@ if (strlen($_SESSION['alogin']) == 0) {
 														</div>
 
 														<div class="form-group">
-															<label class="col-sm-2 control-label">Price Per Day(in USD)<span style="color:red">*</span></label>
+															<label class="col-sm-2 control-label">Price Per Day(&#x20B1;)<span style="color:red">*</span></label>
 															<div class="col-sm-4">
 																<input type="text" name="priceperday" class="form-control" value="<?php echo htmlentities($result->PricePerDay); ?>" required>
 															</div>
-															<label class="col-sm-2 control-label">Select Fuel Type<span style="color:red">*</span></label>
+															<label class="col-sm-2 control-label">Select Transmission<span style="color:red">*</span></label>
 															<div class="col-sm-4">
 																<select class="selectpicker" name="fueltype" required>
 																	<option value="<?php echo htmlentities($result->FuelType); ?>"> <?php echo htmlentities($result->FuelType); ?> </option>
 
-																	<option value="Petrol">Petrol</option>
-																	<option value="Diesel">Diesel</option>
-																	<option value="CNG">CNG</option>
+																	<option value="Automatic">Automatic</option>
+																	<option value="Semi Automatic">Semi Automatic</option>
+																	<option value="Manual">Manual</option>
 																</select>
 															</div>
 														</div>
@@ -236,15 +236,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 																Image 4<img src="img/vehicleimages/<?php echo htmlentities($result->Vimage4); ?>" width="300" height="200" style="border:solid 1px #000">
 																<a href="changeimage4.php?imgid=<?php echo htmlentities($result->id) ?>">Change Image 4</a>
 															</div>
-															<div class="col-sm-4">
-																Image 5
-																<?php if ($result->Vimage5 == "") {
-																	echo htmlentities("File not available");
-																} else { ?>
-																	<img src="img/vehicleimages/<?php echo htmlentities($result->Vimage5); ?>" width="300" height="200" style="border:solid 1px #000">
-																	<a href="changeimage5.php?imgid=<?php echo htmlentities($result->id) ?>">Change Image 5</a>
-																<?php } ?>
-															</div>
+
 
 														</div>
 														<div class="hr-dashed"></div>
@@ -258,7 +250,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 							<div class="row">
 								<div class="col-md-12">
 									<div class="panel panel-default">
-										<div class="panel-heading">Accessories</div>
+										<div class="panel-heading">Accessories & extras</div>
 										<div class="panel-body">
 
 
@@ -267,55 +259,30 @@ if (strlen($_SESSION['alogin']) == 0) {
 													<?php if ($result->AirConditioner == 1) { ?>
 														<div class="checkbox checkbox-inline">
 															<input type="checkbox" id="inlineCheckbox1" name="airconditioner" checked value="1">
-															<label for="inlineCheckbox1"> Air Conditioner </label>
+															<label for="inlineCheckbox1"> Helmet </label>
 														</div>
 													<?php } else { ?>
 														<div class="checkbox checkbox-inline">
 															<input type="checkbox" id="inlineCheckbox1" name="airconditioner" value="1">
-															<label for="inlineCheckbox1"> Air Conditioner </label>
+															<label for="inlineCheckbox1"> Helmet </label>
 														</div>
 													<?php } ?>
 												</div>
-												<div class="col-sm-3">
-													<?php if ($result->PowerDoorLocks == 1) { ?>
-														<div class="checkbox checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox1" name="powerdoorlocks" checked value="1">
-															<label for="inlineCheckbox2"> Power Door Locks </label>
-														</div>
-													<?php } else { ?>
-														<div class="checkbox checkbox-success checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox1" name="powerdoorlocks" value="1">
-															<label for="inlineCheckbox2"> Power Door Locks </label>
-														</div>
-													<?php } ?>
-												</div>
+
 												<div class="col-sm-3">
 													<?php if ($result->AntiLockBrakingSystem == 1) { ?>
 														<div class="checkbox checkbox-inline">
 															<input type="checkbox" id="inlineCheckbox1" name="antilockbrakingsys" checked value="1">
-															<label for="inlineCheckbox3"> AntiLock Braking System </label>
+															<label for="inlineCheckbox3">Rain Coat </label>
 														</div>
 													<?php } else { ?>
 														<div class="checkbox checkbox-inline">
 															<input type="checkbox" id="inlineCheckbox1" name="antilockbrakingsys" value="1">
-															<label for="inlineCheckbox3"> AntiLock Braking System </label>
+															<label for="inlineCheckbox3"> Rain Coat</label>
 														</div>
 													<?php } ?>
 												</div>
-												<div class="col-sm-3">
-													<?php if ($result->BrakeAssist == 1) {
-													?>
-														<div class="checkbox checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox1" name="brakeassist" checked value="1">
-															<label for="inlineCheckbox3"> Brake Assist </label>
-														</div>
-													<?php } else { ?>
-														<div class="checkbox checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox1" name="brakeassist" value="1">
-															<label for="inlineCheckbox3"> Brake Assist </label>
-														</div>
-													<?php } ?>
-												</div>
+
 
 												<div class="form-group">
 													<?php if ($result->PowerSteering == 1) {
@@ -323,156 +290,107 @@ if (strlen($_SESSION['alogin']) == 0) {
 														<div class="col-sm-3">
 															<div class="checkbox checkbox-inline">
 																<input type="checkbox" id="inlineCheckbox1" name="powersteering" checked value="1">
-																<label for="inlineCheckbox1"> Power Steering </label>
+																<label for="inlineCheckbox1">Phone Holder</label>
 															</div>
 														<?php } else { ?>
 															<div class="col-sm-3">
 																<div class="checkbox checkbox-inline">
 																	<input type="checkbox" id="inlineCheckbox1" name="powersteering" value="1">
-																	<label for="inlineCheckbox1"> Power Steering </label>
+																	<label for="inlineCheckbox1"> Phone Holder</label>
 																</div>
 															<?php } ?>
 															</div>
+
+
 															<div class="col-sm-3">
-																<?php if ($result->DriverAirbag == 1) {
+																<?php if ($result->PowerWindows == 1) {
 																?>
 																	<div class="checkbox checkbox-inline">
-																		<input type="checkbox" id="inlineCheckbox1" name="driverairbag" checked value="1">
-																		<label for="inlineCheckbox2">Driver Airbag</label>
+																		<input type="checkbox" id="inlineCheckbox1" name="powerwindow" checked value="1">
+																		<label for="inlineCheckbox3"> Phone Charger </label>
 																	</div>
 																<?php } else { ?>
 																	<div class="checkbox checkbox-inline">
-																		<input type="checkbox" id="inlineCheckbox1" name="driverairbag" value="1">
-																		<label for="inlineCheckbox2">Driver Airbag</label>
-																	<?php } ?>
+																		<input type="checkbox" id="inlineCheckbox1" name="powerwindow" value="1">
+																		<label for="inlineCheckbox3"> Phone Charger</label>
 																	</div>
-																	<div class="col-sm-3">
-																		<?php if ($result->DriverAirbag == 1) {
-																		?>
-																			<div class="checkbox checkbox-inline">
-																				<input type="checkbox" id="inlineCheckbox1" name="passengerairbag" checked value="1">
-																				<label for="inlineCheckbox3"> Passenger Airbag </label>
-																			</div>
-																		<?php } else { ?>
-																			<div class="checkbox checkbox-inline">
-																				<input type="checkbox" id="inlineCheckbox1" name="passengerairbag" value="1">
-																				<label for="inlineCheckbox3"> Passenger Airbag </label>
-																			</div>
-																		<?php } ?>
-																	</div>
-																	<div class="col-sm-3">
-																		<?php if ($result->PowerWindows == 1) {
-																		?>
-																			<div class="checkbox checkbox-inline">
-																				<input type="checkbox" id="inlineCheckbox1" name="powerwindow" checked value="1">
-																				<label for="inlineCheckbox3"> Power Windows </label>
-																			</div>
-																		<?php } else { ?>
-																			<div class="checkbox checkbox-inline">
-																				<input type="checkbox" id="inlineCheckbox1" name="powerwindow" value="1">
-																				<label for="inlineCheckbox3"> Power Windows </label>
-																			</div>
-																		<?php } ?>
-																	</div>
-
-
-																	<div class="form-group">
-																		<div class="col-sm-3">
-																			<?php if ($result->CDPlayer == 1) {
-																			?>
-																				<div class="checkbox checkbox-inline">
-																					<input type="checkbox" id="inlineCheckbox1" name="cdplayer" checked value="1">
-																					<label for="inlineCheckbox1"> CD Player </label>
-																				</div>
-																			<?php } else { ?>
-																				<div class="checkbox checkbox-inline">
-																					<input type="checkbox" id="inlineCheckbox1" name="cdplayer" value="1">
-																					<label for="inlineCheckbox1"> CD Player </label>
-																				</div>
-																			<?php } ?>
-																		</div>
-																		<div class="col-sm-3">
-																			<?php if ($result->CentralLocking == 1) {
-																			?>
-																				<div class="checkbox  checkbox-inline">
-																					<input type="checkbox" id="inlineCheckbox1" name="centrallocking" checked value="1">
-																					<label for="inlineCheckbox2">Central Locking</label>
-																				</div>
-																			<?php } else { ?>
-																				<div class="checkbox checkbox-success checkbox-inline">
-																					<input type="checkbox" id="inlineCheckbox1" name="centrallocking" value="1">
-																					<label for="inlineCheckbox2">Central Locking</label>
-																				</div>
-																			<?php } ?>
-																		</div>
-																		<div class="col-sm-3">
-																			<?php if ($result->CrashSensor == 1) {
-																			?>
-																				<div class="checkbox checkbox-inline">
-																					<input type="checkbox" id="inlineCheckbox1" name="crashcensor" checked value="1">
-																					<label for="inlineCheckbox3"> Crash Sensor </label>
-																				</div>
-																			<?php } else { ?>
-																				<div class="checkbox checkbox-inline">
-																					<input type="checkbox" id="inlineCheckbox1" name="crashcensor" value="1">
-																					<label for="inlineCheckbox3"> Crash Sensor </label>
-																				</div>
-																			<?php } ?>
-																		</div>
-																		<div class="col-sm-3">
-																			<?php if ($result->CrashSensor == 1) {
-																			?>
-																				<div class="checkbox checkbox-inline">
-																					<input type="checkbox" id="inlineCheckbox1" name="leatherseats" checked value="1">
-																					<label for="inlineCheckbox3"> Leather Seats </label>
-																				</div>
-																			<?php } else { ?>
-																				<div class="checkbox checkbox-inline">
-																					<input type="checkbox" id="inlineCheckbox1" name="leatherseats" value="1">
-																					<label for="inlineCheckbox3"> Leather Seats </label>
-																				</div>
-																			<?php } ?>
-																		</div>
-																	</div>
-
-															<?php }
-													} ?>
+																<?php } ?>
+															</div>
 
 
 															<div class="form-group">
-																<div class="col-sm-8 col-sm-offset-2">
+																<div class="col-sm-3">
+																	<?php if ($result->CDPlayer == 1) {
+																	?>
+																		<div class="checkbox checkbox-inline">
+																			<input type="checkbox" id="inlineCheckbox1" name="cdplayer" checked value="1">
+																			<label for="inlineCheckbox1"> 2nd Helmet </label>
+																		</div>
+																	<?php } else { ?>
+																		<div class="checkbox checkbox-inline">
+																			<input type="checkbox" id="inlineCheckbox1" name="cdplayer" value="1">
+																			<label for="inlineCheckbox1"> 2nd Helmet </label>
+																		</div>
+																	<?php } ?>
+																</div>
 
-																	<button class="btn btn-primary" name="submit" type="submit" style="margin-top:4%">Save changes</button>
+
+																<div class="col-sm-3">
+																	<?php if ($result->LeatherSeats == 1) {
+																	?>
+																		<div class="checkbox checkbox-inline">
+																			<input type="checkbox" id="inlineCheckbox1" name="leatherseats" checked value="1">
+																			<label for="inlineCheckbox3"> 2nd Rain Coat </label>
+																		</div>
+																	<?php } else { ?>
+																		<div class="checkbox checkbox-inline">
+																			<input type="checkbox" id="inlineCheckbox1" name="leatherseats" value="1">
+																			<label for="inlineCheckbox3"> 2nd Rain Coat </label>
+																		</div>
+																	<?php } ?>
 																</div>
 															</div>
 
-															</form>
+													<?php }
+											} ?>
+
+
+													<div class="form-group">
+														<center>
+															<div class="col-sm-8 col-sm-offset-2">
+
+																<button class="btn btn-primary" name="submit" type="submit" style="margin-top:4%">Save changes</button>
 															</div>
+														</center>
+													</div>
+
+													</form>
 														</div>
 												</div>
 											</div>
-
-
-
 										</div>
+
+
+
 									</div>
-
-
-
 								</div>
+
+
+
 							</div>
 						</div>
+					</div>
 
-						<!-- Loading Scripts -->
-						<script src="js/jquery.min.js"></script>
-						<script src="js/bootstrap-select.min.js"></script>
-						<script src="js/bootstrap.min.js"></script>
-						<script src="js/jquery.dataTables.min.js"></script>
-						<script src="js/dataTables.bootstrap.min.js"></script>
-						<script src="js/Chart.min.js"></script>
-						<script src="js/fileinput.js"></script>
-						<script src="js/chartData.js"></script>
-						<script src="js/main.js"></script>
+					<!-- Loading Scripts -->
+					<script src="js/jquery.min.js"></script>
+					<script src="js/bootstrap-select.min.js"></script>
+					<script src="js/bootstrap.min.js"></script>
+					<script src="js/jquery.dataTables.min.js"></script>
+					<script src="js/dataTables.bootstrap.min.js"></script>
+					<script src="js/Chart.min.js"></script>
+					<script src="js/fileinput.js"></script>
+					<script src="js/chartData.js"></script>
+					<script src="js/main.js"></script>
 	</body>
 
 	</html>

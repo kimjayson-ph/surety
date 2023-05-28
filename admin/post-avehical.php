@@ -190,6 +190,17 @@ if (strlen($_SESSION['alogin']) == 0) {
 														<input type="text" name="priceperday" class="form-control" required>
 													</div>
 
+													<label class="col-sm-2 control-label">Select Transmission<span style="color:red">*</span></label>
+													<div class="col-sm-4">
+														<select class="selectpicker" name="fueltype" required>
+															<option value=""> Select </option>
+
+															<option value="Automatic">Automatic</option>
+															<option value="Semi Automatic">Semi Automatic</option>
+															<option value="Manual">Manual</option>
+														</select>
+													</div>
+
 												</div>
 
 
@@ -198,7 +209,10 @@ if (strlen($_SESSION['alogin']) == 0) {
 													<div class="col-sm-4">
 														<input type="text" name="modelyear" class="form-control" required>
 													</div>
-
+													<label class="col-sm-2 control-label">Seating Capacity<span style="color:red">*</span></label>
+													<div class="col-sm-4">
+														<input type="text" name="seatingcapacity" class="form-control" required>
+													</div>
 												</div>
 												<div class="hr-dashed"></div>
 
@@ -225,16 +239,70 @@ if (strlen($_SESSION['alogin']) == 0) {
 													</div>
 												</div>
 
-
-
 												<div class="hr-dashed"></div>
+												<div class="row">
+													<div class="col-md-12">
+														<div class="panel panel-default">
+															<div class="panel-heading">Accessories</div>
+															<div class="panel-body">
 
-												<div class="form-group">
-													<div class="col-sm-8 col-sm-offset-2">
-														<button class="btn btn-default" type="reset">Cancel</button>
-														<button class="btn btn-primary" name="submit" type="submit">Save changes</button>
-													</div>
-												</div>
+
+																<div class="form-group">
+																	<div class="col-sm-3">
+																		<div class="checkbox checkbox-inline">
+																			<input type="checkbox" id="airconditioner" name="airconditioner" value="1">
+																			<label for="airconditioner"> Helmet </label>
+																		</div>
+																	</div>
+
+																	<div class="col-sm-3">
+																		<div class="checkbox checkbox-inline">
+																			<input type="checkbox" id="antilockbrakingsys" name="antilockbrakingsys" value="1">
+																			<label for="antilockbrakingsys"> Rain Coat </label>
+																		</div>
+																	</div>
+
+																	<div class="col-sm-3">
+																		<div class="checkbox checkbox-inline">
+																			<input type="checkbox" id="powersteering" name="powersteering" value="1">
+																			<input type="checkbox" id="powersteering" name="powersteering" value="1">
+																			<label for="inlineCheckbox5"> Phone Holder </label>
+																		</div>
+																	</div>
+
+																	<div class="checkbox checkbox-inline">
+																		<input type="checkbox" id="powerwindow" name="powerwindow" value="1">
+																		<label for="powerwindow"> Phone Charger </label>
+																	</div>
+
+																</div>
+
+																<div class="form-group">
+																	<div class="col-sm-3">
+																		<div class="checkbox checkbox-inline">
+																			<input type="checkbox" id="cdplayer" name="cdplayer" value="1">
+																			<label for="cdplayer">2nd Helmet </label>
+																		</div>
+																	</div>
+
+
+																	<div class="col-sm-3">
+																		<div class="checkbox checkbox-inline">
+																			<input type="checkbox" id="leatherseats" name="leatherseats" value="1">
+																			<label for="leatherseats">2nd Rain Coat </label>
+																		</div>
+																	</div>
+																</div>
+
+
+																<div class="form-group">
+																	<center>
+																		<div class="col-sm-8 col-sm-offset-2">
+																			<button class="btn btn-default" type="reset">Cancel</button>
+																			<button class="btn btn-primary" name="submit" type="submit">Save changes</button>
+																		</div>
+																	</center>
+																</div>
 
 											</form>
 

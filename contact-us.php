@@ -111,7 +111,7 @@ if (isset($_POST['send'])) {
           <div class="contact_form gray-bg">
             <form method="post">
               <div class="form-group">
-                <label class="control-label">Full Name <span>*</span></label>
+                <label class="control-label">Name <span>*</span></label>
                 <input type="text" name="fullname" class="form-control white_bg" id="fullname" required>
               </div>
               <div class="form-group">
@@ -120,7 +120,7 @@ if (isset($_POST['send'])) {
               </div>
               <div class="form-group">
                 <label class="control-label">Phone Number <span>*</span></label>
-                <input type="text" name="contactno" class="form-control white_bg" id="phonenumber" required maxlength="10" pattern="[0-9]+">
+                <input type="text" name="contactno" class="form-control white_bg" id="phonenumber" required maxlength="11" pattern="[0-9]+">
               </div>
               <div class="form-group">
                 <label class="control-label">Message <span>*</span></label>
