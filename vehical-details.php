@@ -147,7 +147,7 @@ if (isset($_POST['submit'])) {
                   </li>
                   <li> <i class="fa fa-user-plus" aria-hidden="true"></i>
                     <h5><?php echo htmlentities($result->SeatingCapacity); ?></h5>
-                    <p>Helmet</p>
+                    <p>--</p>
                   </li>
                   <li> <i class="fa fa-cogs" aria-hidden="true"></i>
                     <h5><?php echo htmlentities($result->FuelType); ?></h5>
