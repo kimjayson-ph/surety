@@ -44,6 +44,7 @@ if (isset($_POST['login'])) {
 	<link rel="stylesheet" href="css/fileinput.min.css">
 	<link rel="stylesheet" href="css/awesome-bootstrap-checkbox.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
 </head>
 
 <body>
@@ -54,23 +55,23 @@ if (isset($_POST['login'])) {
 				<div class="row">
 					<div class="col-md-6 col-md-offset-3">
 
-						<h1 class="text-center text-bold mt-4x" style="color:#fff">Admin | Sign in</h1>
+						<h1 class="text-center text-bold mt-4x" style="color:#7bc41d">Admin | Sign in</h1>
 						<div class="well row pt-2x pb-3x bk-light">
 							<div class="col-md-8 col-md-offset-2">
 								<form method="post">
 
-									<label for="" class="text-uppercase text-sm">Your Username </label>
+									<!-- <label for="" class="text-uppercase text-sm">Your Username </label> -->
 									<input type="text" placeholder="Username" name="username" class="form-control mb">
 
-									<label for="" class="text-uppercase text-sm">Password</label>
+									<!-- <label for="" class="text-uppercase text-sm">Password</label> -->
 									<input type="password" placeholder="Password" name="password" class="form-control mb">
 
 
-									<button class="btn btn-primary btn-block" name="login" type="submit">LOGIN</button>
+									<button class="btn btn-primary btn-block" style="background-color: #7bc41d;" name="login" type="submit">LOGIN</button>
 
 								</form>
 
-								<p style="margin-top: 4%" align="center"><a href="../index.php">Back to Home</a> </p>
+								<p style="margin-top: 4%" align="center"><a style="color: red;" href="../index.php">Back to Home</a> </p>
 							</div>
 
 						</div>

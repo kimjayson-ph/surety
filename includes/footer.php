@@ -30,7 +30,7 @@ if (isset($_POST['emailsubscibe'])) {
       <div class="row">
 
         <div class="col-md-6">
-          <h6>About Us</h6>
+          <h6>Surety Motorbikes</h6>
           <ul>
 
 
