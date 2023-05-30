@@ -161,6 +161,70 @@ if (isset($_POST['send'])) {
             <?php }
             } ?>
           </div>
+          <h4 class="title">Social Media</h4>
+        <div class="col-lg-3 col-md-3 col-sm-3">
+          <div class="servicebox text-center">
+            <div class="service-icon">
+              <div class="dm-icon-effect-1" data-effect="slide-bottom">
+                <a href="#" class=""> <i class="dm-icon fa fa-facebook fa-3x"></i> </a>
+              </div>
+              <div class="servicetitle">
+                <h4>Facebook</h4>
+              </div>
+            </div>
+            <!-- service-icon -->
+          </div>
+          <!-- servicebox -->
+        </div>
+        <!-- large-3 -->
+
+        <div class="col-lg-3 col-md-3 col-sm-3">
+          <div class="servicebox text-center">
+            <div class="service-icon">
+              <div class="dm-icon-effect-1" data-effect="slide-bottom">
+                <a href="#" class=""> <i class="dm-icon fa fa-twitter fa-3x"></i> </a>
+              </div>
+              <div class="servicetitle">
+                <h4>Twitter</h4>
+              </div>
+            </div>
+            <!-- service-icon -->
+          </div>
+          <!-- servicebox -->
+        </div>
+        <!-- large-3 -->
+
+        <div class="col-lg-3 col-md-3 col-sm-3">
+          <div class="servicebox text-center">
+            <div class="service-icon">
+              <div class="dm-icon-effect-1" data-effect="slide-bottom">
+                <a href="#" class=""> <i class="dm-icon fa fa-google-plus fa-3x"></i> </a>
+              </div>
+              <div class="servicetitle">
+                <h4>Google Plus</h4>
+              </div>
+            </div>
+            <!-- service-icon -->
+          </div>
+          <!-- servicebox -->
+        </div>
+        <!-- large-3 -->
+
+        <div class="col-lg-3 col-md-3 col-sm-3">
+          <div class="servicebox text-center">
+            <div class="service-icon">
+              <div class="dm-icon-effect-1" data-effect="slide-bottom">
+                <a href="#" class=""> <i class="dm-icon fa fa-youtube fa-3x"></i> </a>
+              </div>
+              <div class="servicetitle">
+                <h4>Youtube</h4>
+              </div>
+            </div>
+            <!-- service-icon -->
+          </div>
+          <!-- servicebox -->
+        </div>
+        <!-- large-3 -->
         </div>
       </div>
     </div>
