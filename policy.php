@@ -81,7 +81,8 @@ include('includes/config.php');
 
 
             <!-- <h2><?php echo htmlentities($result->PageName); ?></h2> -->
-            <h4> <?php echo $result->detail; ?> </h4>
+            <div style="padding:4%">
+                <h4> <?php echo $result->detail; ?> </h4>
             </div>
     <?php }
     } ?>
