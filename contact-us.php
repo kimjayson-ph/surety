@@ -135,102 +135,95 @@ if (isset($_POST['send'])) {
         <div class="col-md-6">
           <h3>Contact Info</h3>
           <div class="contact_detail">
-            <?php
-            $pagetype = $_GET['type'];
-            $sql = "SELECT Address,EmailId,ContactNo from tblcontactusinfo";
-            $query = $dbh->prepare($sql);
-            $query->execute();
-            $results = $query->fetchAll(PDO::FETCH_OBJ);
-            $cnt = 1;
-            if ($query->rowCount() > 0) {
-              foreach ($results as $result) { ?>
-                <ul>
-                  <li>
-                    <div class="icon_wrap"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
-                    <div class="contact_info_m"><?php echo htmlentities($result->Address); ?></div>
-                  </li>
-                  <li>
-                    <div class="icon_wrap"><i class="fa fa-phone" aria-hidden="true"></i></div>
-                    <div class="contact_info_m"><a href=""><?php echo htmlentities($result->EmailId); ?></a></div>
-                  </li>
-                  <li>
-                    <div class="icon_wrap"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
-                    <div class="contact_info_m"><a href=""><?php echo htmlentities($result->ContactNo); ?></a></div>
-                  </li>
-                </ul>
-            <?php }
-            } ?>
+              <?php
+              $pagetype = $_GET['type'];
+              $sql = "SELECT Address,EmailId,ContactNo from tblcontactusinfo";
+              $query = $dbh->prepare($sql);
+              $query->execute();
+              $results = $query->fetchAll(PDO::FETCH_OBJ);
+              $cnt = 1;
+              if ($query->rowCount() > 0) {
+                foreach ($results as $result) { ?>
+                  <ul>
+                    <li>
+                      <div class="icon_wrap"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                      <div class="contact_info_m"><?php echo htmlentities($result->Address); ?></div>
+                    </li>
+                    <li>
+                      <div class="icon_wrap"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                      <div class="contact_info_m"><a href=""><?php echo htmlentities($result->EmailId); ?></a></div>
+                    </li>
+                    <li>
+                      <div class="icon_wrap"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+                      <div class="contact_info_m"><a href=""><?php echo htmlentities($result->ContactNo); ?></a></div>
+                    </li>
+                  </ul>
+              <?php }
+              } ?>
           </div>
-          <h4 class="title">Social Media</h4>
-        <div class="col-lg-3 col-md-3 col-sm-3">
-          <div class="servicebox text-center">
-            <div class="service-icon">
-              <div class="dm-icon-effect-1" data-effect="slide-bottom">
-                <a href="#" class=""> <i class="dm-icon fa fa-facebook fa-3x"></i> </a>
+          
+            <h3 class="title">Social Media</h3>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+              <div class="servicebox">
+                <div class="service-icon">
+                  <div class="dm-icon-effect-1" data-effect="slide-bottom">
+                    <a href="#" class=""> <i class="dm-icon fa fa-facebook fa-3x"></i> </a>
+                  </div>
+                </div>
+                <!-- service-icon -->
               </div>
-              <div class="servicetitle">
-                <h4>Facebook</h4>
-              </div>
+              <!-- servicebox -->
             </div>
-            <!-- service-icon -->
-          </div>
-          <!-- servicebox -->
-        </div>
-        <!-- large-3 -->
+            <!-- large-3 -->
 
-        <div class="col-lg-3 col-md-3 col-sm-3">
-          <div class="servicebox text-center">
-            <div class="service-icon">
-              <div class="dm-icon-effect-1" data-effect="slide-bottom">
-                <a href="#" class=""> <i class="dm-icon fa fa-twitter fa-3x"></i> </a>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+              <div class="servicebox">
+                <div class="service-icon">
+                  <div class="dm-icon-effect-1" data-effect="slide-bottom">
+                    <a href="#" class=""> <i class="dm-icon fa fa-twitter fa-3x"></i> </a>
+                  </div>
+                </div>
+                <!-- service-icon -->
               </div>
-              <div class="servicetitle">
-                <h4>Twitter</h4>
-              </div>
+              <!-- servicebox -->
             </div>
-            <!-- service-icon -->
-          </div>
-          <!-- servicebox -->
-        </div>
-        <!-- large-3 -->
+            <!-- large-3 -->
 
-        <div class="col-lg-3 col-md-3 col-sm-3">
-          <div class="servicebox text-center">
-            <div class="service-icon">
-              <div class="dm-icon-effect-1" data-effect="slide-bottom">
-                <a href="#" class=""> <i class="dm-icon fa fa-google-plus fa-3x"></i> </a>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+              <div class="servicebox text-center">
+                <div class="service-icon">
+                  <div class="dm-icon-effect-1" data-effect="slide-bottom">
+                    <a href="#" class=""> <i class="dm-icon fa fa-google-plus fa-3x"></i> </a>
+                  </div>
+                </div>
+                <!-- service-icon -->
               </div>
-              <div class="servicetitle">
-                <h4>Google Plus</h4>
-              </div>
+              <!-- servicebox -->
             </div>
-            <!-- service-icon -->
-          </div>
-          <!-- servicebox -->
-        </div>
-        <!-- large-3 -->
+            <!-- large-3 -->
 
-        <div class="col-lg-3 col-md-3 col-sm-3">
-          <div class="servicebox text-center">
-            <div class="service-icon">
-              <div class="dm-icon-effect-1" data-effect="slide-bottom">
-                <a href="#" class=""> <i class="dm-icon fa fa-youtube fa-3x"></i> </a>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+              <div class="servicebox text-center">
+                <div class="service-icon">
+                  <div class="dm-icon-effect-1" data-effect="slide-bottom">
+                    <a href="#" class=""> <i class="dm-icon fa fa-youtube fa-3x"></i> </a>
+                  </div>
+                </div>
+                <!-- service-icon -->
               </div>
-              <div class="servicetitle">
-                <h4>Youtube</h4>
-              </div>
+              <!-- servicebox -->
             </div>
-            <!-- service-icon -->
-          </div>
-          <!-- servicebox -->
-        </div>
-        <!-- large-3 -->
+            <!-- large-3 -->
         </div>
       </div>
     </div>
-  </section>
+    </section>
   <!-- /Contact-us-->
-
+  <h1 class="text-center">
+    Surety Motorbikes Satellite Map
+  </h1>
+  <div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=145 M. L. Quezon St, Taguig, 1632 Metro Manila&amp;t=p&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://capcuttemplate.org/">Capcut Template</a></div><style>.mapouter{position:relative;text-align:right;width:100%;height:400px;}.gmap_canvas {overflow:hidden;background:none!important;width:100%;height:400px;}.gmap_iframe {height:400px!important;}</style></div>
+  <br>
 
   <!--Footer -->
   <?php include('includes/footer.php'); ?>
