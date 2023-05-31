@@ -35,10 +35,12 @@ if (isset($_POST['emailsubscibe'])) {
 
 
             <li><a href="page.php?type=aboutus">About Us</a></li>
+            <li><a href="motorbike-listing.php">Motorbike Listing</a></li>
             <li><a href="faqs.php?type=faqs">FAQs</a></li>
-            <li><a href="privacy.php?type=privacy">Privacy</a></li>
+            <li><a href="contact-us.php">Contact Us</a></li>
+            <li><a href="policy.php?type=policy">Privacy</a></li>
             <li><a href="termofuse.php?type=terms">Terms of use</a></li>
-            <li><a href="admin/">Admin Login</a></li>
+
           </ul>
         </div>
 

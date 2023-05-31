@@ -137,7 +137,7 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
 														<select name="menu1" onChange="MM_jumpMenu('parent',this,0)">
 															<option value="" selected="selected" class="form-control">***Select One***</option>
 															<option value="manage-pages.php?type=terms">terms and condition</option>
-															<option value="manage-pages.php?type=privacy">privacy and policy</option>
+															<option value="manage-pages.php?type=policy">privacy and policy</option>
 															<option value="manage-pages.php?type=aboutus">aboutus</option>
 															<option value="manage-pages.php?type=faqs">FAQs</option>
 														</select>
@@ -155,7 +155,7 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
 																echo "Terms and Conditions";
 																break;
 
-															case "privacy":
+															case "policy":
 																echo "Privacy And Policy";
 																break;
 
