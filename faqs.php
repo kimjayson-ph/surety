@@ -99,7 +99,7 @@ include('includes/config.php');
             <div class="dmbox">
               <div class="service-icon">
                 <div class="dm-icon-effect-1" data-effect="slide-bottom">
-                  <i class="dm-icon fa fa-book fa-3x"></i>
+                  <i class="fa fa-book fa-5x"></i>
                 </div>
               </div>
               <h4>Get Quote</h4>
@@ -112,7 +112,7 @@ include('includes/config.php');
             <div class="dmbox">
               <div class="service-icon">
                 <div class="dm-icon-effect-1" data-effect="slide-bottom">
-                  <i class="dm-icon fa fa-comments fa-3x"></i>
+                  <i class="fa fa-comments fa-5x"></i>
                 </div>
               </div>
               <h4> Live Chat!</h4>
@@ -125,7 +125,7 @@ include('includes/config.php');
             <div class="dmbox">
               <div class="service-icon">
                 <div class="dm-icon-effect-1" data-effect="slide-bottom">
-                  <i class="dm-icon fa fa-envelope-o fa-3x"></i>
+                  <i class="fa fa-envelope-o fa-5x"></i>
                 </div>
               </div>
               <h4> Report a Bug</h4>
@@ -140,6 +140,7 @@ include('includes/config.php');
           <div class="clearfix"></div>
           <div class="divider"></div>
 
+          <!--Accordion-->
           <div class="general-title text-center">
             <h3>Most Asked Questions</h3>
             <hr>
