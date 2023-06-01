@@ -1,5 +1,7 @@
 <?php
-if (isset($_POST['login'])) {
+var_dump($_SESSION);
+// if (isset($_POST['login'])) {
+if (isset($_POST["login"])) {
   $email = $_POST['email'];
   $password = md5($_POST['password']);
   $sql = "SELECT EmailId,Password,FullName FROM tblusers WHERE EmailId=:email and Password=:password";
@@ -8,16 +10,52 @@ if (isset($_POST['login'])) {
   $query->bindParam(':password', $password, PDO::PARAM_STR);
   $query->execute();
   $results = $query->fetchAll(PDO::FETCH_OBJ);
+
+
+  $admin_email = "admin@gmail.com";
+  $admin_password = "admintest";
+
+  $is_admin_login = ($email === $admin_email && $_POST['password'] === $admin_password);
+
+  // var_dump($email);
+
+  // die();
+
+  if ($is_admin_login) {
+    $_SESSION['login'] = $admin_email;
+    // $_SESSION['fname'] = $results->FullName;
+    $_SESSION['fname'] = 'Admin';
+
+    $_SESSION['alogin'] = $admin_email;
+
+    $sampple = $_SESSION['alogin'];
+
+    // echo "<script>alert('$sampple');</script>";
+
+    // $currentpage = $_SERVER['REQUEST_URI'];
+    // header("Location: ../admin/index.php");
+    echo "<script type='text/javascript'> document.location = '../surety/admin/dashboard.php'; </script>";
+  }
+
   if ($query->rowCount() > 0) {
     $_SESSION['login'] = $_POST['email'];
     $_SESSION['fname'] = $results->FullName;
     $currentpage = $_SERVER['REQUEST_URI'];
     echo "<script type='text/javascript'> document.location = 'index.php'; </script>";
-  } else {
-
+  }
+  //  elseif ($is_admin_login) {
+  //   $_SESSION['login'] = $_POST['admin@email.com'];
+  //   // $_SESSION['fname'] = $results->FullName;
+  //   $_SESSION['fname'] = $_POST['Admin'];
+  //   // $currentpage = $_SERVER['REQUEST_URI'];
+  //   header("location: admin/index.php");
+  //   // echo "<script type='text/javascript'> document.location = 'admin/index.php'; </script>";
+  // } 
+  else {
     echo "<script>alert('Invalid Details');</script>";
   }
 }
+
 
 ?>
 
@@ -43,8 +81,8 @@ if (isset($_POST['login'])) {
                 </div>
                 <div class="form-group checkbox">
                   <input type="checkbox" id="remember">
-
                 </div>
+                <input type="hidden" name="action" value="login">
                 <div class="form-group">
                   <input type="submit" name="login" value="Login" class="btn btn-block">
                 </div>
@@ -57,7 +95,7 @@ if (isset($_POST['login'])) {
       <div class="modal-footer text-center">
         <p>Don't have an account? <a href="#signupform" data-toggle="modal" data-dismiss="modal">Signup Here</a></p>
         <p><a href="#forgotpassword" data-toggle="modal" data-dismiss="modal">Forgot Password ?</a></p>
-        <p><a href="admin/">Admin Login</a></p>
+
 
       </div>
     </div>
