@@ -167,7 +167,7 @@ if (isset($_POST['send'])) {
             <div class="servicebox text-center">
               <div class="service-icon">
                 <div class="dm-icon-effect-1" data-effect="slide-bottom">
-                  <a href="#" class=""> <i class="dm-icon fa fa-facebook fa-3x"></i> </a>
+                  <a href="https://www.facebook.com/profile.php?id=100092961292385" target="_blank" class=""> <i class="dm-icon fa fa-facebook fa-3x"></i> </a>
                 </div>
               </div>
               <!-- service-icon -->
@@ -180,7 +180,7 @@ if (isset($_POST['send'])) {
             <div class="servicebox text-center">
               <div class="service-icon">
                 <div class="dm-icon-effect-1" data-effect="slide-bottom">
-                  <a href="#" class=""> <i class="dm-icon fa fa-twitter fa-3x"></i> </a>
+                  <a href="https://twitter.com/" target="_blank" class=""> <i class="dm-icon fa fa-twitter fa-3x"></i> </a>
                 </div>
               </div>
               <!-- service-icon -->
@@ -193,7 +193,7 @@ if (isset($_POST['send'])) {
             <div class="servicebox text-center">
               <div class="service-icon">
                 <div class="dm-icon-effect-1" data-effect="slide-bottom">
-                  <a href="#" class=""> <i class="dm-icon fa fa-google-plus fa-3x"></i> </a>
+                  <a href="https://www.google.com/" target="_blank" class=""> <i class="dm-icon fa fa-google-plus fa-3x"></i> </a>
                 </div>
               </div>
               <!-- service-icon -->
@@ -206,7 +206,7 @@ if (isset($_POST['send'])) {
             <div class="servicebox text-center">
               <div class="service-icon">
                 <div class="dm-icon-effect-1" data-effect="slide-bottom">
-                  <a href="#" class=""> <i class="dm-icon fa fa-youtube fa-3x"></i> </a>
+                  <a href="https://www.youtube.com/" target="_blank" class=""> <i class="dm-icon fa fa-youtube fa-3x"></i> </a>
                 </div>
               </div>
               <!-- service-icon -->
