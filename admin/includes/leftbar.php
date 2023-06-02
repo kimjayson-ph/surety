@@ -22,8 +22,8 @@
 				<ul>
 					<li><a href="manage-bookings.php">Manage Bookings</a></li>
 					<li><a href="new-bookings.php">New</a></li>
-					<li><a href="confirmed-bookings.php">Confirmed</a></li>
-					<li><a href="canceled-bookings.php">Canceled</a></li>
+					<li><a href="confirmed-bookings.php">Approved</a></li>
+					<li><a href="canceled-bookings.php">Rejected</a></li>
 				</ul>
 			</li>
 

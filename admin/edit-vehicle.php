@@ -360,6 +360,7 @@ if (!isset($_SESSION['alogin'])) {
 															<div class="col-sm-8 col-sm-offset-2">
 
 																<button class="btn btn-primary" name="submit" type="submit" style="margin-top:4%">Save changes</button>
+																<a href="manage-vehicles.php" class="btn btn-danger" style="margin-top:4%">Cancel</a>
 															</div>
 														</center>
 													</div>

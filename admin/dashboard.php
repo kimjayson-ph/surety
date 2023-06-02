@@ -189,12 +189,10 @@ if (!isset($_SESSION['alogin'])) {
 														$query = $query6->rowCount();
 														?>
 														<div class="stat-panel-number h1 "><?php echo htmlentities($query); ?></div>
-														<hr>
-														<i class="fa fa-question-circle fa-2x" aria-hidden="true"></i>
 														<div class="stat-panel-title text-uppercase">Queries</div>
 													</div>
 												</div>
-												<a href="manage-conactusquery.php" class="block-anchor panel-footer text-center">More info &nbsp; <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+												<a href="manage-conactusquery.php" class="block-anchor panel-footer text-center">Full Detail &nbsp; <i class="fa fa-arrow-right"></i></a>
 											</div>
 										</div>
 										<div class="col-md-6">

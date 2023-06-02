@@ -217,7 +217,7 @@ include('includes/config.php');
           <p>Once you rent the motorcycle your destinations are limited because the Philippines is an archipelago.</p>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-12">
-          <a class="dmbutton button large pull-right" href="#"><i class="fa fa-download"></i> BOOK NOW !</a>
+          <a class="dmbutton button large pull-right" href="motorbike-listing.php"><i class="fa fa-download"></i> BOOK NOW !</a>
         </div>
       </div>
       <!-- end message -->

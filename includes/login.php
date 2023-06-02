@@ -1,6 +1,6 @@
 <?php
-var_dump($_SESSION);
-// if (isset($_POST['login'])) {
+
+
 if (isset($_POST["login"])) {
   $email = $_POST['email'];
   $password = md5($_POST['password']);
@@ -17,23 +17,18 @@ if (isset($_POST["login"])) {
 
   $is_admin_login = ($email === $admin_email && $_POST['password'] === $admin_password);
 
-  // var_dump($email);
 
-  // die();
 
   if ($is_admin_login) {
     $_SESSION['login'] = $admin_email;
-    // $_SESSION['fname'] = $results->FullName;
+
     $_SESSION['fname'] = 'Admin';
 
     $_SESSION['alogin'] = $admin_email;
 
     $sampple = $_SESSION['alogin'];
 
-    // echo "<script>alert('$sampple');</script>";
 
-    // $currentpage = $_SERVER['REQUEST_URI'];
-    // header("Location: ../admin/index.php");
     echo "<script type='text/javascript'> document.location = '../surety/admin/dashboard.php'; </script>";
   }
 
@@ -42,16 +37,7 @@ if (isset($_POST["login"])) {
     $_SESSION['fname'] = $results->FullName;
     $currentpage = $_SERVER['REQUEST_URI'];
     echo "<script type='text/javascript'> document.location = 'index.php'; </script>";
-  }
-  //  elseif ($is_admin_login) {
-  //   $_SESSION['login'] = $_POST['admin@email.com'];
-  //   // $_SESSION['fname'] = $results->FullName;
-  //   $_SESSION['fname'] = $_POST['Admin'];
-  //   // $currentpage = $_SERVER['REQUEST_URI'];
-  //   header("location: admin/index.php");
-  //   // echo "<script type='text/javascript'> document.location = 'admin/index.php'; </script>";
-  // } 
-  else {
+  } else {
     echo "<script>alert('Invalid Details');</script>";
   }
 }

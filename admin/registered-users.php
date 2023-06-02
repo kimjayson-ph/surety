@@ -103,7 +103,7 @@ if (!isset($_SESSION['alogin'])) {
 												<th>Address</th>
 												<th>City</th>
 
-												<th>Reg Date</th>
+												<th>Registered Date</th>
 
 											</tr>
 										</thead>
@@ -117,7 +117,7 @@ if (!isset($_SESSION['alogin'])) {
 												<th>Address</th>
 												<th>City</th>
 
-												<th>Reg Date</th>
+												<th>Registered Date</th>
 											</tr>
 											</tr>
 										</tfoot>

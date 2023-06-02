@@ -40,6 +40,11 @@
                         $query->bindParam(':email', $email, PDO::PARAM_STR);
                         $query->execute();
                         $results = $query->fetchAll(PDO::FETCH_OBJ);
+
+                        $admin_email = "admin@gmail.com";
+                        $admin_password = "admintest";
+
+
                         if ($query->rowCount() > 0) {
                           foreach ($results as $result) {
 
@@ -48,17 +53,43 @@
                         } ?>
                         <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                       <ul class="dropdown-menu" style="background-color: #7bc41d;">
+
+                        <?php if ($_SESSION['login'] === $admin_email) { ?>
+
+
+                          <li><a href="./admin/dashboard.php">Admin Dashboard</a></li>
+
+                        <?php } ?>
+
                         <?php if ($_SESSION['login']) { ?>
+
                           <li><a href="profile.php">Profile Settings</a></li>
                           <li><a href="update-password.php">Update Password</a></li>
                           <li><a href="my-booking.php">My Booking</a></li>
                           <li><a href="post-testimonial.php">Post a Testimonial</a></li>
                           <li><a href="my-testimonials.php">My Testimonial</a></li>
                           <li><a href="logout.php">Sign Out</a></li>
+
                         <?php } ?>
+
+
+
+
+
+
+
+
                       </ul>
+
+
                     </li>
+
+
                   <?php    } ?>
+
+
+
+
                 </ul>
               </div>
             </div>
@@ -67,7 +98,7 @@
               <div class="login_btn"> <a style="background-color: #7bc41d;" href="#loginform" class="btn btn-xs uppercase" data-toggle="modal" data-dismiss="modal">Login / Register</a> </div>
             <?php } else {
 
-              echo  " ";
+              echo "";
             } ?>
 
 

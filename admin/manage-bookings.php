@@ -14,7 +14,7 @@ if (!isset($_SESSION['alogin'])) {
 		$query->bindParam(':eid', $eid, PDO::PARAM_STR);
 		$query->execute();
 
-		$msg = "Booking Successfully Cancelled";
+		$msg = "Booking Successfully Rejected";
 	}
 
 
@@ -28,7 +28,7 @@ if (!isset($_SESSION['alogin'])) {
 		$query->bindParam(':aeid', $aeid, PDO::PARAM_STR);
 		$query->execute();
 
-		$msg = "Booking Successfully Confirmed";
+		$msg = "Booking Successfully Approved";
 	}
 
 
@@ -118,8 +118,8 @@ if (!isset($_SESSION['alogin'])) {
 												<th>To Date</th>
 												<th>Message</th>
 												<th>Drivers License</th>
-												<th>Status</th>
 												<th>Posting date</th>
+												<th>Status</th>
 												<th>Action</th>
 											</tr>
 										</thead>
@@ -132,8 +132,8 @@ if (!isset($_SESSION['alogin'])) {
 												<th>To Date</th>
 												<th>Message</th>
 												<th>Drivers License</th>
-												<th>Status</th>
 												<th>Posting date</th>
+												<th>Status</th>
 												<th>Action</th>
 											</tr>
 										</tfoot>
@@ -154,20 +154,21 @@ if (!isset($_SESSION['alogin'])) {
 														<td><?php echo htmlentities($result->ToDate); ?></td>
 														<td><?php echo htmlentities($result->message); ?></td>
 														<td> <img width="60px" src="../img/id/<?php echo htmlentities($result->driverid); ?>" alt="image"></td>
+
+														<td><?php echo htmlentities($result->PostingDate); ?></td>
 														<td><?php
 															if ($result->Status == 0) {
-																echo htmlentities('Not Confirmed yet');
+																echo htmlentities('Pending approval');
 															} else if ($result->Status == 1) {
-																echo htmlentities('Confirmed');
+																echo htmlentities('Approved');
 															} else {
-																echo htmlentities('Cancelled');
+																echo htmlentities('Rejected');
 															}
 															?></td>
-														<td><?php echo htmlentities($result->PostingDate); ?></td>
-														<td><a href="manage-bookings.php?aeid=<?php echo htmlentities($result->id); ?>" onclick="return confirm('Do you really want to Confirm this booking')"> Confirm</a> /
+														<td><a href="manage-bookings.php?aeid=<?php echo htmlentities($result->id); ?>" onclick="return confirm('Do you really want to Approve this booking')"> Approve</a> /
 
 
-															<a href="manage-bookings.php?eid=<?php echo htmlentities($result->id); ?>" onclick="return confirm('Do you really want to Cancel this Booking')"> Cancel</a>
+															<a href="manage-bookings.php?eid=<?php echo htmlentities($result->id); ?>" onclick="return confirm('Do you really want to Reject this Booking')"> Reject</a>
 														</td>
 
 													</tr>
