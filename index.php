@@ -219,6 +219,7 @@ error_reporting(0);
   </section>
   <!-- /Testimonial-->
   
+  <!--Chatbot-->
   <script>
   window.addEventListener('mouseover', initLandbot, { once: true });
   window.addEventListener('touchstart', initLandbot, { once: true });
@@ -237,6 +238,7 @@ error_reporting(0);
     }
   }
   </script>
+  <!--/Chatbot-->
 
 
   <!--Footer -->
