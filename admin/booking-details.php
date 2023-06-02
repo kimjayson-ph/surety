@@ -194,9 +194,9 @@ DATEDIFF(tblbooking.ToDate,tblbooking.FromDate) as totalnodays,tblvehicles.Price
 														<?php if ($result->Status == 0) { ?>
 															<tr>
 																<td style="text-align:center" colspan="4">
-																	<a href="bookig-details.php?aeid=<?php echo htmlentities($result->id); ?>" onclick="return confirm('Do you really want to Confirm this booking')" class="btn btn-primary"> Confirm Booking</a>
+																	<a href="bookig-details.php?aeid=<?php echo htmlentities($result->id); ?>" onclick="return confirm('Do you really want to Approve this booking')" class="btn btn-success"> Approve Booking</a>
 
-																	<a href="bookig-details.php?eid=<?php echo htmlentities($result->id); ?>" onclick="return confirm('Do you really want to Cancel this Booking')" class="btn btn-danger"> Cancel Booking</a>
+																	<a href="bookig-details.php?eid=<?php echo htmlentities($result->id); ?>" onclick="return confirm('Do you really want to Reject this Booking')" class="btn btn-danger"> Reject Booking</a>
 																</td>
 															</tr>
 														<?php } ?>

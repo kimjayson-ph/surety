@@ -39,9 +39,7 @@ html {
 body {
   font-size: 1em;
 }
-a {
-  color: #37a6c4;
-}
+
 a:hover {
   text-decoration: none;
   color: #5db9d1;

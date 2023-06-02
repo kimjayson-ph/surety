@@ -123,19 +123,19 @@ if (strlen($_SESSION['login']) == 0) {
                                 </div>
                               </div>
                               <?php if ($result->Status == 1) { ?>
-                                <div class="vehicle_status"> <a href="#" style="background-color: #7bc41d;" class="btn btn-xs active-btn">Confirmed</a>
+                                <div class="vehicle_status"> <a href="#" style="background-color: #7bc41d;" class="btn btn-xs active-btn">Approved</a>
                                   <div class="clearfix"></div>
                                 </div>
 
                               <?php } else if ($result->Status == 2) { ?>
-                                <div class="vehicle_status"> <a href="#" style="background-color: red;" class="btn outline btn-xs">Cancelled</a>
+                                <div class="vehicle_status"> <a href="#" style="background-color: red;" class="btn outline btn-xs ">Rejected</a>
                                   <div class="clearfix"></div>
                                 </div>
 
 
 
                               <?php } else { ?>
-                                <div class="vehicle_status"> <a href="#" class="btn outline btn-xs">Not Confirm yet</a>
+                                <div class="vehicle_status"> <a href="#" style="background-color: yellow;" class="btn outline btn-xs">Pending Approval</a>
                                   <div class="clearfix"></div>
                                 </div>
                               <?php } ?>
