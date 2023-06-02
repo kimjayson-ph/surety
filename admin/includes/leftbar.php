@@ -30,8 +30,8 @@
 
 
 			<li><a href="testimonials.php"><i class="fa fa-table"></i> Manage Testimonials</a></li>
-			<li><a href="manage-conactusquery.php"><i class="fa fa-desktop"></i> Manage Conatctus Query</a></li>
-			<li><a href="reg-users.php"><i class="fa fa-users"></i> Reg Users</a></li>
+			<li><a href="manage-contactusquery.php"><i class="fa fa-desktop"></i> Manage Contactus Query</a></li>
+			<li><a href="registered-users.php"><i class="fa fa-users"></i> Registered Users</a></li>
 			<li><a href="manage-pages.php"><i class="fa fa-files-o"></i> Manage Pages</a></li>
 			<li><a href="update-contactinfo.php"><i class="fa fa-files-o"></i> Update Contact Info</a></li>
 

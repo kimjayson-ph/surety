@@ -126,7 +126,7 @@ if (!isset($_SESSION['alogin'])) {
 														<td>
 
 
-															<a href="manage-subscribers.php?del=<?php echo $result->id; ?>" onclick="return confirm('Do you want to delete');"><i class="fa fa-close"></i></a>
+															<a href="manage-subscribers.php?del=<?php echo $result->id; ?>" onclick="return confirm('Do you want to delete');"><i class="fa fa-trash"></i></a>
 														</td>
 
 													</tr>

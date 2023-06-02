@@ -40,6 +40,9 @@
                         $query->bindParam(':email', $email, PDO::PARAM_STR);
                         $query->execute();
                         $results = $query->fetchAll(PDO::FETCH_OBJ);
+                        $admin_email = "admin@gmail.com";
+                        $admin_password = "admintest";
+
                         if ($query->rowCount() > 0) {
                           foreach ($results as $result) {
 
@@ -55,9 +58,19 @@
                           <li><a href="post-testimonial.php">Post a Testimonial</a></li>
                           <li><a href="my-testimonials.php">My Testimonial</a></li>
                           <li><a href="logout.php">Sign Out</a></li>
+
                         <?php } ?>
+
+
+
+
+
                       </ul>
+
+
                     </li>
+
+
                   <?php    } ?>
                 </ul>
               </div>

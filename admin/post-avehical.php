@@ -225,16 +225,16 @@ if (!isset($_SESSION['alogin'])) {
 
 
 												<div class="form-group">
-													<div class="col-sm-4">
+													<div class="col-sm-3">
 														Image 1 <span style="color:red">*</span><input type="file" name="img1" required>
 													</div>
-													<div class="col-sm-4">
+													<div class="col-sm-3">
 														Image 2<span style="color:red">*</span><input type="file" name="img2" required>
 													</div>
-													<div class="col-sm-4">
+													<div class="col-sm-3">
 														Image 3<span style="color:red">*</span><input type="file" name="img3" required>
 													</div>
-													<div class="col-sm-4">
+													<div class="col-sm-3">
 														Image 4<span style="color:red">*</span><input type="file" name="img4">
 													</div>
 												</div>

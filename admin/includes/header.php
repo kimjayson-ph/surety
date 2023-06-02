@@ -1,5 +1,5 @@
 <div class="brand clearfix">
-	<a href="dashboard.php" style="font-size: 25px;">Motorbike Rental Portal | Admin Panel</a>
+	<a href="../index.php" style="font-size: 25px;">Motorbike Rental Portal | Admin Panel</a>
 	<span class="menu-btn"><i class="fa fa-bars"></i></span>
 	<ul class="ts-profile-nav">
 

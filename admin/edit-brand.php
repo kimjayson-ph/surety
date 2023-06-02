@@ -126,7 +126,8 @@ if (!isset($_SESSION['alogin'])) {
 												<div class="form-group">
 													<div class="col-sm-8 col-sm-offset-4">
 
-														<button class="btn btn-primary" name="submit" type="submit">Submit</button>
+														<button class="btn btn-primary" name="submit" type="submit">Update</button>
+														<a href="manage-brands.php" class="btn btn-danger">Cancel</a>
 													</div>
 												</div>
 

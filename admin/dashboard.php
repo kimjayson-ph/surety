@@ -73,10 +73,10 @@ if (!isset($_SESSION['alogin'])) {
 														$regusers = $query->rowCount();
 														?>
 														<div class="stat-panel-number h1 "><?php echo htmlentities($regusers); ?></div>
-														<div class="stat-panel-title text-uppercase">Reg Users</div>
+														<div class="stat-panel-title text-uppercase">Registered Users</div>
 													</div>
 												</div>
-												<a href="reg-users.php" class="block-anchor panel-footer">Full Detail <i class="fa fa-arrow-right"></i></a>
+												<a href="registered-users.php" class="block-anchor panel-footer">Full Detail <i class="fa fa-arrow-right"></i></a>
 											</div>
 										</div>
 										<div class="col-md-3">
@@ -179,10 +179,10 @@ if (!isset($_SESSION['alogin'])) {
 														$query = $query6->rowCount();
 														?>
 														<div class="stat-panel-number h1 "><?php echo htmlentities($query); ?></div>
-														<div class="stat-panel-title text-uppercase">Queries</div>
+														<div class="stat-panel-title text-uppercase">Contact us Queries</div>
 													</div>
 												</div>
-												<a href="manage-conactusquery.php" class="block-anchor panel-footer text-center">Full Detail &nbsp; <i class="fa fa-arrow-right"></i></a>
+												<a href="manage-contactusquery.php" class="block-anchor panel-footer text-center">Full Detail &nbsp; <i class="fa fa-arrow-right"></i></a>
 											</div>
 										</div>
 										<div class="col-md-3">
