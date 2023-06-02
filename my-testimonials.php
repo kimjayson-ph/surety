@@ -81,7 +81,7 @@ if (strlen($_SESSION['login']) == 0) {
               <div class="dealer_info">
                 <h5><?php echo htmlentities($result->FullName); ?></h5>
                 <p><?php echo htmlentities($result->Address); ?><br>
-                  <?php echo htmlentities($result->City); ?>&nbsp;<?php echo htmlentities($result->Country);
+                  <?php echo htmlentities($result->City); ?>&nbsp;<?php echo '';
                                                                 }
                                                               } ?></p>
               </div>
@@ -116,12 +116,12 @@ if (strlen($_SESSION['login']) == 0) {
                                 <p><b>Posting Date:</b><?php echo htmlentities($result->PostingDate); ?> </p>
                               </div>
                               <?php if ($result->status == 1) { ?>
-                                <div class="vehicle_status"> <a class="btn outline btn-xs active-btn">Active</a>
+                                <div class="vehicle_status"> <a class="btn  btn-xs btn-success">Active</a>
 
                                   <div class="clearfix"></div>
                                 </div>
                               <?php } else { ?>
-                                <div class="vehicle_status"> <a href="#" class="btn outline btn-xs">Waiting for approval</a>
+                                <div class="vehicle_status"> <a href="#" style="background-color: yellow;" class="btn outline btn-xs">Pending Approval</a>
                                   <div class="clearfix"></div>
                                 </div>
                               <?php } ?>

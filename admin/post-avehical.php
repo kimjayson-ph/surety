@@ -298,8 +298,9 @@ if (!isset($_SESSION['alogin'])) {
 																<div class="form-group">
 																	<center>
 																		<div class="col-sm-8 col-sm-offset-2">
-																			<button class="btn btn-default" type="reset">Cancel</button>
-																			<button class="btn btn-primary" name="submit" type="submit">Save changes</button>
+																			<button class="btn btn-success" name="submit" type="submit">Save changes</button>
+																			<button class="btn btn-danger" type="reset">Cancel</button>
+
 																		</div>
 																	</center>
 																</div>
