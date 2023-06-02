@@ -61,7 +61,7 @@ if (!isset($_SESSION['alogin'])) {
 							<div class="row">
 								<div class="col-md-12">
 									<div class="row">
-										<div class="col-md-3">
+										<div class="col-md-6">
 											<div class="panel panel-default">
 												<div class="panel-body bk-primary text-light">
 													<div class="stat-panel text-center">
@@ -73,13 +73,15 @@ if (!isset($_SESSION['alogin'])) {
 														$regusers = $query->rowCount();
 														?>
 														<div class="stat-panel-number h1 "><?php echo htmlentities($regusers); ?></div>
-														<div class="stat-panel-title text-uppercase">Reg Users</div>
+														<hr>
+														<i class="fa fa-users fa-2x"></i> 
+														<div class="stat-panel-title text-uppercase"> Registered Users</div>
 													</div>
 												</div>
-												<a href="reg-users.php" class="block-anchor panel-footer">Full Detail <i class="fa fa-arrow-right"></i></a>
+												<a href="reg-users.php" class="block-anchor panel-footer text-center">More info &nbsp; <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
 											</div>
 										</div>
-										<div class="col-md-3">
+										<div class="col-md-6">
 											<div class="panel panel-default">
 												<div class="panel-body bk-success text-light">
 													<div class="stat-panel text-center">
@@ -91,13 +93,15 @@ if (!isset($_SESSION['alogin'])) {
 														$totalvehicle = $query1->rowCount();
 														?>
 														<div class="stat-panel-number h1 "><?php echo htmlentities($totalvehicle); ?></div>
-														<div class="stat-panel-title text-uppercase">Listed Vehicles</div>
+														<hr>
+														<i class="fa fa-motorcycle fa-2x" aria-hidden="true"></i>
+														<div class="stat-panel-title text-uppercase">Listed Motorbikes</div>
 													</div>
 												</div>
-												<a href="manage-vehicles.php" class="block-anchor panel-footer text-center">Full Detail &nbsp; <i class="fa fa-arrow-right"></i></a>
+												<a href="manage-vehicles.php" class="block-anchor panel-footer text-center">More info &nbsp; <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
 											</div>
 										</div>
-										<div class="col-md-3">
+										<div class="col-md-6">
 											<div class="panel panel-default">
 												<div class="panel-body bk-info text-light">
 													<div class="stat-panel text-center">
@@ -110,13 +114,15 @@ if (!isset($_SESSION['alogin'])) {
 														?>
 
 														<div class="stat-panel-number h1 "><?php echo htmlentities($bookings); ?></div>
+														<hr>
+														<i class="fa fa-calendar-check-o fa-2x" aria-hidden="true"></i>
 														<div class="stat-panel-title text-uppercase">Total Bookings</div>
 													</div>
 												</div>
-												<a href="manage-bookings.php" class="block-anchor panel-footer text-center">Full Detail &nbsp; <i class="fa fa-arrow-right"></i></a>
+												<a href="manage-bookings.php" class="block-anchor panel-footer text-center">More info &nbsp; <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
 											</div>
 										</div>
-										<div class="col-md-3">
+										<div class="col-md-6">
 											<div class="panel panel-default">
 												<div class="panel-body bk-warning text-light">
 													<div class="stat-panel text-center">
@@ -128,10 +134,12 @@ if (!isset($_SESSION['alogin'])) {
 														$brands = $query3->rowCount();
 														?>
 														<div class="stat-panel-number h1 "><?php echo htmlentities($brands); ?></div>
+														<hr>
+														<i class="fa fa-list-alt fa-2x" aria-hidden="true"></i>
 														<div class="stat-panel-title text-uppercase">Listed Brands</div>
 													</div>
 												</div>
-												<a href="manage-brands.php" class="block-anchor panel-footer text-center">Full Detail &nbsp; <i class="fa fa-arrow-right"></i></a>
+												<a href="manage-brands.php" class="block-anchor panel-footer text-center">More info &nbsp; <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
 											</div>
 										</div>
 									</div>
@@ -149,7 +157,7 @@ if (!isset($_SESSION['alogin'])) {
 							<div class="row">
 								<div class="col-md-12">
 									<div class="row">
-										<div class="col-md-3">
+										<div class="col-md-6">
 											<div class="panel panel-default">
 												<div class="panel-body bk-primary text-light">
 													<div class="stat-panel text-center">
@@ -161,13 +169,15 @@ if (!isset($_SESSION['alogin'])) {
 														$subscribers = $query4->rowCount();
 														?>
 														<div class="stat-panel-number h1 "><?php echo htmlentities($subscribers); ?></div>
+														<hr>
+														<i class="fa fa-bell-slash fa-2x" aria-hidden="true"></i>
 														<div class="stat-panel-title text-uppercase">Subscribers</div>
 													</div>
 												</div>
-												<a href="manage-subscribers.php" class="block-anchor panel-footer">Full Detail <i class="fa fa-arrow-right"></i></a>
+												<a href="manage-subscribers.php" class="block-anchor panel-footer text-center">More info &nbsp; <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
 											</div>
 										</div>
-										<div class="col-md-3">
+										<div class="col-md-6">
 											<div class="panel panel-default">
 												<div class="panel-body bk-success text-light">
 													<div class="stat-panel text-center">
@@ -179,13 +189,15 @@ if (!isset($_SESSION['alogin'])) {
 														$query = $query6->rowCount();
 														?>
 														<div class="stat-panel-number h1 "><?php echo htmlentities($query); ?></div>
+														<hr>
+														<i class="fa fa-question-circle fa-2x" aria-hidden="true"></i>
 														<div class="stat-panel-title text-uppercase">Queries</div>
 													</div>
 												</div>
-												<a href="manage-conactusquery.php" class="block-anchor panel-footer text-center">Full Detail &nbsp; <i class="fa fa-arrow-right"></i></a>
+												<a href="manage-conactusquery.php" class="block-anchor panel-footer text-center">More info &nbsp; <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
 											</div>
 										</div>
-										<div class="col-md-3">
+										<div class="col-md-6">
 											<div class="panel panel-default">
 												<div class="panel-body bk-info text-light">
 													<div class="stat-panel text-center">
@@ -196,12 +208,13 @@ if (!isset($_SESSION['alogin'])) {
 														$results5 = $query5->fetchAll(PDO::FETCH_OBJ);
 														$testimonials = $query5->rowCount();
 														?>
-
 														<div class="stat-panel-number h1 "><?php echo htmlentities($testimonials); ?></div>
+														<hr>
+														<i class="fa fa-thumbs-up fa-2x" aria-hidden="true"></i>
 														<div class="stat-panel-title text-uppercase">Testimonials</div>
 													</div>
 												</div>
-												<a href="testimonials.php" class="block-anchor panel-footer text-center">Full Detail &nbsp; <i class="fa fa-arrow-right"></i></a>
+												<a href="testimonials.php" class="block-anchor panel-footer text-center">More info &nbsp; <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
 											</div>
 										</div>
 

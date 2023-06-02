@@ -5,12 +5,12 @@
 *   FOR RESPONSIVENESS      *
 ****************************/
 ::selection {
-  background: #4f5362;
+  background: #dff0d8;
   /* WebKit/Blink Browsers */
   color: #fff;
 }
 ::-moz-selection {
-  background: #4f5362;
+  background: #dff0d8;
   /* Gecko Browsers */
   color: #fff;
 }
@@ -60,12 +60,12 @@ a:hover {
   text-align: left;
 }
 .btn-brand {
-  background: #37a6c4;
+  background: #7bc41d;
   color: #fff;
 }
 .btn-brand:hover {
   color: #fff;
-  background: #2c849c;
+  background: #7bc41d;
 }
 .btn-dark {
   background: #272727;
@@ -73,10 +73,10 @@ a:hover {
 }
 .btn-dark:hover {
   color: #fff;
-  background: #2c849c;
+  background: #7bc41d;
 }
 .btn-red {
-  background: #4f5362;
+  background: #dff0d8;
   color: #fff;
 }
 .btn-red:hover {
@@ -89,29 +89,29 @@ a:hover {
 }
 .btn-alt:hover {
   color: #fff;
-  background: #2c849c;
+  background: #7bc41d;
 }
 /****************************
 *      Background Colors        *
 ****************************/
 .bk-primary {
-  background: #325d88;
+  background: #7bc41d;
 }
 .bk-success {
-  background: #93c54b;
+  background: #7bc41d;
 }
 .bk-warning {
-  background: #f47c3c;
+  background: #7bc41d;
 }
 .bk-danger {
-  background: #d9534f;
+  background: #7bc41d;
 }
 .bk-info {
-  background: #29abe0;
+  background: #7bc41d;
 }
 .bk-white,
 .bk-light {
-  background: #fff;
+  background: #ffffff;
 }
 .bk-brand {
   background: #37a6c4;
@@ -120,7 +120,7 @@ a:hover {
   background: #222;
 }
 .bk-blue {
-  background: #0010ce;
+  background: #7bc41d;
 }
 .bk-alt {
   background: #f7f7f7;
@@ -141,7 +141,7 @@ a:hover {
 }
 .hr-green {
   height: 2px;
-  background: #37a6c4;
+  background: #7bc41d;
 }
 .hr-grey {
   height: 2px;
@@ -213,7 +213,7 @@ a:hover {
   color: #818181;
 }
 .text-brand {
-  color: #37a6c4;
+  color: #7bc41d;
 }
 .text-yellow {
   color: #ffff00;
@@ -542,7 +542,7 @@ li {
   border-bottom: 1px solid #f0f0f0;
 }
 .brand {
-  background: #3e454c;
+  background: #dff0d8;
   position: relative;
   z-index: 3;
   position: fixed;
@@ -566,7 +566,7 @@ li {
 }
 .brand .menu-btn {
   float: right;
-  background: #232d3b;
+  background: #dff0d8;
   text-align: center;
   cursor: pointer;
   color: #fff;
@@ -588,7 +588,7 @@ li {
 .brand .ts-profile-nav li a {
   display: block;
   padding: 20px;
-  color: #fff;
+  color: #000000;
 }
 .brand .ts-profile-nav li ul {
   visibility: hidden;
@@ -602,14 +602,14 @@ li {
 }
 .brand .ts-profile-nav li ul li a {
   padding: 10px 20px;
-  background: #222;
+  background: #dff0d8;
 }
 .brand .ts-profile-nav .ts-account .fa-angle-down {
   float: right;
 }
 .brand .ts-profile-nav .ts-account > a {
   width: 180px;
-  background: #2c3136;
+  background: #dff0d8;
 }
 .brand .ts-profile-nav .ts-account .ts-avatar {
   border-radius: 50%;
@@ -637,7 +637,7 @@ li {
   background-color: #b4b4b4;
 }
 .ts-sidebar {
-  background: #2c3136;
+  background: #dff0d8;
   max-height: 0;
   transition: max-height 0.3s;
   overflow: hidden;
@@ -670,7 +670,7 @@ li {
   }
 }
 .ts-sidebar-menu .ts-label {
-  color: #585c64;
+  color: #dff0d8;
   font-weight: bold;
   padding: 8px 15px;
   text-transform: uppercase;
@@ -682,19 +682,19 @@ li {
   display: block;
   text-decoration: none;
   padding: 12px 15px;
-  color: #fff;
+  color: #000000;
 }
 .ts-sidebar-menu li {
   position: relative;
 }
 .ts-sidebar-menu li i {
-  color: #585c64;
+  color: #dff0d8;
   margin-right: 10px;
 }
 .ts-sidebar-menu li ul {
   display: block;
-  background: rgba(255, 0, 0, 0.12);
-  background: rgba(0, 0, 0, 0.32);
+  background: #dff0d8;
+  background: #dff0d8;
   max-height: 0;
   overflow: hidden;
   transition: all 0.3s ease;
@@ -707,8 +707,8 @@ li {
   background: rgba(51, 56, 62, 0.35);
 }
 .ts-sidebar-menu > .open > a {
-  background: #33383e;
-  border-left: 3px solid #37a6c4;
+  background: rgb(255, 255, 255);
+  border-left: 3px solid green;
 }
 .ts-sidebar-menu .open > .more i {
   transform: rotate(180deg);

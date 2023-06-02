@@ -113,7 +113,7 @@ if (!isset($_SESSION['alogin'])) {
 												<div class="form-group">
 													<div class="col-sm-8 col-sm-offset-4">
 
-														<button class="btn btn-primary" name="submit" type="submit">Submit</button>
+														<button class="btn btn-success" name="submit" type="submit">Submit</button>
 													</div>
 												</div>
 
