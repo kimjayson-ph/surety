@@ -218,9 +218,13 @@ error_reporting(0);
     <div class="dark-overlay"></div>
   </section>
   <!-- /Testimonial-->
+<<<<<<< HEAD
 
 
 
+=======
+  
+>>>>>>> 9f026cd87ed021ff194307b32af8854df39b6f81
 
   <!--Footer -->
   <?php include('includes/footer.php'); ?>
