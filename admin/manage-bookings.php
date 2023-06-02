@@ -14,7 +14,7 @@ if (!isset($_SESSION['alogin'])) {
 		$query->bindParam(':eid', $eid, PDO::PARAM_STR);
 		$query->execute();
 
-		$msg = "Booking Successfully Approved";
+		$msg = "Booking Successfully Rejected";
 	}
 
 
@@ -165,10 +165,10 @@ if (!isset($_SESSION['alogin'])) {
 																echo htmlentities('Rejected');
 															}
 															?></td>
-														<td><a href="manage-bookings.php?aeid=<?php echo htmlentities($result->id); ?>" onclick="return confirm('Do you really want to Approve this booking')"> Approved</a> /
+														<td><a href="manage-bookings.php?aeid=<?php echo htmlentities($result->id); ?>" onclick="return confirm('Do you really want to Approve this booking')"> Approve</a> /
 
 
-															<a href="manage-bookings.php?eid=<?php echo htmlentities($result->id); ?>" onclick="return confirm('Do you really want to Reject this Booking')"> Rejected</a>
+															<a href="manage-bookings.php?eid=<?php echo htmlentities($result->id); ?>" onclick="return confirm('Do you really want to Reject this Booking')"> Reject</a>
 														</td>
 
 													</tr>
