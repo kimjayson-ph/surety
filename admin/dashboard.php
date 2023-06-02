@@ -116,7 +116,7 @@ if (!isset($_SESSION['alogin'])) {
 														<div class="stat-panel-number h1 "><?php echo htmlentities($bookings); ?></div>
 														<hr>
 														<i class="fa fa-calendar-check-o fa-2x" aria-hidden="true"></i>
-														<div class="stat-panel-title text-uppercase">Total Bookings</div>
+														<div class="stat-panel-title text-uppercase">Total Booking</div>
 													</div>
 												</div>
 												<a href="manage-bookings.php" class="block-anchor panel-footer text-center">More info &nbsp; <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
