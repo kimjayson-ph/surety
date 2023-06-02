@@ -189,6 +189,8 @@ if (!isset($_SESSION['alogin'])) {
 														$query = $query6->rowCount();
 														?>
 														<div class="stat-panel-number h1 "><?php echo htmlentities($query); ?></div>
+														<hr>
+														<i class="fa fa-question fa-2x" aria-hidden="true"></i>
 														<div class="stat-panel-title text-uppercase">Queries</div>
 													</div>
 												</div>
