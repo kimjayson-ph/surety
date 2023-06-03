@@ -5,13 +5,22 @@ include('includes/config.php');
 if (!isset($_SESSION['alogin'])) {
 	header("location: ../index.php");
 } else {
-	if (isset($_GET['del'])) {
+	/* if (isset($_GET['del'])) {
 		$id = $_GET['del'];
 		$sql = "delete from tblbrands  WHERE id=:id";
 		$query = $dbh->prepare($sql);
 		$query->bindParam(':id', $id, PDO::PARAM_STR);
 		$query->execute();
 		$msg = "Page data updated  successfully";
+	} */
+
+	if (isset($_REQUEST['del'])) {
+		$delid = intval($_GET['del']);
+		$sql = "delete from tblusers  WHERE  id=:delid";
+		$query = $dbh->prepare($sql);
+		$query->bindParam(':delid', $delid, PDO::PARAM_STR);
+		$query->execute();
+		$msg = "Registered User deleted successfully";
 	}
 
 
@@ -102,8 +111,8 @@ if (!isset($_SESSION['alogin'])) {
 												<th>DOB</th>
 												<th>Address</th>
 												<th>City</th>
-
 												<th>Registered Date</th>
+												<th>Action</th>
 
 											</tr>
 										</thead>
@@ -116,8 +125,8 @@ if (!isset($_SESSION['alogin'])) {
 												<th>DOB</th>
 												<th>Address</th>
 												<th>City</th>
-
 												<th>Registered Date</th>
+												<th>Action</th>
 											</tr>
 											</tr>
 										</tfoot>
@@ -138,8 +147,8 @@ if (!isset($_SESSION['alogin'])) {
 														<td><?php echo htmlentities($result->dob); ?></td>
 														<td><?php echo htmlentities($result->Address); ?></td>
 														<td><?php echo htmlentities($result->City); ?></td>
-
 														<td><?php echo htmlentities($result->RegDate); ?></td>
+														<td><a href="registered-users.php?del=<?php echo $result->id; ?>" onclick="return confirm('Do you want to delete');"><i style="color: #7bc41d;" class="fa fa-trash"></i></a></td>
 													</tr>
 											<?php $cnt = $cnt + 1;
 												}
