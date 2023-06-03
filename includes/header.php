@@ -1,5 +1,5 @@
 <header>
-  <div class="default-header">
+  <div class="default-header  ">
     <div class="container">
       <div class="row">
         <div class="col-sm-3 col-md-2">
@@ -110,7 +110,7 @@
   </div>
 
   <!-- Navigation -->
-  <nav id="navigation_bar" class="navbar navbar-default   " style="background-color: #7bc41d;">
+  <nav id="navigation_bar" class="navbar navbar-default " style="background-color: #7bc41d;">
     <div class="container">
       <div class="navbar-header">
         <button id="menu_slide" data-target="#navigation" aria-expanded="false" data-toggle="collapse" class="navbar-toggle collapsed" style="background-color: black;" type="button"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar" style="background-color: white;"></span> <span style="background-color: white;" class="icon-bar"></span> <span style="background-color: white;" class="icon-bar"></span> </button>
@@ -139,6 +139,8 @@
   </nav>
   <!-- Navigation end -->
 
-  
+  <script>
+
+  </script>
 
 </header>

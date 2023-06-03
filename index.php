@@ -218,13 +218,9 @@ error_reporting(0);
     <div class="dark-overlay"></div>
   </section>
   <!-- /Testimonial-->
-<<<<<<< HEAD
 
 
 
-=======
-  
->>>>>>> 9f026cd87ed021ff194307b32af8854df39b6f81
 
   <!--Footer -->
   <?php include('includes/footer.php'); ?>
@@ -255,7 +251,7 @@ error_reporting(0);
   <script src="assets/js/bootstrap.min.js"></script>
   <script src="assets/js/interface.js"></script>
   <!--Switcher-->
-  <script src="assets/switcher/js/switcher.js"></script>
+
   <!--bootstrap-slider-JS-->
   <script src="assets/js/bootstrap-slider.min.js"></script>
   <!--Slider-JS-->
