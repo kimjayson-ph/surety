@@ -163,8 +163,8 @@ if (isset($_POST['submit'])) {
                   <ul class="nav nav-tabs gray-bg" role="tablist">
                     <li role="presentation" class="active"><a href="#vehicle-overview " aria-controls="vehicle-overview" role="tab" data-toggle="tab">Vehicle Overview </a></li>
 
-                    <li role="presentation"><a href="#accessories" aria-controls="accessories" role="tab" data-toggle="tab">Accessories & extras</a></li>
-                    <li role="presentation"><a href="#rentalrequirements" aria-controls="rentalrequirements" role="tab" data-toggle="tab">Rental requirements</a></li>
+                    <li role="presentation"><a href="#accessories" aria-controls="accessories" role="tab" data-toggle="tab">Accessories & Extras</a></li>
+                    <li role="presentation"><a href="#rentalrequirements" aria-controls="rentalrequirements" role="tab" data-toggle="tab">Rental Requirements</a></li>
                   </ul>
 
                   <!-- Tab panes -->
@@ -178,7 +178,12 @@ if (isset($_POST['submit'])) {
                     <!-- Rental requirements -->
                     <div role="tabpanel" class="tab-pane" id="rentalrequirements">
 
-                      <p>hello</p>
+                      <ul>
+                        <li>Motorcycle Drivers license</li>
+                        <li>Deposit 1 Valid ID</li>
+
+
+                      </ul>
                     </div>
 
 
