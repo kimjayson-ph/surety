@@ -146,7 +146,7 @@ if (isset($_POST['submit'])) {
                     <p>Reg.Year</p>
                   </li>
                   <li> <i class="fa fa-motorcycle" aria-hidden="true"></i>
-                    <h5><?php echo htmlentities($result->SeatingCapacity); ?></h5>
+                    <h5><?php echo htmlentities($result->displacement); ?></h5>
                     <p>Displacement</p>
                   </li>
                   <li> <i class="fa fa-cogs" aria-hidden="true"></i>
@@ -421,7 +421,7 @@ if (isset($_POST['submit'])) {
             <div class="row">
               <?php
               $bid = $_SESSION['brndid'];
-              $sql = "SELECT tblvehicles.VehiclesTitle,tblbrands.BrandName,tblvehicles.PricePerDay,tblvehicles.FuelType,tblvehicles.ModelYear,tblvehicles.id,tblvehicles.SeatingCapacity,tblvehicles.VehiclesOverview,tblvehicles.Vimage1 from tblvehicles join tblbrands on tblbrands.id=tblvehicles.VehiclesBrand where tblvehicles.VehiclesBrand=:bid";
+              $sql = "SELECT tblvehicles.VehiclesTitle,tblbrands.BrandName,tblvehicles.PricePerDay,tblvehicles.FuelType,tblvehicles.ModelYear,tblvehicles.id,tblvehicles.displacement,tblvehicles.VehiclesOverview,tblvehicles.Vimage1 from tblvehicles join tblbrands on tblbrands.id=tblvehicles.VehiclesBrand where tblvehicles.VehiclesBrand=:bid";
               $query = $dbh->prepare($sql);
               $query->bindParam(':bid', $bid, PDO::PARAM_STR);
               $query->execute();

@@ -107,7 +107,7 @@ error_reporting(0);
                   <h5><a href="vehical-details.php?vhid=<?php echo htmlentities($result->id); ?>"><?php echo htmlentities($result->BrandName); ?> , <?php echo htmlentities($result->VehiclesTitle); ?></a></h5>
                   <p class="list-price">&#x20B1;<?php echo htmlentities($result->PricePerDay); ?> Per Day</p>
                   <ul>
-                    <li><i class="fa fa-user" aria-hidden="true"></i><?php echo htmlentities($result->SeatingCapacity); ?> Helmet</li>
+                    <li><i class="fa fa-user" aria-hidden="true"></i><?php echo htmlentities($result->displacement); ?> Helmet</li>
                     <li><i class="fa fa-calendar" aria-hidden="true"></i><?php echo htmlentities($result->ModelYear); ?> model</li>
 
                   </ul>

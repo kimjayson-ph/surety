@@ -13,7 +13,7 @@ if (!isset($_SESSION['alogin'])) {
 		$priceperday = $_POST['priceperday'];
 		$fueltype = $_POST['fueltype'];
 		$modelyear = $_POST['modelyear'];
-		$seatingcapacity = $_POST['seatingcapacity'];
+		$displacement = $_POST['displacement'];
 		$helmet = $_POST['helmet'];
 		$powerdoorlocks = $_POST['powerdoorlocks'];
 		$raincoat = $_POST['raincoat'];
@@ -28,7 +28,7 @@ if (!isset($_SESSION['alogin'])) {
 		$ndraincoat = $_POST['ndraincoat'];
 		$id = intval($_GET['id']);
 
-		$sql = "update tblvehicles set VehiclesTitle=:vehicletitle,VehiclesBrand=:brand,VehiclesOverview=:vehicleoverview,PricePerDay=:priceperday,FuelType=:fueltype,ModelYear=:modelyear,SeatingCapacity=:seatingcapacity,helmet=:helmet,PowerDoorLocks=:powerdoorlocks,raincoat=:raincoat,BrakeAssist=:brakeassist,phoneholder=:phoneholder,DriverAirbag=:driverairbag,PassengerAirbag=:passengerairbag,phonecharger=:phonecharger,ndhelmet=:ndhelmet,CentralLocking=:centrallocking,CrashSensor=:crashcensor,ndraincoat=:ndraincoat where id=:id ";
+		$sql = "update tblvehicles set VehiclesTitle=:vehicletitle,VehiclesBrand=:brand,VehiclesOverview=:vehicleoverview,PricePerDay=:priceperday,FuelType=:fueltype,ModelYear=:modelyear,displacement=:displacement,helmet=:helmet,PowerDoorLocks=:powerdoorlocks,raincoat=:raincoat,BrakeAssist=:brakeassist,phoneholder=:phoneholder,DriverAirbag=:driverairbag,PassengerAirbag=:passengerairbag,phonecharger=:phonecharger,ndhelmet=:ndhelmet,CentralLocking=:centrallocking,CrashSensor=:crashcensor,ndraincoat=:ndraincoat where id=:id ";
 		$query = $dbh->prepare($sql);
 		$query->bindParam(':vehicletitle', $vehicletitle, PDO::PARAM_STR);
 		$query->bindParam(':brand', $brand, PDO::PARAM_STR);
@@ -36,7 +36,7 @@ if (!isset($_SESSION['alogin'])) {
 		$query->bindParam(':priceperday', $priceperday, PDO::PARAM_STR);
 		$query->bindParam(':fueltype', $fueltype, PDO::PARAM_STR);
 		$query->bindParam(':modelyear', $modelyear, PDO::PARAM_STR);
-		$query->bindParam(':seatingcapacity', $seatingcapacity, PDO::PARAM_STR);
+		$query->bindParam(':displacement', $displacement, PDO::PARAM_STR);
 		$query->bindParam(':helmet', $helmet, PDO::PARAM_STR);
 		$query->bindParam(':powerdoorlocks', $powerdoorlocks, PDO::PARAM_STR);
 		$query->bindParam(':raincoat', $raincoat, PDO::PARAM_STR);
@@ -204,7 +204,7 @@ if (!isset($_SESSION['alogin'])) {
 															</div>
 															<label class="col-sm-2 control-label">Displacement<span style="color:red">*</span></label>
 															<div class="col-sm-4">
-																<input type="text" name="seatingcapacity" class="form-control" placeholder="125cc" required>
+																<input type="text" name="displacement" class="form-control" value="<?php echo htmlentities($result->displacement); ?>" required>
 															</div>
 														</div>
 														<div class="hr-dashed"></div>
