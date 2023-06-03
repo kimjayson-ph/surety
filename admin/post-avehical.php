@@ -209,10 +209,10 @@ if (!isset($_SESSION['alogin'])) {
 													<div class="col-sm-4">
 														<input type="text" name="modelyear" class="form-control" required>
 													</div>
-													<label class="col-sm-2 control-label">--<span style="color:red">*</span></label>
+													<!-- <label class="col-sm-2 control-label">--<span style="color:red">*</span></label>
 													<div class="col-sm-4">
 														<input type="text" name="seatingcapacity" class="form-control" required>
-													</div>
+													</div> -->
 												</div>
 												<div class="hr-dashed"></div>
 
@@ -235,7 +235,7 @@ if (!isset($_SESSION['alogin'])) {
 														Image 3<span style="color:red">*</span><input type="file" name="img3" required>
 													</div>
 													<div class="col-sm-3">
-														Image 4<span style="color:red">*</span><input type="file" name="img4">
+														Image 4<span style="color:red"></span><input type="file" name="img4">
 													</div>
 												</div>
 
@@ -243,7 +243,7 @@ if (!isset($_SESSION['alogin'])) {
 												<div class="row">
 													<div class="col-md-12">
 														<div class="panel panel-default">
-															<div class="panel-heading">Accessories</div>
+															<div class="panel-heading">Accessories & Extras</div>
 															<div class="panel-body">
 
 

@@ -145,10 +145,10 @@ if (isset($_POST['submit'])) {
                     <h5><?php echo htmlentities($result->ModelYear); ?></h5>
                     <p>Reg.Year</p>
                   </li>
-                  <li> <i class="fa fa-user-plus" aria-hidden="true"></i>
+                  <!--  <li> <i class="fa fa-user-plus" aria-hidden="true"></i>
                     <h5><?php echo htmlentities($result->SeatingCapacity); ?></h5>
                     <p>--</p>
-                  </li>
+                  </li> -->
                   <li> <i class="fa fa-cogs" aria-hidden="true"></i>
                     <h5><?php echo htmlentities($result->FuelType); ?></h5>
                     <p>Transmission</p>
@@ -193,70 +193,168 @@ if (isset($_POST['submit'])) {
                         </thead>
                         <tbody>
                           <tr>
-                            <td>Helmet</td>
+                            <h5>Included</h5>
+
                             <?php if ($result->helmet == 1) {
                             ?>
-                              <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                              <td>Helmet</td>
+                              <!-- <td><i class="fa fa-check" aria-hidden="true"></i></td> -->
                             <?php } else { ?>
-                              <td><i class="fa fa-close" aria-hidden="true"></i></td>
+                              <!-- <td><i class="fa fa-close" aria-hidden="true"></i></td> -->
                             <?php } ?>
                           </tr>
 
                           <tr>
-                            <td>Rain Coat</td>
+
                             <?php if ($result->raincoat == 1) {
                             ?>
-                              <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                              <td>Rain Coat</td>
+                              <!--  <td><i class="fa fa-check" aria-hidden="true"></i></td> -->
                             <?php } else { ?>
-                              <td><i class="fa fa-close" aria-hidden="true"></i></td>
+                              <!-- <td><i class="fa fa-close" aria-hidden="true"></i></td> -->
                             <?php } ?>
                           </tr>
 
                           <tr>
-                            <td>Phone Holder</td>
+
                             <?php if ($result->phoneholder == 1) {
                             ?>
-                              <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                              <td>Phone Holder</td>
+                              <!--  <td><i class="fa fa-check" aria-hidden="true"></i></td> -->
                             <?php } else { ?>
-                              <td><i class="fa fa-close" aria-hidden="true"></i></td>
+                              <!--    <td><i class="fa fa-close" aria-hidden="true"></i></td> -->
                             <?php } ?>
                           </tr>
 
 
                           <tr>
 
-                            <td>Phone Charger</td>
+
 
                             <?php if ($result->Phonecharger == 1) {
                             ?>
-                              <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                              <td>Phone Charger</td>
+                              <!--  <td><i class="fa fa-check" aria-hidden="true"></i></td> -->
                             <?php } else { ?>
-                              <td><i class="fa fa-close" aria-hidden="true"></i></td>
+                              <!--  <td><i class="fa fa-close" aria-hidden="true"></i></td> -->
                             <?php } ?>
                           </tr>
 
                           <tr>
-                            <td>2nd Helmet</td>
+
                             <?php if ($result->ndhelmet == 1) {
                             ?>
-                              <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                              <td>2nd Helmet</td>
+                              <!--  <td><i class="fa fa-check" aria-hidden="true"></i></td> -->
                             <?php } else { ?>
-                              <td><i class="fa fa-close" aria-hidden="true"></i></td>
+                              <!-- <td><i class="fa fa-close" aria-hidden="true"></i></td> -->
                             <?php } ?>
                           </tr>
 
                           <tr>
-                            <td>2nd Rain Coat</td>
+
                             <?php if ($result->ndraincoat == 1) {
                             ?>
-                              <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                              <td>2nd Rain Coat</td>
+                              <!-- <td><i class="fa fa-check" aria-hidden="true"></i></td> -->
                             <?php } else { ?>
-                              <td><i class="fa fa-close" aria-hidden="true"></i></td>
+                              <!--   <td><i class="fa fa-close" aria-hidden="true"></i></td> -->
                             <?php } ?>
                           </tr>
+
 
 
                         </tbody>
+
+                      </table>
+                      <!--   2 -->
+                      <table>
+                        <thead>
+                          <tr>
+                            <!-- <th colspan="2">Accessories</th> -->
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <h5>Extras</h5>
+
+                            <?php if ($result->helmet == 0) {
+                            ?>
+                              <td>Helmet</td>
+
+                              <!--  <td><i class="fa fa-close" aria-hidden="true"></i></td> -->
+                            <?php } else { ?>
+                              <!-- <td><i class="fa fa-close" aria-hidden="true"></i></td> -->
+                            <?php } ?>
+                          </tr>
+
+                          <tr>
+
+                            <?php if ($result->raincoat == 0) {
+                            ?>
+                              <td>Rain Coat</td>
+
+                              <!--  <td><i class="fa fa-close" aria-hidden="true"></i></td> -->
+                            <?php } else { ?>
+                              <!--  <td><i class="fa fa-close" aria-hidden="true"></i></td> -->
+                            <?php } ?>
+                          </tr>
+
+                          <tr>
+
+                            <?php if ($result->phoneholder == 0) {
+                            ?>
+                              <td>Phone Holder</td>
+
+                              <!--  <td><i class="fa fa-close" aria-hidden="true"></i></td> -->
+                            <?php } else { ?>
+                              <!--   <td><i class="fa fa-close" aria-hidden="true"></i></td> -->
+                            <?php } ?>
+                          </tr>
+
+
+                          <tr>
+
+
+
+                            <?php if ($result->Phonecharger == 0) {
+                            ?>
+                              <td>Phone Charger</td>
+
+                              <!--  <td><i class="fa fa-close" aria-hidden="true"></i></td> -->
+                            <?php } else { ?>
+                              <!--   <td><i class="fa fa-close" aria-hidden="true"></i></td> -->
+                            <?php } ?>
+                          </tr>
+
+                          <tr>
+
+                            <?php if ($result->ndhelmet == 0) {
+                            ?>
+                              <td>2nd Helmet</td>
+
+                              <!-- <td><i class="fa fa-close" aria-hidden="true"></i></td> -->
+                            <?php } else { ?>
+                              <!--    <td><i class="fa fa-close" aria-hidden="true"></i></td> -->
+                            <?php } ?>
+                          </tr>
+
+                          <tr>
+
+                            <?php if ($result->ndraincoat == 0) {
+                            ?>
+                              <td>2nd Rain Coat</td>
+
+                              <!-- <td><i class="fa fa-close" aria-hidden="true"></i></td> -->
+                            <?php } else { ?>
+                              <!-- <td><i class="fa fa-close" aria-hidden="true"></i></td> -->
+                            <?php } ?>
+                          </tr>
+
+
+
+                        </tbody>
+
                       </table>
                     </div>
                     <!--Accessories-->
