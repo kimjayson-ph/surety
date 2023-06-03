@@ -15,6 +15,16 @@ if (!isset($_SESSION['alogin'])) {
 		$query->execute();
 	}
 
+	if (isset($_REQUEST['del'])) {
+		$delid = intval($_GET['del']);
+		$sql = "delete from tblcontactusquery  WHERE  id=:delid";
+		$query = $dbh->prepare($sql);
+		$query->bindParam(':delid', $delid, PDO::PARAM_STR);
+		$query->execute();
+		$msg = "Contact Us Query deleted successfully";
+	}
+
+
 
 
 ?>
@@ -102,6 +112,7 @@ if (!isset($_SESSION['alogin'])) {
 												<th>Contact No</th>
 												<th>Message</th>
 												<th>Posting date</th>
+												<!-- 	<th>Status</th> -->
 												<th>Action</th>
 											</tr>
 										</thead>
@@ -113,6 +124,7 @@ if (!isset($_SESSION['alogin'])) {
 												<th>Contact No</th>
 												<th>Message</th>
 												<th>Posting date</th>
+												<!-- 	<th>Status</th> -->
 												<th>Action</th>
 											</tr>
 											</tr>
@@ -134,12 +146,14 @@ if (!isset($_SESSION['alogin'])) {
 														<td><?php echo htmlentities($result->Message); ?></td>
 														<td><?php echo htmlentities($result->PostingDate); ?></td>
 														<?php if ($result->status == 1) {
-														?><td>Read</td>
+														?><!-- <td>Read</td> -->
 														<?php } else { ?>
 
-															<td><a href="manage-conactusquery.php?eid=<?php echo htmlentities($result->id); ?>" onclick="return confirm('Do you really want to read')">Pending</a>
-															</td>
+															<!-- <td><a href="manage-contactusquery.php?eid=<?php echo htmlentities($result->id); ?>" onclick="return confirm('Do you really want to read')">Pending</a></td> -->
+
 														<?php } ?>
+														<td><a href="manage-contactusquery.php?del=<?php echo $result->id; ?>" onclick="return confirm('Do you want to delete');"><i style="color: #7bc41d;" class="fa fa-trash"></i></a></td>
+
 													</tr>
 											<?php $cnt = $cnt + 1;
 												}
