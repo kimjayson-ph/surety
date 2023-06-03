@@ -145,10 +145,10 @@ if (isset($_POST['submit'])) {
                     <h5><?php echo htmlentities($result->ModelYear); ?></h5>
                     <p>Reg.Year</p>
                   </li>
-                  <!--  <li> <i class="fa fa-user-plus" aria-hidden="true"></i>
+                  <li> <i class="fa fa-motorcycle" aria-hidden="true"></i>
                     <h5><?php echo htmlentities($result->SeatingCapacity); ?></h5>
-                    <p>--</p>
-                  </li> -->
+                    <p>Displacement</p>
+                  </li>
                   <li> <i class="fa fa-cogs" aria-hidden="true"></i>
                     <h5><?php echo htmlentities($result->FuelType); ?></h5>
                     <p>Transmission</p>
@@ -178,7 +178,7 @@ if (isset($_POST['submit'])) {
                     <!-- Rental requirements -->
                     <div role="tabpanel" class="tab-pane" id="rentalrequirements">
 
-                      <p><?php echo htmlentities($result->VehiclesOverview); ?></p>
+                      <p>hello</p>
                     </div>
 
 

@@ -202,9 +202,9 @@ if (!isset($_SESSION['alogin'])) {
 															<div class="col-sm-4">
 																<input type="text" name="modelyear" class="form-control" value="<?php echo htmlentities($result->ModelYear); ?>" required>
 															</div>
-															<label class="col-sm-2 control-label">--<span style="color:red">*</span></label>
+															<label class="col-sm-2 control-label">Displacement<span style="color:red">*</span></label>
 															<div class="col-sm-4">
-																<input type="text" name="seatingcapacity" class="form-control" value="<?php echo htmlentities($result->SeatingCapacity); ?>" required>
+																<input type="text" name="seatingcapacity" class="form-control" placeholder="125cc" required>
 															</div>
 														</div>
 														<div class="hr-dashed"></div>
