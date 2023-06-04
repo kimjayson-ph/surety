@@ -147,7 +147,7 @@ if (!isset($_SESSION['alogin'])) {
 										</tfoot>
 										<tbody>
 
-											<?php $sql = "SELECT tblusers.EmailId,tblusers.FullName,tblbrands.BrandName,tblvehicles.VehiclesTitle,tblbooking.FromDate,tblbooking.ToDate,tblbooking.message,tblbooking.driverid,tblbooking.VehicleId as vid,tblbooking.Status,tblbooking.PostingDate,tblbooking.id  from tblbooking join tblvehicles on tblvehicles.id=tblbooking.VehicleId join tblusers on tblusers.EmailId=tblbooking.userEmail join tblbrands on tblvehicles.VehiclesBrand=tblbrands.id  ";
+											<?php $sql = "SELECT  tblvehicles.PricePerDay,tblusers.City,tblusers.Address,tblusers.ContactNo,tblusers.EmailId,tblusers.FullName,tblbrands.BrandName,tblvehicles.VehiclesTitle,tblbooking.BookingNumber,DATEDIFF(tblbooking.ToDate,tblbooking.FromDate) as totalnodays,tblbooking.FromDate,tblbooking.ToDate,tblbooking.message,tblbooking.driverid,tblbooking.VehicleId as vid,tblbooking.Status,tblbooking.PostingDate,tblbooking.id  from tblbooking join tblvehicles on tblvehicles.id=tblbooking.VehicleId join tblusers on tblusers.EmailId=tblbooking.userEmail join tblbrands on tblvehicles.VehiclesBrand=tblbrands.id  ";
 											$query = $dbh->prepare($sql);
 											$query->execute();
 											$results = $query->fetchAll(PDO::FETCH_OBJ);
@@ -171,6 +171,20 @@ if (!isset($_SESSION['alogin'])) {
 															} else if ($result->Status == 1) {
 																echo htmlentities('Approved');
 																$mail_send =  ($result->EmailId);
+																$booking_number = ($result->BookingNumber);
+																$booking_name = ($result->FullName);
+																$booking_email = ($result->EmailId);
+																$booking_contact = ($result->ContactNo);
+																$booking_address = ($result->Address);
+																$booking_city = ($result->City);
+																$booking_brand = ($result->BrandName);
+																$booking_motorname = ($result->VehiclesTitle);
+																$booking_date = ($result->PostingDate);
+																$booking_todate = ($result->ToDate);
+																$booking_fromdate = ($result->FromDate);
+																$booking_totaldays = ($result->totalnodays);
+																$booking_perday = ($result->PricePerDay);
+																$booking_total = ($result->PricePerDay);
 															} else {
 																echo htmlentities('Rejected');
 															}
@@ -204,8 +218,10 @@ if (!isset($_SESSION['alogin'])) {
 				</div>
 			</div>
 		</div>
+
 		<!-- 	phpmailer -->
 		<?php
+
 
 
 
@@ -234,13 +250,66 @@ if (!isset($_SESSION['alogin'])) {
 
 
 			//Attachments
-			$mail->addAttachment(path: '../assets/images/surety/headerlogo.png');         //Add attachments
+			/* $mail->addAttachment(path: '../assets/images/surety/headerlogo.png'); */         //Add attachments
 
-
+			/* "Booking no. {$booking_number} " */
 			//Content
 			$mail->isHTML(true);                                  //Set email format to HTML
-			$mail->Subject = 'Here is the subject';
-			$mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+			$mail->Subject = 'Suretymotorental Booking Approval';
+			$mail->Body    = "<h2 style='color:yellowgreen'>SuretyMotoRental </h2>
+			<h3 style='color:red'>Booking Status: Approved </h3>
+
+			<tr>
+				<center><th  style='color:blue'>User Details</th></center>
+			</tr>
+			<tr>
+				<th>Booking No.</th>
+				<td>{$booking_number}</td>
+				<th>Name</th>
+				<td>{$booking_name}</td>
+			</tr>
+			<tr>
+				<th>Email Id</th>
+				<td>{$booking_email}</td>
+				<th>Contact No</th>
+				<td>{$booking_contact}</td>
+			</tr>
+			<tr>
+				<th>Address</th>
+				<td>{$booking_address}</td>
+				<th>City</th>
+				<td>{$booking_city}</td>
+			</tr>
+
+
+			<tr>
+				<center><th  style='color:blue'>Booking Details</th></center>
+			</tr>
+			<tr>
+				<th>Motorbike Name</th>
+				<td>{$booking_brand} {$booking_motorname}</td>
+				<th>Booking Date</th>
+				<td>{$booking_date}</td>
+			</tr>
+			<tr>
+				<th>From Date</th>
+				<td>{$booking_fromdate}</td>
+				<th>To Date</th>
+				<td>{$booking_todate}</td>
+			</tr>
+			<tr>
+				<th>Total Days</th>
+				<td>{$booking_totaldays}</td>
+				<th>Rent Per Days</th>
+				<td>{$booking_perday}</td>
+			</tr>
+			<tr>
+				<center><th  >Grand Total</th></center>
+				<td>{$booking_total}</td>
+			</tr> ";
+
+
+
 			$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
 			$mail->send();
