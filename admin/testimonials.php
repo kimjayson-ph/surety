@@ -31,6 +31,15 @@ if (!isset($_SESSION['alogin'])) {
 		$msg = "Testimonial Successfully Active";
 	}
 
+	if (isset($_REQUEST['del'])) {
+		$delid = intval($_GET['del']);
+		$sql = "delete from tbltestimonial  WHERE  id=:delid";
+		$query = $dbh->prepare($sql);
+		$query->bindParam(':delid', $delid, PDO::PARAM_STR);
+		$query->execute();
+		$msg = "Testimonial deleted successfully";
+	}
+
 
 ?>
 
@@ -144,13 +153,20 @@ if (!isset($_SESSION['alogin'])) {
 														<td><?php echo htmlentities($result->UserEmail); ?></td>
 														<td><?php echo htmlentities($result->Testimonial); ?></td>
 														<td><?php echo htmlentities($result->PostingDate); ?></td>
+
 														<td><?php if ($result->status == "" || $result->status == 0) {
 															?><a href="testimonials.php?aeid=<?php echo htmlentities($result->id); ?>" onclick="return confirm('Do you really want to Active')"> Inactive</a>
-															<?php } else { ?>
-
-																<a href="testimonials.php?eid=<?php echo htmlentities($result->id); ?>" onclick="return confirm('Do you really want to Inactive')"> Active</a>
+														<td>
+															<a href="testimonials.php?del=<?php echo $result->id; ?>" onclick="return confirm('Do you want to delete');"><i style="color: #7bc41d;" class="fa fa-trash"></i></a>
 														</td>
-													<?php } ?></td>
+													<?php } else { ?>
+
+														<a href="testimonials.php?eid=<?php echo htmlentities($result->id); ?>" onclick="return confirm('Do you really want to Inactive')"> Active</a>
+														<td><a href="testimonials.php?del=<?php echo $result->id; ?>" onclick="return confirm('Do you want to 	delete');"><i style="color: #7bc41d;" class="fa fa-trash"></i></a></td>
+														</td>
+
+													<?php } ?>
+													</td>
 													</tr>
 											<?php $cnt = $cnt + 1;
 												}

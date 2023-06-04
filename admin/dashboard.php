@@ -74,11 +74,11 @@ if (!isset($_SESSION['alogin'])) {
 														?>
 														<div class="stat-panel-number h1 "><?php echo htmlentities($regusers); ?></div>
 														<hr>
-														<i class="fa fa-users fa-2x"></i> 
+														<i class="fa fa-users fa-2x"></i>
 														<div class="stat-panel-title text-uppercase"> Registered Users</div>
 													</div>
 												</div>
-												<a href="reg-users.php" class="block-anchor panel-footer text-center">More info &nbsp; <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+												<a href="registered-users.php" class="block-anchor panel-footer text-center">More info &nbsp; <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
 											</div>
 										</div>
 										<div class="col-md-6">
@@ -191,10 +191,10 @@ if (!isset($_SESSION['alogin'])) {
 														<div class="stat-panel-number h1 "><?php echo htmlentities($query); ?></div>
 														<hr>
 														<i class="fa fa-question fa-2x" aria-hidden="true"></i>
-														<div class="stat-panel-title text-uppercase">Queries</div>
+														<div class="stat-panel-title text-uppercase">Contact Us Queries</div>
 													</div>
 												</div>
-												<a href="manage-conactusquery.php" class="block-anchor panel-footer text-center">Full Detail &nbsp; <i class="fa fa-arrow-right"></i></a>
+												<a href="manage-contactusquery.php" class="block-anchor panel-footer text-center">Full Detail &nbsp; <i class="fa fa-arrow-right"></i></a>
 											</div>
 										</div>
 										<div class="col-md-6">

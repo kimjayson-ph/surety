@@ -144,7 +144,7 @@ if (!isset($_SESSION['alogin'])) {
 														<td>
 
 
-															<a href="bookig-details.php?bid=<?php echo htmlentities($result->id); ?>"> View</a>
+															<a href="booking-details.php?bid=<?php echo htmlentities($result->id); ?>"> View</a>
 														</td>
 
 													</tr>

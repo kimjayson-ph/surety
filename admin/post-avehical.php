@@ -13,7 +13,7 @@ if (!isset($_SESSION['alogin'])) {
 		$priceperday = $_POST['priceperday'];
 		$fueltype = $_POST['fueltype'];
 		$modelyear = $_POST['modelyear'];
-		$seatingcapacity = $_POST['seatingcapacity'];
+		$displacement = $_POST['displacement'];
 		$vimage1 = $_FILES["img1"]["name"];
 		$vimage2 = $_FILES["img2"]["name"];
 		$vimage3 = $_FILES["img3"]["name"];
@@ -37,7 +37,7 @@ if (!isset($_SESSION['alogin'])) {
 		move_uploaded_file($_FILES["img4"]["tmp_name"], "img/vehicleimages/" . $_FILES["img4"]["name"]);
 		move_uploaded_file($_FILES["img5"]["tmp_name"], "img/vehicleimages/" . $_FILES["img5"]["name"]);
 
-		$sql = "INSERT INTO tblvehicles(VehiclesTitle,VehiclesBrand,VehiclesOverview,PricePerDay,FuelType,ModelYear,SeatingCapacity,Vimage1,Vimage2,Vimage3,Vimage4,Vimage5,helmet,PowerDoorLocks,raincoat,BrakeAssist,phoneholder,DriverAirbag,PassengerAirbag,phonecharger,ndhelmet,CentralLocking,CrashSensor,ndraincoat) VALUES(:vehicletitle,:brand,:vehicleoverview,:priceperday,:fueltype,:modelyear,:seatingcapacity,:vimage1,:vimage2,:vimage3,:vimage4,:vimage5,:helmet,:powerdoorlocks,:raincoat,:brakeassist,:phoneholder,:driverairbag,:passengerairbag,:phonecharger,:ndhelmet,:centrallocking,:crashcensor,:ndraincoat)";
+		$sql = "INSERT INTO tblvehicles(VehiclesTitle,VehiclesBrand,VehiclesOverview,PricePerDay,FuelType,ModelYear,displacement,Vimage1,Vimage2,Vimage3,Vimage4,Vimage5,helmet,PowerDoorLocks,raincoat,BrakeAssist,phoneholder,DriverAirbag,PassengerAirbag,phonecharger,ndhelmet,CentralLocking,CrashSensor,ndraincoat) VALUES(:vehicletitle,:brand,:vehicleoverview,:priceperday,:fueltype,:modelyear,:displacement,:vimage1,:vimage2,:vimage3,:vimage4,:vimage5,:helmet,:powerdoorlocks,:raincoat,:brakeassist,:phoneholder,:driverairbag,:passengerairbag,:phonecharger,:ndhelmet,:centrallocking,:crashcensor,:ndraincoat)";
 		$query = $dbh->prepare($sql);
 		$query->bindParam(':vehicletitle', $vehicletitle, PDO::PARAM_STR);
 		$query->bindParam(':brand', $brand, PDO::PARAM_STR);
@@ -45,7 +45,7 @@ if (!isset($_SESSION['alogin'])) {
 		$query->bindParam(':priceperday', $priceperday, PDO::PARAM_STR);
 		$query->bindParam(':fueltype', $fueltype, PDO::PARAM_STR);
 		$query->bindParam(':modelyear', $modelyear, PDO::PARAM_STR);
-		$query->bindParam(':seatingcapacity', $seatingcapacity, PDO::PARAM_STR);
+		$query->bindParam(':displacement', $displacement, PDO::PARAM_STR);
 		$query->bindParam(':vimage1', $vimage1, PDO::PARAM_STR);
 		$query->bindParam(':vimage2', $vimage2, PDO::PARAM_STR);
 		$query->bindParam(':vimage3', $vimage3, PDO::PARAM_STR);
@@ -209,9 +209,9 @@ if (!isset($_SESSION['alogin'])) {
 													<div class="col-sm-4">
 														<input type="text" name="modelyear" class="form-control" required>
 													</div>
-													<label class="col-sm-2 control-label">--<span style="color:red">*</span></label>
+													<label class="col-sm-2 control-label">Displacement<span style="color:red">*</span></label>
 													<div class="col-sm-4">
-														<input type="text" name="seatingcapacity" class="form-control" required>
+														<input type="text" name="displacement" class="form-control" placeholder="125cc" required>
 													</div>
 												</div>
 												<div class="hr-dashed"></div>
@@ -235,7 +235,7 @@ if (!isset($_SESSION['alogin'])) {
 														Image 3<span style="color:red">*</span><input type="file" name="img3" required>
 													</div>
 													<div class="col-sm-3">
-														Image 4<span style="color:red">*</span><input type="file" name="img4">
+														Image 4<span style="color:red"></span><input type="file" name="img4">
 													</div>
 												</div>
 
@@ -243,7 +243,7 @@ if (!isset($_SESSION['alogin'])) {
 												<div class="row">
 													<div class="col-md-12">
 														<div class="panel panel-default">
-															<div class="panel-heading">Accessories</div>
+															<div class="panel-heading">Accessories & Extras</div>
 															<div class="panel-body">
 
 
@@ -298,8 +298,9 @@ if (!isset($_SESSION['alogin'])) {
 																<div class="form-group">
 																	<center>
 																		<div class="col-sm-8 col-sm-offset-2">
-																			<button class="btn btn-default" type="reset">Cancel</button>
-																			<button class="btn btn-primary" name="submit" type="submit">Save changes</button>
+																			<button class="btn btn-success" name="submit" type="submit">Save changes</button>
+																			<button class="btn btn-danger" type="reset">Cancel</button>
+
 																		</div>
 																	</center>
 																</div>

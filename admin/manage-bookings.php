@@ -1,4 +1,10 @@
 <?php
+//Import PHPMailer classes into the global namespace
+//These must be at the top of your script, not inside a function
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
 session_start();
 error_reporting(0);
 include('includes/config.php');
@@ -113,6 +119,7 @@ if (!isset($_SESSION['alogin'])) {
 											<tr>
 												<th>#</th>
 												<th>Name</th>
+
 												<th>Vehicle</th>
 												<th>From Date</th>
 												<th>To Date</th>
@@ -127,6 +134,7 @@ if (!isset($_SESSION['alogin'])) {
 											<tr>
 												<th>#</th>
 												<th>Name</th>
+
 												<th>Vehicle</th>
 												<th>From Date</th>
 												<th>To Date</th>
@@ -139,7 +147,7 @@ if (!isset($_SESSION['alogin'])) {
 										</tfoot>
 										<tbody>
 
-											<?php $sql = "SELECT tblusers.FullName,tblbrands.BrandName,tblvehicles.VehiclesTitle,tblbooking.FromDate,tblbooking.ToDate,tblbooking.message,tblbooking.driverid,tblbooking.VehicleId as vid,tblbooking.Status,tblbooking.PostingDate,tblbooking.id  from tblbooking join tblvehicles on tblvehicles.id=tblbooking.VehicleId join tblusers on tblusers.EmailId=tblbooking.userEmail join tblbrands on tblvehicles.VehiclesBrand=tblbrands.id  ";
+											<?php $sql = "SELECT  tblvehicles.PricePerDay,tblusers.City,tblusers.Address,tblusers.ContactNo,tblusers.EmailId,tblusers.FullName,tblbrands.BrandName,tblvehicles.VehiclesTitle,tblbooking.BookingNumber,DATEDIFF(tblbooking.ToDate,tblbooking.FromDate) as totalnodays,tblbooking.FromDate,tblbooking.ToDate,tblbooking.message,tblbooking.driverid,tblbooking.VehicleId as vid,tblbooking.Status,tblbooking.PostingDate,tblbooking.id  from tblbooking join tblvehicles on tblvehicles.id=tblbooking.VehicleId join tblusers on tblusers.EmailId=tblbooking.userEmail join tblbrands on tblvehicles.VehiclesBrand=tblbrands.id  ";
 											$query = $dbh->prepare($sql);
 											$query->execute();
 											$results = $query->fetchAll(PDO::FETCH_OBJ);
@@ -149,6 +157,7 @@ if (!isset($_SESSION['alogin'])) {
 													<tr>
 														<td><?php echo htmlentities($cnt); ?></td>
 														<td><?php echo htmlentities($result->FullName); ?></td>
+
 														<td><a href="edit-vehicle.php?id=<?php echo htmlentities($result->vid); ?>"><?php echo htmlentities($result->BrandName); ?> , <?php echo htmlentities($result->VehiclesTitle); ?></td>
 														<td><?php echo htmlentities($result->FromDate); ?></td>
 														<td><?php echo htmlentities($result->ToDate); ?></td>
@@ -161,6 +170,21 @@ if (!isset($_SESSION['alogin'])) {
 																echo htmlentities('Pending approval');
 															} else if ($result->Status == 1) {
 																echo htmlentities('Approved');
+																$mail_send =  ($result->EmailId);
+																$booking_number = ($result->BookingNumber);
+																$booking_name = ($result->FullName);
+																$booking_email = ($result->EmailId);
+																$booking_contact = ($result->ContactNo);
+																$booking_address = ($result->Address);
+																$booking_city = ($result->City);
+																$booking_brand = ($result->BrandName);
+																$booking_motorname = ($result->VehiclesTitle);
+																$booking_date = ($result->PostingDate);
+																$booking_todate = ($result->ToDate);
+																$booking_fromdate = ($result->FromDate);
+																$booking_totaldays = ($result->totalnodays);
+																$booking_perday = ($result->PricePerDay);
+																$booking_total = ($result->PricePerDay);
 															} else {
 																echo htmlentities('Rejected');
 															}
@@ -172,9 +196,12 @@ if (!isset($_SESSION['alogin'])) {
 														</td>
 
 													</tr>
+
 											<?php $cnt = $cnt + 1;
 												}
-											} ?>
+											}
+											?>
+
 
 										</tbody>
 									</table>
@@ -185,13 +212,114 @@ if (!isset($_SESSION['alogin'])) {
 							</div>
 
 
-
 						</div>
 					</div>
 
 				</div>
 			</div>
 		</div>
+
+		<!-- 	phpmailer -->
+		<?php
+
+
+
+
+		//Load Composer's autoloader
+		require '../vendor/autoload.php';
+
+		//Create an instance; passing `true` enables exceptions
+		$mail = new PHPMailer(true);
+
+		try {
+			//Server settings
+
+			$mail->isSMTP();                                            //Send using SMTP
+			$mail->Host       = 'smtp-relay.sendinblue.com';                     //Set the SMTP server to send through
+			$mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+			$mail->Username   = 'suretymotorental@gmail.com';                     //SMTP username
+			$mail->Password   = 'p3FXNxTQkUHdmt9V';                               //SMTP password
+
+			$mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+
+			//Recipients
+			$mail->setFrom('suretymotorental@gmail.com', 'Suretymotorental');
+			$mail->addAddress($mail_send);     //Add a recipient
+
+			$mail->addReplyTo('suretymotorental@gmail.com', '');
+
+
+			//Attachments
+			/* $mail->addAttachment(path: '../assets/images/surety/headerlogo.png'); */         //Add attachments
+
+			/* "Booking no. {$booking_number} " */
+			//Content
+			$mail->isHTML(true);                                  //Set email format to HTML
+			$mail->Subject = 'Suretymotorental Booking Approval';
+			$mail->Body    = "<h2 style='color:yellowgreen'>SuretyMotoRental </h2>
+			<h3 style='color:red'>Booking Status: Approved </h3>
+
+			<tr>
+				<center><th  style='color:blue'>User Details</th></center>
+			</tr>
+			<tr>
+				<th>Booking No.</th>
+				<td>{$booking_number}</td>
+				<th>Name</th>
+				<td>{$booking_name}</td>
+			</tr>
+			<tr>
+				<th>Email Id</th>
+				<td>{$booking_email}</td>
+				<th>Contact No</th>
+				<td>{$booking_contact}</td>
+			</tr>
+			<tr>
+				<th>Address</th>
+				<td>{$booking_address}</td>
+				<th>City</th>
+				<td>{$booking_city}</td>
+			</tr>
+
+
+			<tr>
+				<center><th  style='color:blue'>Booking Details</th></center>
+			</tr>
+			<tr>
+				<th>Motorbike Name</th>
+				<td>{$booking_brand} {$booking_motorname}</td>
+				<th>Booking Date</th>
+				<td>{$booking_date}</td>
+			</tr>
+			<tr>
+				<th>From Date</th>
+				<td>{$booking_fromdate}</td>
+				<th>To Date</th>
+				<td>{$booking_todate}</td>
+			</tr>
+			<tr>
+				<th>Total Days</th>
+				<td>{$booking_totaldays}</td>
+				<th>Rent Per Days</th>
+				<td>{$booking_perday}</td>
+			</tr>
+			<tr>
+				<center><th  >Grand Total</th></center>
+				<td>{$booking_total}</td>
+			</tr> ";
+
+
+
+			$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+
+			$mail->send();
+			/* echo 'Message has been sent'; */
+		} catch (Exception $e) {
+			echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+		} ?>
+
+		<!-- 	phpmailer -->
+
 
 		<!-- Loading Scripts -->
 		<script src="js/jquery.min.js"></script>

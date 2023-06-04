@@ -136,7 +136,7 @@ error_reporting(0);
         <!-- Recently Listed New MotorBikes -->
         <div class="tab-content">
           <div role="tabpanel" class="tab-pane active" id="resentnewcar">
-            <?php $sql = "SELECT tblvehicles.VehiclesTitle,tblbrands.BrandName,tblvehicles.PricePerDay,tblvehicles.FuelType,tblvehicles.ModelYear,tblvehicles.id,tblvehicles.SeatingCapacity,tblvehicles.VehiclesOverview,tblvehicles.Vimage1 from tblvehicles join tblbrands on tblbrands.id=tblvehicles.VehiclesBrand limit 9";
+            <?php $sql = "SELECT tblvehicles.VehiclesTitle,tblbrands.BrandName,tblvehicles.PricePerDay,tblvehicles.FuelType,tblvehicles.ModelYear,tblvehicles.id,tblvehicles.displacement,tblvehicles.VehiclesOverview,tblvehicles.Vimage1 from tblvehicles join tblbrands on tblbrands.id=tblvehicles.VehiclesBrand limit 9";
             $query = $dbh->prepare($sql);
             $query->execute();
             $results = $query->fetchAll(PDO::FETCH_OBJ);
@@ -220,6 +220,8 @@ error_reporting(0);
   <!-- /Testimonial-->
 
 
+
+
   <!--Footer -->
   <?php include('includes/footer.php'); ?>
   <!-- /Footer-->
@@ -241,12 +243,15 @@ error_reporting(0);
   <?php include('includes/forgotpassword.php'); ?>
   <!--/Forgot-password-Form -->
 
+
+
+
   <!-- Scripts -->
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
   <script src="assets/js/interface.js"></script>
   <!--Switcher-->
-  <script src="assets/switcher/js/switcher.js"></script>
+
   <!--bootstrap-slider-JS-->
   <script src="assets/js/bootstrap-slider.min.js"></script>
   <!--Slider-JS-->

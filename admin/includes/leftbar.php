@@ -30,8 +30,8 @@
 
 
 			<li><a href="testimonials.php"><i class="fa fa-table" style="color:green"></i> Manage Testimonials</a></li>
-			<li><a href="manage-conactusquery.php"><i class="fa fa-desktop" style="color:green"></i> Manage Contact us Query</a></li>
-			<li><a href="reg-users.php"><i class="fa fa-users" style="color:green"></i> Reg Users</a></li>
+			<li><a href="manage-contactusquery.php"><i class="fa fa-desktop" style="color:green"></i> Manage Contact us Query</a></li>
+			<li><a href="registered-users.php"><i class="fa fa-users" style="color:green"></i> Registered Users</a></li>
 			<li><a href="manage-pages.php"><i class="fa fa-files-o" style="color:green"></i> Manage Pages</a></li>
 			<li><a href="update-contactinfo.php"><i class="fa fa-files-o" style="color:green"></i> Update Contact Info</a></li>
 			<li><a href="manage-subscribers.php"><i class="fa fa-table" style="color:green"></i> Manage Subscribers</a></li>
