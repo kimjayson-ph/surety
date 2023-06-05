@@ -122,25 +122,31 @@ if (strlen($_SESSION['login']) == 0) {
                                   <p><b>Message:</b> <?php echo htmlentities($result->message); ?> </p>
                                 </div>
                               </div>
+
                               <?php if ($result->Status == 1) { ?>
                                 <div class="vehicle_status"> <a href="#" style="background-color: #7bc41d;" class="btn btn-xs active-btn">Approved</a>
-                                  <div class="clearfix"></div>
+                                  <div class="clearfix"><em>*Check your email for <br>booking-approved details</em></div>
                                 </div>
 
                               <?php } else if ($result->Status == 2) { ?>
                                 <div class="vehicle_status"> <a href="#" style="background-color: red;" class="btn outline btn-xs ">Rejected</a>
-                                  <div class="clearfix"></div>
+                                  <div class="clearfix"><em>*Update your profile and <br>upload a valid driver's license</em></div>
                                 </div>
 
 
 
                               <?php } else { ?>
                                 <div class="vehicle_status"> <a href="#" style="background-color: yellow;" class="btn outline btn-xs">Pending Approval</a>
-                                  <div class="clearfix"></div>
-                                </div>
-                              <?php } ?>
+                                  <div class="clearfix"> <em>*Kindly monitor your status of booking or check your email for booking approval</em>
+                                    <div>
+
+                                    </div>
+
+                                  <?php } ?>
 
                             </li>
+
+
 
                             <h5 style="color:blue">Invoice</h5>
                             <table>
@@ -187,8 +193,7 @@ if (strlen($_SESSION['login']) == 0) {
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
         <script src="assets/js/interface.js"></script>
-        <!--Switcher-->
-        <script src="assets/switcher/js/switcher.js"></script>
+
         <!--bootstrap-slider-JS-->
         <script src="assets/js/bootstrap-slider.min.js"></script>
         <!--Slider-JS-->
