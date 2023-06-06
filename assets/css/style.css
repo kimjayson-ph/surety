@@ -5393,3 +5393,8 @@ table.info-tabel tr td {
     padding: 40px 20px;
   }
 }
+
+.clearfix {
+  font-size: 12px;
+  line-height: 2;
+}
