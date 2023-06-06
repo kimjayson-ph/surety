@@ -78,7 +78,7 @@ error_reporting(0);
               $searchdata = $_POST['searchdata'];
               $sql = "SELECT tblvehicles.id from tblvehicles 
 join tblbrands on tblbrands.id=tblvehicles.VehiclesBrand 
-where tblvehicles.VehiclesTitle=:search || tblvehicles.FuelType=:search || tblbrands.BrandName=:search || tblvehicles.ModelYear=:search";
+where tblvehicles.VehiclesTitle=:search || tblvehicles.transmission=:search || tblbrands.BrandName=:search || tblvehicles.ModelYear=:search";
               $query = $dbh->prepare($sql);
               $query->bindParam(':search', $searchdata, PDO::PARAM_STR);
               $query->execute();
@@ -92,7 +92,7 @@ where tblvehicles.VehiclesTitle=:search || tblvehicles.FuelType=:search || tblbr
           <?php
           $sql = "SELECT tblvehicles.*,tblbrands.BrandName,tblbrands.id as bid  from tblvehicles 
 join tblbrands on tblbrands.id=tblvehicles.VehiclesBrand 
-where tblvehicles.VehiclesTitle=:search || tblvehicles.FuelType=:search || tblbrands.BrandName=:search || tblvehicles.ModelYear=:search";
+where tblvehicles.VehiclesTitle=:search || tblvehicles.transmission=:search || tblbrands.BrandName=:search || tblvehicles.ModelYear=:search";
           $query = $dbh->prepare($sql);
           $query->bindParam(':search', $searchdata, PDO::PARAM_STR);
           $query->execute();
@@ -185,9 +185,27 @@ where tblvehicles.VehiclesTitle=:search || tblvehicles.FuelType=:search || tblbr
   </section>
   <!-- /Listing-->
 
-  <!--Chatbot-->                
+  <!--Chatbot-->
   <script type='text/javascript'>
-		(function(I, L, T, i, c, k, s) {if(I.iticks) return;I.iticks = {host:c, settings:s, clientId:k, cdn:L, queue:[]};var h = T.head || T.documentElement;var e = T.createElement(i);var l = I.location;e.async = true;e.src = (L||c)+'/client/inject-v2.min.js';h.insertBefore(e, h.firstChild);I.iticks.call = function(a, b) {I.iticks.queue.push([a, b]);};})(window, 'https://cdn-v1.intelliticks.com/prod/common', document, 'script', 'https://app.intelliticks.com', 'HK3hq2em6gmh6mxAJ_c', {});
+    (function(I, L, T, i, c, k, s) {
+      if (I.iticks) return;
+      I.iticks = {
+        host: c,
+        settings: s,
+        clientId: k,
+        cdn: L,
+        queue: []
+      };
+      var h = T.head || T.documentElement;
+      var e = T.createElement(i);
+      var l = I.location;
+      e.async = true;
+      e.src = (L || c) + '/client/inject-v2.min.js';
+      h.insertBefore(e, h.firstChild);
+      I.iticks.call = function(a, b) {
+        I.iticks.queue.push([a, b]);
+      };
+    })(window, 'https://cdn-v1.intelliticks.com/prod/common', document, 'script', 'https://app.intelliticks.com', 'HK3hq2em6gmh6mxAJ_c', {});
   </script>
   <!--End of Chatbot-->
 

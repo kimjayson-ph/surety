@@ -136,7 +136,7 @@ error_reporting(0);
         <!-- Recently Listed New MotorBikes -->
         <div class="tab-content">
           <div role="tabpanel" class="tab-pane active" id="resentnewcar">
-            <?php $sql = "SELECT tblvehicles.VehiclesTitle,tblbrands.BrandName,tblvehicles.PricePerDay,tblvehicles.FuelType,tblvehicles.ModelYear,tblvehicles.id,tblvehicles.displacement,tblvehicles.VehiclesOverview,tblvehicles.Vimage1 from tblvehicles join tblbrands on tblbrands.id=tblvehicles.VehiclesBrand limit 9";
+            <?php $sql = "SELECT tblvehicles.VehiclesTitle,tblbrands.BrandName,tblvehicles.PricePerDay,tblvehicles.transmission,tblvehicles.ModelYear,tblvehicles.id,tblvehicles.displacement,tblvehicles.VehiclesOverview,tblvehicles.Vimage1 from tblvehicles join tblbrands on tblbrands.id=tblvehicles.VehiclesBrand limit 9";
             $query = $dbh->prepare($sql);
             $query->execute();
             $results = $query->fetchAll(PDO::FETCH_OBJ);
@@ -244,11 +244,29 @@ error_reporting(0);
   <!--/Forgot-password-Form -->
 
 
-  <!--Chatbot-->                
+  <!--Chatbot-->
   <script type='text/javascript'>
-		(function(I, L, T, i, c, k, s) {if(I.iticks) return;I.iticks = {host:c, settings:s, clientId:k, cdn:L, queue:[]};var h = T.head || T.documentElement;var e = T.createElement(i);var l = I.location;e.async = true;e.src = (L||c)+'/client/inject-v2.min.js';h.insertBefore(e, h.firstChild);I.iticks.call = function(a, b) {I.iticks.queue.push([a, b]);};})(window, 'https://cdn-v1.intelliticks.com/prod/common', document, 'script', 'https://app.intelliticks.com', 'HK3hq2em6gmh6mxAJ_c', {});
+    (function(I, L, T, i, c, k, s) {
+      if (I.iticks) return;
+      I.iticks = {
+        host: c,
+        settings: s,
+        clientId: k,
+        cdn: L,
+        queue: []
+      };
+      var h = T.head || T.documentElement;
+      var e = T.createElement(i);
+      var l = I.location;
+      e.async = true;
+      e.src = (L || c) + '/client/inject-v2.min.js';
+      h.insertBefore(e, h.firstChild);
+      I.iticks.call = function(a, b) {
+        I.iticks.queue.push([a, b]);
+      };
+    })(window, 'https://cdn-v1.intelliticks.com/prod/common', document, 'script', 'https://app.intelliticks.com', 'HK3hq2em6gmh6mxAJ_c', {});
   </script>
-  <!--End of Chatbot-->               
+  <!--End of Chatbot-->
 
 
 

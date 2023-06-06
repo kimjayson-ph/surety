@@ -96,7 +96,7 @@ error_reporting(0);
                   <h5><a href="vehical-details.php?vhid=<?php echo htmlentities($result->id); ?>"><?php echo htmlentities($result->BrandName); ?> , <?php echo htmlentities($result->VehiclesTitle); ?></a></h5>
                   <p class="list-price">&#x20B1;<?php echo htmlentities($result->PricePerDay); ?> Per Day</p>
                   <ul>
-                    <li><i class="fa fa-cog" aria-hidden="true"></i><?php echo htmlentities($result->FuelType); ?> </li>
+                    <li><i class="fa fa-cog" aria-hidden="true"></i><?php echo htmlentities($result->transmission); ?> </li>
                     <li><i class="fa fa-calendar" aria-hidden="true"></i><?php echo htmlentities($result->ModelYear); ?> model</li>
 
                   </ul>
@@ -174,9 +174,27 @@ error_reporting(0);
   </section>
   <!-- /Listing-->
 
-  <!--Chatbot-->                
+  <!--Chatbot-->
   <script type='text/javascript'>
-		(function(I, L, T, i, c, k, s) {if(I.iticks) return;I.iticks = {host:c, settings:s, clientId:k, cdn:L, queue:[]};var h = T.head || T.documentElement;var e = T.createElement(i);var l = I.location;e.async = true;e.src = (L||c)+'/client/inject-v2.min.js';h.insertBefore(e, h.firstChild);I.iticks.call = function(a, b) {I.iticks.queue.push([a, b]);};})(window, 'https://cdn-v1.intelliticks.com/prod/common', document, 'script', 'https://app.intelliticks.com', 'HK3hq2em6gmh6mxAJ_c', {});
+    (function(I, L, T, i, c, k, s) {
+      if (I.iticks) return;
+      I.iticks = {
+        host: c,
+        settings: s,
+        clientId: k,
+        cdn: L,
+        queue: []
+      };
+      var h = T.head || T.documentElement;
+      var e = T.createElement(i);
+      var l = I.location;
+      e.async = true;
+      e.src = (L || c) + '/client/inject-v2.min.js';
+      h.insertBefore(e, h.firstChild);
+      I.iticks.call = function(a, b) {
+        I.iticks.queue.push([a, b]);
+      };
+    })(window, 'https://cdn-v1.intelliticks.com/prod/common', document, 'script', 'https://app.intelliticks.com', 'HK3hq2em6gmh6mxAJ_c', {});
   </script>
   <!--End of Chatbot-->
 
