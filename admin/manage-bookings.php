@@ -37,6 +37,15 @@ if (!isset($_SESSION['alogin'])) {
 		$msg = "Booking Successfully Approved";
 	}
 
+	if (isset($_REQUEST['del'])) {
+		$delid = intval($_GET['del']);
+		$sql = "delete from tblbooking  WHERE  id=:delid";
+		$query = $dbh->prepare($sql);
+		$query->bindParam(':delid', $delid, PDO::PARAM_STR);
+		$query->execute();
+		$msg = "Booking deleted successfully";
+	}
+
 
 ?>
 
@@ -192,7 +201,9 @@ if (!isset($_SESSION['alogin'])) {
 														<td><a href="manage-bookings.php?aeid=<?php echo htmlentities($result->id); ?>" onclick="return confirm('Do you really want to Approve this booking')"> Approve</a> /
 
 
-															<a href="manage-bookings.php?eid=<?php echo htmlentities($result->id); ?>" onclick="return confirm('Do you really want to Reject this Booking')"> Reject</a>
+															<a href="manage-bookings.php?eid=<?php echo htmlentities($result->id); ?>" onclick="return confirm('Do you really want to Reject this Booking')"> Reject</a> /
+
+															<a href="manage-bookings.php?del=<?php echo $result->id; ?>" onclick="return confirm('Do you want to delete');"><i style="color: #7bc41d;" class="fa fa-trash"></i></a>
 														</td>
 
 													</tr>
