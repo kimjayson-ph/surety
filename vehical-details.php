@@ -376,7 +376,7 @@ if (isset($_POST['submit'])) {
             <aside class="col-md-3">
 
               <div class="share_vehicle">
-                <p>Share: <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a> </p>
+                <p>Share: <a href="https://www.facebook.com/profile.php?id=100092961292385"><i class="fa fa-facebook-square" aria-hidden="true"></i></a> <a href="https://twitter.com/"><i class="fa fa-twitter-square" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a> <a href="https://www.google.com/"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a> </p>
               </div>
               <div class="sidebar_widget">
                 <div class="widget_heading">
