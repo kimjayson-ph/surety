@@ -11,7 +11,7 @@ if (!isset($_SESSION['alogin'])) {
 		$brand = $_POST['brandname'];
 		$vehicleoverview = $_POST['vehicalorcview'];
 		$priceperday = $_POST['priceperday'];
-		$fueltype = $_POST['fueltype'];
+		$transmission = $_POST['transmission'];
 		$modelyear = $_POST['modelyear'];
 		$displacement = $_POST['displacement'];
 		$vimage1 = $_FILES["img1"]["name"];
@@ -20,16 +20,16 @@ if (!isset($_SESSION['alogin'])) {
 		$vimage4 = $_FILES["img4"]["name"];
 		$vimage5 = $_FILES["img5"]["name"];
 		$helmet = $_POST['helmet'];
-		$powerdoorlocks = $_POST['powerdoorlocks'];
+
 		$raincoat = $_POST['raincoat'];
-		$brakeassist = $_POST['brakeassist'];
+
 		$phoneholder = $_POST['phoneholder'];
-		$driverairbag = $_POST['driverairbag'];
-		$passengerairbag = $_POST['passengerairbag'];
+
+
 		$phonecharger = $_POST['phonecharger'];
 		$ndhelmet = $_POST['ndhelmet'];
-		$centrallocking = $_POST['centrallocking'];
-		$crashcensor = $_POST['crashcensor'];
+
+
 		$ndraincoat = $_POST['ndraincoat'];
 		move_uploaded_file($_FILES["img1"]["tmp_name"], "img/vehicleimages/" . $_FILES["img1"]["name"]);
 		move_uploaded_file($_FILES["img2"]["tmp_name"], "img/vehicleimages/" . $_FILES["img2"]["name"]);
@@ -37,13 +37,13 @@ if (!isset($_SESSION['alogin'])) {
 		move_uploaded_file($_FILES["img4"]["tmp_name"], "img/vehicleimages/" . $_FILES["img4"]["name"]);
 		move_uploaded_file($_FILES["img5"]["tmp_name"], "img/vehicleimages/" . $_FILES["img5"]["name"]);
 
-		$sql = "INSERT INTO tblvehicles(VehiclesTitle,VehiclesBrand,VehiclesOverview,PricePerDay,FuelType,ModelYear,displacement,Vimage1,Vimage2,Vimage3,Vimage4,Vimage5,helmet,PowerDoorLocks,raincoat,BrakeAssist,phoneholder,DriverAirbag,PassengerAirbag,phonecharger,ndhelmet,CentralLocking,CrashSensor,ndraincoat) VALUES(:vehicletitle,:brand,:vehicleoverview,:priceperday,:fueltype,:modelyear,:displacement,:vimage1,:vimage2,:vimage3,:vimage4,:vimage5,:helmet,:powerdoorlocks,:raincoat,:brakeassist,:phoneholder,:driverairbag,:passengerairbag,:phonecharger,:ndhelmet,:centrallocking,:crashcensor,:ndraincoat)";
+		$sql = "INSERT INTO tblvehicles(VehiclesTitle,VehiclesBrand,VehiclesOverview,PricePerDay,transmission,ModelYear,displacement,Vimage1,Vimage2,Vimage3,Vimage4,Vimage5,helmet,raincoat,phoneholder,phonecharger,ndhelmet,ndraincoat) VALUES(:vehicletitle,:brand,:vehicleoverview,:priceperday,:transmission,:modelyear,:displacement,:vimage1,:vimage2,:vimage3,:vimage4,:vimage5,:helmet,:raincoat,:phoneholder,:phonecharger,:ndhelmet,:ndraincoat)";
 		$query = $dbh->prepare($sql);
 		$query->bindParam(':vehicletitle', $vehicletitle, PDO::PARAM_STR);
 		$query->bindParam(':brand', $brand, PDO::PARAM_STR);
 		$query->bindParam(':vehicleoverview', $vehicleoverview, PDO::PARAM_STR);
 		$query->bindParam(':priceperday', $priceperday, PDO::PARAM_STR);
-		$query->bindParam(':fueltype', $fueltype, PDO::PARAM_STR);
+		$query->bindParam(':transmission', $transmission, PDO::PARAM_STR);
 		$query->bindParam(':modelyear', $modelyear, PDO::PARAM_STR);
 		$query->bindParam(':displacement', $displacement, PDO::PARAM_STR);
 		$query->bindParam(':vimage1', $vimage1, PDO::PARAM_STR);
@@ -52,16 +52,16 @@ if (!isset($_SESSION['alogin'])) {
 		$query->bindParam(':vimage4', $vimage4, PDO::PARAM_STR);
 		$query->bindParam(':vimage5', $vimage5, PDO::PARAM_STR);
 		$query->bindParam(':helmet', $helmet, PDO::PARAM_STR);
-		$query->bindParam(':powerdoorlocks', $powerdoorlocks, PDO::PARAM_STR);
+
 		$query->bindParam(':raincoat', $raincoat, PDO::PARAM_STR);
-		$query->bindParam(':brakeassist', $brakeassist, PDO::PARAM_STR);
+
 		$query->bindParam(':phoneholder', $phoneholder, PDO::PARAM_STR);
-		$query->bindParam(':driverairbag', $driverairbag, PDO::PARAM_STR);
-		$query->bindParam(':passengerairbag', $passengerairbag, PDO::PARAM_STR);
+
+
 		$query->bindParam(':phonecharger', $phonecharger, PDO::PARAM_STR);
 		$query->bindParam(':ndhelmet', $ndhelmet, PDO::PARAM_STR);
-		$query->bindParam(':centrallocking', $centrallocking, PDO::PARAM_STR);
-		$query->bindParam(':crashcensor', $crashcensor, PDO::PARAM_STR);
+
+
 		$query->bindParam(':ndraincoat', $ndraincoat, PDO::PARAM_STR);
 		$query->execute();
 		$lastInsertId = $dbh->lastInsertId();
@@ -192,7 +192,7 @@ if (!isset($_SESSION['alogin'])) {
 
 													<label class="col-sm-2 control-label">Select Transmission<span style="color:red">*</span></label>
 													<div class="col-sm-4">
-														<select class="selectpicker" name="fueltype" required>
+														<select class="selectpicker" name="transmission" required>
 															<option value=""> Select </option>
 
 															<option value="Automatic">Automatic</option>

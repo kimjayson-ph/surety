@@ -76,7 +76,7 @@ error_reporting(0);
               <?php
               //Query for Listing count
               $brand = $_POST['brand'];
-              $fueltype = $_POST['fueltype'];
+              $transmission = $_POST['transmission'];
               $sql = "SELECT id from tblvehicles where tblvehicles.VehiclesBrand=:brand";
               $query = $dbh->prepare($sql);
               $query->bindParam(':brand', $brand, PDO::PARAM_STR);
@@ -185,9 +185,27 @@ error_reporting(0);
   </section>
   <!-- /Listing-->
 
-  <!--Chatbot-->                
+  <!--Chatbot-->
   <script type='text/javascript'>
-		(function(I, L, T, i, c, k, s) {if(I.iticks) return;I.iticks = {host:c, settings:s, clientId:k, cdn:L, queue:[]};var h = T.head || T.documentElement;var e = T.createElement(i);var l = I.location;e.async = true;e.src = (L||c)+'/client/inject-v2.min.js';h.insertBefore(e, h.firstChild);I.iticks.call = function(a, b) {I.iticks.queue.push([a, b]);};})(window, 'https://cdn-v1.intelliticks.com/prod/common', document, 'script', 'https://app.intelliticks.com', 'HK3hq2em6gmh6mxAJ_c', {});
+    (function(I, L, T, i, c, k, s) {
+      if (I.iticks) return;
+      I.iticks = {
+        host: c,
+        settings: s,
+        clientId: k,
+        cdn: L,
+        queue: []
+      };
+      var h = T.head || T.documentElement;
+      var e = T.createElement(i);
+      var l = I.location;
+      e.async = true;
+      e.src = (L || c) + '/client/inject-v2.min.js';
+      h.insertBefore(e, h.firstChild);
+      I.iticks.call = function(a, b) {
+        I.iticks.queue.push([a, b]);
+      };
+    })(window, 'https://cdn-v1.intelliticks.com/prod/common', document, 'script', 'https://app.intelliticks.com', 'HK3hq2em6gmh6mxAJ_c', {});
   </script>
   <!--End of Chatbot-->
 

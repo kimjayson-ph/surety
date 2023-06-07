@@ -11,43 +11,43 @@ if (!isset($_SESSION['alogin'])) {
 		$brand = $_POST['brandname'];
 		$vehicleoverview = $_POST['vehicalorcview'];
 		$priceperday = $_POST['priceperday'];
-		$fueltype = $_POST['fueltype'];
+		$transmission = $_POST['transmission'];
 		$modelyear = $_POST['modelyear'];
 		$displacement = $_POST['displacement'];
 		$helmet = $_POST['helmet'];
-		$powerdoorlocks = $_POST['powerdoorlocks'];
+
 		$raincoat = $_POST['raincoat'];
-		$brakeassist = $_POST['brakeassist'];
+
 		$phoneholder = $_POST['phoneholder'];
-		$driverairbag = $_POST['driverairbag'];
-		$passengerairbag = $_POST['passengerairbag'];
+
+
 		$phonecharger = $_POST['phonecharger'];
 		$ndhelmet = $_POST['ndhelmet'];
-		$centrallocking = $_POST['centrallocking'];
-		$crashcensor = $_POST['crashcensor'];
+
+
 		$ndraincoat = $_POST['ndraincoat'];
 		$id = intval($_GET['id']);
 
-		$sql = "update tblvehicles set VehiclesTitle=:vehicletitle,VehiclesBrand=:brand,VehiclesOverview=:vehicleoverview,PricePerDay=:priceperday,FuelType=:fueltype,ModelYear=:modelyear,displacement=:displacement,helmet=:helmet,PowerDoorLocks=:powerdoorlocks,raincoat=:raincoat,BrakeAssist=:brakeassist,phoneholder=:phoneholder,DriverAirbag=:driverairbag,PassengerAirbag=:passengerairbag,phonecharger=:phonecharger,ndhelmet=:ndhelmet,CentralLocking=:centrallocking,CrashSensor=:crashcensor,ndraincoat=:ndraincoat where id=:id ";
+		$sql = "update tblvehicles set VehiclesTitle=:vehicletitle,VehiclesBrand=:brand,VehiclesOverview=:vehicleoverview,PricePerDay=:priceperday,transmission=:transmission,ModelYear=:modelyear,displacement=:displacement,helmet=:helmet,raincoat=:raincoat,phoneholder=:phoneholder,phonecharger=:phonecharger,ndhelmet=:ndhelmet,ndraincoat=:ndraincoat where id=:id ";
 		$query = $dbh->prepare($sql);
 		$query->bindParam(':vehicletitle', $vehicletitle, PDO::PARAM_STR);
 		$query->bindParam(':brand', $brand, PDO::PARAM_STR);
 		$query->bindParam(':vehicleoverview', $vehicleoverview, PDO::PARAM_STR);
 		$query->bindParam(':priceperday', $priceperday, PDO::PARAM_STR);
-		$query->bindParam(':fueltype', $fueltype, PDO::PARAM_STR);
+		$query->bindParam(':transmission', $transmission, PDO::PARAM_STR);
 		$query->bindParam(':modelyear', $modelyear, PDO::PARAM_STR);
 		$query->bindParam(':displacement', $displacement, PDO::PARAM_STR);
 		$query->bindParam(':helmet', $helmet, PDO::PARAM_STR);
-		$query->bindParam(':powerdoorlocks', $powerdoorlocks, PDO::PARAM_STR);
+
 		$query->bindParam(':raincoat', $raincoat, PDO::PARAM_STR);
-		$query->bindParam(':brakeassist', $brakeassist, PDO::PARAM_STR);
+
 		$query->bindParam(':phoneholder', $phoneholder, PDO::PARAM_STR);
-		$query->bindParam(':driverairbag', $driverairbag, PDO::PARAM_STR);
-		$query->bindParam(':passengerairbag', $passengerairbag, PDO::PARAM_STR);
+
+
 		$query->bindParam(':phonecharger', $phonecharger, PDO::PARAM_STR);
 		$query->bindParam(':ndhelmet', $ndhelmet, PDO::PARAM_STR);
-		$query->bindParam(':centrallocking', $centrallocking, PDO::PARAM_STR);
-		$query->bindParam(':crashcensor', $crashcensor, PDO::PARAM_STR);
+
+
 		$query->bindParam(':ndraincoat', $ndraincoat, PDO::PARAM_STR);
 		$query->bindParam(':id', $id, PDO::PARAM_STR);
 		$query->execute();
@@ -186,8 +186,8 @@ if (!isset($_SESSION['alogin'])) {
 															</div>
 															<label class="col-sm-2 control-label">Select Transmission<span style="color:red">*</span></label>
 															<div class="col-sm-4">
-																<select class="selectpicker" name="fueltype" required>
-																	<option value="<?php echo htmlentities($result->FuelType); ?>"> <?php echo htmlentities($result->FuelType); ?> </option>
+																<select class="selectpicker" name="transmission" required>
+																	<option value="<?php echo htmlentities($result->transmission); ?>"> <?php echo htmlentities($result->transmission); ?> </option>
 
 																	<option value="Automatic">Automatic</option>
 																	<option value="Semi Automatic">Semi Automatic</option>

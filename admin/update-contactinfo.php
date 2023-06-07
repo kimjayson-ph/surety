@@ -16,7 +16,7 @@ if (!isset($_SESSION['alogin'])) {
 		$query->bindParam(':email', $email, PDO::PARAM_STR);
 		$query->bindParam(':contactno', $contactno, PDO::PARAM_STR);
 		$query->execute();
-		$msg = "Info Updateed successfully";
+		$msg = "Info Updated successfully";
 	}
 ?>
 

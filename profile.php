@@ -11,16 +11,16 @@ if (strlen($_SESSION['login']) == 0) {
     $dob = $_POST['dob'];
     $adress = $_POST['address'];
     $city = $_POST['city'];
-    $country = $_POST['country'];
+
     $email = $_SESSION['login'];
-    $sql = "update tblusers set FullName=:name,ContactNo=:mobileno,dob=:dob,Address=:adress,City=:city,Country=:country where EmailId=:email";
+    $sql = "update tblusers set FullName=:name,ContactNo=:mobileno,dob=:dob,Address=:adress,City=:city, where EmailId=:email";
     $query = $dbh->prepare($sql);
     $query->bindParam(':name', $name, PDO::PARAM_STR);
     $query->bindParam(':mobileno', $mobileno, PDO::PARAM_STR);
     $query->bindParam(':dob', $dob, PDO::PARAM_STR);
     $query->bindParam(':adress', $adress, PDO::PARAM_STR);
     $query->bindParam(':city', $city, PDO::PARAM_STR);
-    $query->bindParam(':country', $country, PDO::PARAM_STR);
+
     $query->bindParam(':email', $email, PDO::PARAM_STR);
     $query->execute();
     $msg = "Profile Updated Successfully";
@@ -122,7 +122,7 @@ if (strlen($_SESSION['login']) == 0) {
               <div class="dealer_info">
                 <h5><?php echo htmlentities($result->FullName); ?></h5>
                 <p><?php echo htmlentities($result->Address); ?><br>
-                  <?php echo htmlentities($result->City); ?>&nbsp;<?php echo htmlentities($result->Country); ?></p>
+                  <?php echo htmlentities($result->City); ?>&nbsp;</p>
               </div>
             </div> -->
 
@@ -184,9 +184,27 @@ if (strlen($_SESSION['login']) == 0) {
         </section>
         <!--/Profile-setting-->
 
-        <!--Chatbot-->                
+        <!--Chatbot-->
         <script type='text/javascript'>
-          (function(I, L, T, i, c, k, s) {if(I.iticks) return;I.iticks = {host:c, settings:s, clientId:k, cdn:L, queue:[]};var h = T.head || T.documentElement;var e = T.createElement(i);var l = I.location;e.async = true;e.src = (L||c)+'/client/inject-v2.min.js';h.insertBefore(e, h.firstChild);I.iticks.call = function(a, b) {I.iticks.queue.push([a, b]);};})(window, 'https://cdn-v1.intelliticks.com/prod/common', document, 'script', 'https://app.intelliticks.com', 'HK3hq2em6gmh6mxAJ_c', {});
+          (function(I, L, T, i, c, k, s) {
+            if (I.iticks) return;
+            I.iticks = {
+              host: c,
+              settings: s,
+              clientId: k,
+              cdn: L,
+              queue: []
+            };
+            var h = T.head || T.documentElement;
+            var e = T.createElement(i);
+            var l = I.location;
+            e.async = true;
+            e.src = (L || c) + '/client/inject-v2.min.js';
+            h.insertBefore(e, h.firstChild);
+            I.iticks.call = function(a, b) {
+              I.iticks.queue.push([a, b]);
+            };
+          })(window, 'https://cdn-v1.intelliticks.com/prod/common', document, 'script', 'https://app.intelliticks.com', 'HK3hq2em6gmh6mxAJ_c', {});
         </script>
         <!--End of Chatbot-->
 
